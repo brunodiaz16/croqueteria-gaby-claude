@@ -1,5 +1,16 @@
 # BITÁCORA CROQUETERÍA GABY
 
+## 2026-03-17 — Cierre del día
+- Flujo completo automatizado funcionando: procesa ventas → genera archivos → sube Drive → commit
+- Nuevo costo confirmado: Perrón Adulto 25kg = $535 (Dartacan)
+- CSV de importación a app funcionando — se importa directo sin abrir Sheets
+- Script subir_drive.py creado con OAuth2
+- Google Cloud proyecto "Croqueteria Gaby" creado, Drive API habilitada
+- Pendiente: agregar brunodiazb16@gmail.com como usuario de prueba en OAuth consent screen
+- Archivos generados hoy: Reporte, Dashboard, Catálogo, Histórico, Lista Precios, Compra Dartacan
+- Ventas del día: 5 órdenes, $4,178 neto, margen ~13%
+- Costos vigentes: Chapetes 18kg $410, Ganador 20kg $990, Pedigree 20kg $725, Perrón Adulto 25kg $535
+
 ## 2026-03-17 (corte vespertino)
 - 5 ventas, $4,178.55 neto, $793.55 ganancia, margen 19.0%
 - Nuevo costo: Perron Adulto 25kg $535 (Dartacan)
