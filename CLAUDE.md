@@ -56,6 +56,7 @@ REGLA FIJA: Chapetes Premium = 18kg. NUNCA 19kg.
 | Chapetes Premium 18kg Perro Adulto    | $410  | Chapetes  | 2026-03-17   |
 | Ganador Premium Adulto 20kg           | $990  | Dartacan  | 2026-03-17   |
 | Pedigree Adulto Res/Vegetales 20kg    | $725  | Dartacan  | 2026-03-17   |
+| Perron Adulto 25kg                    | $535  | Dartacan  | 2026-03-17   |
 
 Si un producto no está aquí → margen = "SIN COSTO" → incluir alerta en reporte.
 
