@@ -178,22 +178,17 @@ Incluir siempre en el reporte cuando se detecten:
 
 ```
 context/
-  aliases_proveedores.md       ← diccionario de nombres internos
-  catalogo_maestro_costos.md   ← costos vigentes e histórico
-  drive_folder_ids.md          ← IDs de carpetas Drive
+  costos.md                    ← costos vigentes + aliases + historial
+  bitacora.md                  ← entradas diarias de aprendizajes
   flujo_de_trabajo.md          ← operaciones día a día
   reglas_de_negocio.md         ← márgenes y SKUs prioritarios
   finanzas_negocio.md          ← ingresos, gastos, estado financiero
   roadmap_herramientas.md      ← qué herramientas usar y cuándo
-  uso_carpetas_drive.md        ← quién sube qué y cuándo
   schema_inventario.md         ← estructura de la app en Vercel
-  iteraciones/
-    iteracion_01_aprendizajes.md
-    iteracion_02_aprendizajes.md
-    iteracion_NN_...            ← una por sesión con aprendizajes nuevos
+  uso_carpetas_drive.md        ← quién sube qué y cuándo
 scripts/
   OrganizarArchivosDeHoy.gs    ← Apps Script activo con trigger horario
-  CrearCarpetasDrive.gs        ← script inicial de estructura Drive
+  SubirArchivoDrive.gs         ← Web App para subir archivos a Drive
   limpiar_xlsx_ml.py           ← parser del XLSX de ML
 prompts/
   procesar_ventas.md
