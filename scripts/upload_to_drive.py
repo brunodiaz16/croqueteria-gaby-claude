@@ -19,7 +19,10 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
 # --- Config ---
-SCOPES = ["https://www.googleapis.com/auth/drive.file"]
+SCOPES = [
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/spreadsheets",
+]
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CREDENTIALS_FILE = PROJECT_ROOT / "credentials.json"
 TOKEN_FILE = PROJECT_ROOT / "token.json"

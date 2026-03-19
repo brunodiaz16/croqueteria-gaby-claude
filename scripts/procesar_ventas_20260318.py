@@ -15,9 +15,9 @@ pub_col = [c for c in df.columns if "publicaci" in c.lower() and "#" in c][0]
 costos = {
     "MLM2668236083": ("Silver Kan 25kg", None, "SIN COSTO"),
     "MLM4663694700": ("Ganador Premium 20kg", 990, "Dartacan"),
-    "MLM4679794046": ("Maskottchen Premium 15kg", 525, "Africa"),
-    "MLM4679897714": ("Maskottchen Premium 15kg", 525, "Africa"),
-    "MLM2668456003": ("Chapetes 20kg (Amarillos)", 300, "Africa"),
+    "MLM4679794046": ("Maskottchen Premium 15kg", 525, "Chapetes"),
+    "MLM4679897714": ("Maskottchen Premium 15kg", 525, "Chapetes"),
+    "MLM2668456003": ("Chapetes 20kg (Amarillos)", 300, "Chapetes"),
     "MLM2743362281": ("LiveClear Gato 3.18kg (2x1.5)", 768.61, "Invet"),
     "MLM4680298954": ("Arena Scoop Away 19kg 2-Pack", 798, "Por confirmar"),
     "MLM4619784042": ("Pedigree 20kg Res/Veg", 725, "Dartacan"),
@@ -128,9 +128,9 @@ with pd.ExcelWriter(dart_path, engine="openpyxl") as w:
 print(f"Generado: {dart_path}")
 
 precios = pd.DataFrame([
-    {"Producto": "Chapetes 20kg (Amarillos)", "Costo": 300, "Proveedor": "Africa", "Actualizado": FECHA},
+    {"Producto": "Chapetes 20kg (Amarillos)", "Costo": 300, "Proveedor": "Chapetes", "Actualizado": FECHA},
     {"Producto": "Chapetes Premium 18kg", "Costo": 410, "Proveedor": "Chapetes", "Actualizado": "2026-03-17"},
-    {"Producto": "Maskottchen Premium 15kg", "Costo": 525, "Proveedor": "Africa", "Actualizado": FECHA},
+    {"Producto": "Maskottchen Premium 15kg", "Costo": 525, "Proveedor": "Chapetes", "Actualizado": FECHA},
     {"Producto": "Ganador Premium 20kg", "Costo": 990, "Proveedor": "Dartacan", "Actualizado": "2026-03-17"},
     {"Producto": "Pedigree 20kg Res/Veg", "Costo": 725, "Proveedor": "Dartacan", "Actualizado": "2026-03-17"},
     {"Producto": "Perron Adulto 25kg", "Costo": 535, "Proveedor": "Dartacan", "Actualizado": "2026-03-17"},

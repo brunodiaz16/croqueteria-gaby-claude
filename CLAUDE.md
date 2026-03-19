@@ -27,12 +27,11 @@ Actuar como: analista financiero + operador de datos + estratega de negocio.
 
 | Proveedor  | Productos                                      |
 |------------|------------------------------------------------|
-| Chapetes   | Chapetes Premium, Cat Chow, Lukat, Gatina      |
+| Chapetes   | Chapetes Premium 18kg, Chapetes 20kg (Amarillos), Maskottchen Premium, Cat Chow, Lukat, Gatina |
 | Dartacan   | Ganador, Pedigree, Minino, Dog Chow, Perron    |
 | Martacan   | Ganador, Minino, Dog Chow, Perron, Silver Kan  |
 | Invet      | Pro Plan, Royal Canin, Nupec, LiveClear, Vet Diet latas |
 | Costco     | Kirkland, Pedigree, Scoop Away, Maintenance    |
-| Africa     | Chapetes 20kg (Amarillos), Maskottchen Premium |
 
 ---
 
@@ -42,8 +41,8 @@ Actuar como: analista financiero + operador de datos + estratega de negocio.
 | Nombre en ticket      | Producto real                         | Peso | Proveedor |
 |-----------------------|---------------------------------------|------|-----------|
 | Naranjas              | Chapetes Premium Perro Adulto         | 18kg | Chapetes  |
-| Amarillos             | Chapetes 20kg                         | 20kg | Africa    |
-| Meskuten cubito pm    | Maskottchen Premium                   | 15kg | Africa    |
+| Amarillos             | Chapetes 20kg                         | 20kg | Chapetes  |
+| Meskuten cubito pm    | Maskottchen Premium                   | 15kg | Chapetes  |
 | 20x0192x5             | Ganador Premium Adulto                | 20kg | Dartacan  |
 | 20x0068x5             | Pedigree Adulto Res/Vegetales         | 20kg | Dartacan  |
 
@@ -56,9 +55,9 @@ REGLA FIJA: Chapetes Premium = 18kg. NUNCA 19kg.
 
 | Producto                              | Costo    | Proveedor | Actualizado  |
 |---------------------------------------|----------|-----------|--------------|
-| Chapetes 20kg (Amarillos)             | $300     | Africa    | 2026-03-18   |
+| Chapetes 20kg (Amarillos)             | $300     | Chapetes  | 2026-03-18   |
 | Chapetes Premium 18kg Perro Adulto    | $410     | Chapetes  | 2026-03-17   |
-| Maskottchen Premium 15kg              | $525     | Africa    | 2026-03-18   |
+| Maskottchen Premium 15kg              | $525     | Chapetes  | 2026-03-18   |
 | Ganador Premium Adulto 20kg           | $990     | Dartacan  | 2026-03-17   |
 | Pedigree Adulto Res/Vegetales 20kg    | $725     | Dartacan  | 2026-03-17   |
 | Perron Adulto 25kg                    | $535     | Dartacan  | 2026-03-17   |
@@ -200,11 +199,25 @@ Incluir siempre en el reporte cuando se detecten:
 
 ---
 
+## GOOGLE SHEETS IDs
+
+| Sheet               | ID                                        |
+|----------------------|------------------------------------------|
+| Catalogo_Maestro     | PENDIENTE — correr scripts/crear_catalogo_maestro.py |
+
+---
+
 ## ESTRUCTURA DEL REPO
 
 ```
+.claude/
+  commands/
+    procesar-ventas.md         ← skill /procesar-ventas
+    registrar-compra.md        ← skill /registrar-compra
+    reporte-semanal.md         ← skill /reporte-semanal
+    subir-drive.md             ← skill /subir-drive
 context/
-  costos.md                    ← costos vigentes + aliases + historial
+  costos.md                    ← costos vigentes + aliases + historial (backup del Sheet)
   bitacora.md                  ← entradas diarias de aprendizajes
   flujo_de_trabajo.md          ← operaciones día a día
   reglas_de_negocio.md         ← márgenes y SKUs prioritarios
@@ -213,9 +226,13 @@ context/
   schema_inventario.md         ← estructura de la app en Vercel
   uso_carpetas_drive.md        ← quién sube qué y cuándo
 scripts/
+  catalogo.py                  ← módulo para leer/escribir Google Sheet Catalogo_Maestro
+  crear_catalogo_maestro.py    ← script one-time para crear el Sheet
+  procesar_ventas.py           ← procesador de ventas reutilizable (no hardcodear fechas)
+  upload_to_drive.py           ← sube archivos a Drive con ruteo por prefijo
   OrganizarArchivosDeHoy.gs    ← Apps Script activo con trigger horario
   SubirArchivoDrive.gs         ← Web App para subir archivos a Drive
-  limpiar_xlsx_ml.py           ← parser del XLSX de ML
+  limpiar_xlsx_ml.py           ← parser del XLSX de ML (legacy)
 prompts/
   procesar_ventas.md
   registrar_compra.md

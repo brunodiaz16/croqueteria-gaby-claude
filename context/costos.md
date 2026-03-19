@@ -1,9 +1,9 @@
 # COSTOS VIGENTES
 | Producto | Costo | Proveedor | Actualizado |
 |---|---|---|---|
-| Chapetes 20kg (Amarillos) | $300 | Africa | 2026-03-18 |
+| Chapetes 20kg (Amarillos) | $300 | Chapetes | 2026-03-18 |
 | Chapetes Premium 18kg Perro Adulto | $410 | Chapetes | 2026-03-17 |
-| Maskottchen Premium 15kg | $525 | Africa | 2026-03-18 |
+| Maskottchen Premium 15kg | $525 | Chapetes | 2026-03-18 |
 | Ganador Premium Adulto 20kg | $990 | Dartacan | 2026-03-17 |
 | Pedigree Adulto Res/Vegetales 20kg | $725 | Dartacan | 2026-03-17 |
 | Perron Adulto 25kg | $535 | Dartacan | 2026-03-17 |
@@ -18,8 +18,8 @@
 | Ticket dice | Producto real | Peso | Proveedor |
 |---|---|---|---|
 | Naranjas | Chapetes Premium Perro Adulto | 18kg | Chapetes |
-| Amarillos | Chapetes 20kg | 20kg | Africa |
-| Meskuten cubito pm | Maskottchen Premium | 15kg | Africa |
+| Amarillos | Chapetes 20kg | 20kg | Chapetes |
+| Meskuten cubito pm | Maskottchen Premium | 15kg | Chapetes |
 | 20x0192x5 | Ganador Premium Adulto | 20kg | Dartacan |
 | 20x0068x5 | Pedigree Adulto Res/Vegetales | 20kg | Dartacan |
 
