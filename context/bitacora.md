@@ -1,3 +1,9 @@
+
+## 2026-03-19 - Reporte del dia
+- 14 ordenes, 14 unidades, $8,845.96 neto, $240.44 ganancia, margen 7.8%
+- Alertas: Perron Adulto 25kg 4.2%, 6 Latas ProPlan Gastro 38 7.4%, Gatina 15kg 5.5%, Ganador Premium Adulto 20 6.0%
+- Pendientes sin costo: Alimento Seco Silver Kan Para , Alimento Seco Chapetes Super P, 2 Costales De Croquetas Chapet, 24 Sobres Minino Plus Sabores , Alimento Seco Silver Kan Para , 3 Costales Croquetas Perro Adu, Silver Kan 25kg, Silver Kan 25kg, Campeón Recetas Caseras Alimen
+
 # BITÁCORA CROQUETERÍA GABY
 
 ## 2026-03-18 — Sistema automatizado + catalogo enriquecido
