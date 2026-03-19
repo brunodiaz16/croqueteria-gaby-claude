@@ -28,8 +28,7 @@ Actuar como: analista financiero + operador de datos + estratega de negocio.
 | Proveedor  | Productos                                      |
 |------------|------------------------------------------------|
 | Chapetes   | Chapetes Premium 18kg, Chapetes 20kg (Amarillos), Maskottchen Premium, Cat Chow, Lukat, Gatina |
-| Dartacan   | Ganador, Pedigree, Minino, Dog Chow, Perron    |
-| Martacan   | Ganador, Minino, Dog Chow, Perron, Silver Kan  |
+| Dartacan   | Ganador, Pedigree, Minino, Dog Chow, Perron, Silver Kan |
 | Invet      | Pro Plan, Royal Canin, Nupec, LiveClear, Vet Diet latas |
 | Costco     | Kirkland, Pedigree, Scoop Away, Maintenance    |
 
@@ -84,22 +83,28 @@ Comisión ML estimada: ~15% (ya descontada en columna "Total MXN" del XLSX)
 ---
 
 ## DRIVE — FOLDER IDs
+<!-- IMPORTANTE: Carpetas con subcarpetas mensuales. Al cambiar de mes, actualizar los IDs de subcarpetas. -->
 
-| Carpeta                              | ID                                  |
-|--------------------------------------|-------------------------------------|
-| 01 - Ventas por Día / 2026-03        | 1ID04u87lSj1bfyE02mfO3AqbYdORZRP7  |
-| 02 - Reportes Semanales / 2026       | 1Lwa_15i5wtn4Ro5b4mq1ZHTYcSRRNVGH  |
-| 03 - Compras / Chapetes              | 1y4WRQB7G9mDvNSD65oqNPw44OwbqUfz-  |
-| 03 - Compras / Dartacan              | 10ihib3toJ3SeO6G1BdkaPcpg36YdVvOc  |
-| 03 - Compras / Invet                 | 1bwCiAbVIt3QhJmSclhtX5gIz1ENp81Mj  |
-| 03 - Compras / Costco                | 1z4iGSk9-0ym9BV24D0tfHLwzugegJ172  |
-| 04 - Notas de Pedido / 2026-03       | 1y0i3xMuzm_AX_75KTx8ovdiImRoOAiee  |
-| 05 - Catálogo y Precios              | 1uTeqMTUtzK-mLfT_LNEHAkns8Oc14yls  |
-| 06 - Control de Inventario           | 1_xb-szCE1bHVa5_SXq8_CmcFdlEOOBAs  |
-| 07 - Análisis y Estrategia           | 1B50RXBeCLe0LAayEzw4YhvUnA0L6pAAM  |
-| 08 - Generados por Claude / 2026-03  | 1m4V3HZutVZ5nzRxwwWwnrREgIIGWEgvT  |
-| Histórico de Precios                 | 1WV5mFQEDLsfym3-VQiiTWTMniX7a22lj  |
-| Listas de Precios Vigentes           | 1KvJWSDh2xPIEBkfGI1LcB3K-ixsnZzGl  |
+| Carpeta                              | ID                                  | Notas                    |
+|--------------------------------------|-------------------------------------|--------------------------|
+| 01 - Ventas por Día (padre)          | 1jgqqt_fXEoDv5YFbaS8Hldmu4C4Xstq0  |                          |
+| 01 - Ventas por Día / 2026-03        | 1ID04u87lSj1bfyE02mfO3AqbYdORZRP7  | ← activa en config.py   |
+| 02 - Reportes Diarios (padre)        | 1p6yZuGtwD_1nIRHyHJjnK8ah59U89h8J  |                          |
+| 02 - Reportes Diarios / PDF / Marzo  | 1nW52l8hhqofwTds3z7ohtB3pEkD0WH0W  |                          |
+| 02 - Reportes Diarios / CSV          | 1DcZDC9jnt_wvgfjotlmmstskG-FShzCI  | ← CSVS_INVENTARIO       |
+| 03 - Compras / Chapetes              | 1y4WRQB7G9mDvNSD65oqNPw44OwbqUfz-  |                          |
+| 03 - Compras / Dartacan              | 10ihib3toJ3SeO6G1BdkaPcpg36YdVvOc  |                          |
+| 03 - Compras / Invet                 | 1bwCiAbVIt3QhJmSclhtX5gIz1ENp81Mj  |                          |
+| 03 - Compras / Costco                | 1z4iGSk9-0ym9BV24D0tfHLwzugegJ172  |                          |
+| 04 - Notas de Pedido (padre)         | 1EFyRedwQafW4A_MAQGUrerCB05v_r8cO  |                          |
+| 04 - Notas de Pedido / Marzo 2026    | 1hCZuAB9uCHKSHdSJGWXYs3eMWYQx__H0  | ← activa en config.py   |
+| 05 - Catálogo y Precios              | 1uTeqMTUtzK-mLfT_LNEHAkns8Oc14yls  |                          |
+| 06 - Control de Inventario           | 1_xb-szCE1bHVa5_SXq8_CmcFdlEOOBAs  |                          |
+| 07 - Análisis y Estrategia           | 1B50RXBeCLe0LAayEzw4YhvUnA0L6pAAM  |                          |
+| 08 - Generados por Claude (padre)    | 1yYxUJOkVOHNCkVVaRlLXyCfyzEsQDmxR  |                          |
+| 08 - Generados por Claude / 2026-03  | 1m4V3HZutVZ5nzRxwwWwnrREgIIGWEgvT  | ← activa en config.py   |
+| Histórico de Precios                 | 1WV5mFQEDLsfym3-VQiiTWTMniX7a22lj  |                          |
+| Listas de Precios Vigentes           | 1KvJWSDh2xPIEBkfGI1LcB3K-ixsnZzGl  |                          |
 
 ## CONVENCIÓN DE NOMBRES DE ARCHIVO
 # Apps Script mueve automáticamente según el prefijo del nombre
@@ -192,13 +197,10 @@ Incluir siempre en el reporte cuando se detecten:
 |----------------------|------------------------------------------|
 | Catalogo_Maestro     | 1ypPZlGeRp7QgL6Jpj7Oo6p8RfrqqW1MCcxWF8dDwsCc       |
 
-## CARPETAS DRIVE ADICIONALES
-
-| Carpeta                          | ID / URL                                              |
-|----------------------------------|-------------------------------------------------------|
-| Reportes Históricos (referencia) | 1p6yZuGtwD_1nIRHyHJjnK8ah59U89h8J                    |
-
-Usar para extraer costos faltantes y como referencia de precios anteriores.
+## NOTA: ESTRUCTURA DE CARPETAS DRIVE
+Las carpetas 01, 02, 04 y 08 tienen subcarpetas mensuales. Los IDs en config.py
+deben apuntar a la **subcarpeta del mes activo**, no a la carpeta padre.
+Al inicio de cada mes, crear subcarpeta nueva y actualizar IDs en config.py + SubirArchivoDrive.gs.
 
 ---
 
@@ -211,6 +213,7 @@ Usar para extraer costos faltantes y como referencia de precios anteriores.
     registrar-compra.md        ← skill /registrar-compra
     reporte-semanal.md         ← skill /reporte-semanal
     subir-drive.md             ← skill /subir-drive
+    generar-imagenes-pedido.md ← skill /generar-imagenes-pedido
 context/
   costos.md                    ← costos vigentes + aliases + historial (backup del Sheet)
   bitacora.md                  ← entradas diarias de aprendizajes
@@ -227,6 +230,7 @@ scripts/
   upload_to_drive.py           ← sube archivos a Drive con ruteo por prefijo
   OrganizarArchivosDeHoy.gs    ← Apps Script activo con trigger horario
   SubirArchivoDrive.gs         ← Web App para subir archivos a Drive
+  generar_notas_imagen.py      ← genera PNGs de notas de pedido para WhatsApp
   limpiar_xlsx_ml.py           ← parser del XLSX de ML (legacy)
 prompts/
   procesar_ventas.md
@@ -252,4 +256,3 @@ README.md
 - [ ] Confirmar si ventas directas van al costo o tienen margen
 - [ ] Costos de Kirkland, Scoop Away, Pro Plan — esperando tickets Costco/Invet
 - [ ] Crear subcarpetas 2026-04 cuando llegue abril
-- [ ] Martacan: verificar si sigue activo como proveedor o todo viene por Dartacan
