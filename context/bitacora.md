@@ -1,3 +1,9 @@
+## 2026-03-19 - Compra Dartacan
+- Ticket #378, $2,454 total, 4 productos (27 piezas)
+- Nuevos costos: Minino Sobre $8.50, Campeón Adulto 25kg $725
+- Sin cambio: Perron 25kg $535, Ganador Premium 20kg $990
+- Gatina/Gatino: pendiente, Bruno compra por separado (no disponible con Dartacan)
+
 ## 2026-03-19 - Reporte del dia
 - 14 ordenes, 14 unidades, $8,845.96 neto, $240.44 ganancia, margen 7.8%
 - Alertas: Perron Adulto 25kg 4.2%, 6 Latas ProPlan Gastro 38 7.4%, Gatina 15kg 5.5%, Ganador Premium Adulto 20 6.0%
