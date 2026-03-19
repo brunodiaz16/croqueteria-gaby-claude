@@ -21,6 +21,7 @@ from googleapiclient.http import MediaFileUpload
 # --- Config ---
 SCOPES = [
     "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive.readonly",
     "https://www.googleapis.com/auth/spreadsheets",
 ]
 PROJECT_ROOT = Path(__file__).resolve().parent.parent

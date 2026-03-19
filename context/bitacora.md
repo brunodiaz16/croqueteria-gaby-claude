@@ -1,5 +1,15 @@
 # BITÁCORA CROQUETERÍA GABY
 
+## 2026-03-18 — Sistema automatizado
+- Catalogo Maestro creado en Google Sheet (13 productos, 12 con pub ML, 5 aliases)
+- Pub IDs agregados: MLM2668276953 (Perron 25kg), MLM2668264237 (Chapetes 18kg)
+- Scope Drive ampliado a readonly para acceder reportes historicos
+- Reportes en Drive son PDFs (20 archivos, ene-mar 2026) — no XLSX, no parseables automaticamente
+- Skills creadas: /procesar-ventas, /registrar-compra, /reporte-semanal, /subir-drive
+- Script procesar_ventas.py generico reemplaza scripts ad-hoc por fecha
+- Script catalogo.py lee/escribe Google Sheet con fallback a markdown
+- Corregido: Africa no es proveedor, es Chapetes (marca de la libreta)
+
 ## 2026-03-18 — Reporte del día
 - 18 órdenes, 19 unidades, $14,528.73 neto, $1,345.91 ganancia, margen 9.9%
 - Compra Dartacan #371: 5 Ganador + 2 Pedigree + 1 Dog Chow + 1 Gatina = $7,795
