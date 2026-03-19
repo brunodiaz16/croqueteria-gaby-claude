@@ -1,4 +1,3 @@
-
 ## 2026-03-19 - Reporte del dia
 - 14 ordenes, 14 unidades, $8,845.96 neto, $240.44 ganancia, margen 7.8%
 - Alertas: Perron Adulto 25kg 4.2%, 6 Latas ProPlan Gastro 38 7.4%, Gatina 15kg 5.5%, Ganador Premium Adulto 20 6.0%
