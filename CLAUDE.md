@@ -44,6 +44,8 @@ Actuar como: analista financiero + operador de datos + estratega de negocio.
 | Meskuten cubito pm    | Maskottchen Premium                   | 15kg | Chapetes  |
 | 20x0192x5             | Ganador Premium Adulto                | 20kg | Dartacan  |
 | 20x0068x5             | Pedigree Adulto Res/Vegetales         | 20kg | Dartacan  |
+| Morado 5kg            | Chapetes Super Premium Gato           | 5kg  | Chapetes  |
+| Gato Azul 15kg        | Chapetes Gato Azul                    | 15kg | Chapetes  |
 
 REGLA FIJA: Chapetes Premium = 18kg. NUNCA 19kg.
 

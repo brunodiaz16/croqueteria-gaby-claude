@@ -88,6 +88,8 @@
 | Whiskas - Croquetas Para Gatos Adultos, Sabor Carne, Omega 6 | $620 |  | 2026-02-17 |
 | Minino Sobre | $8.5 | Dartacan | 2026-03-19 |
 | Campeon Adulto 25kg | $725 | Dartacan | 2026-03-19 |
+| Chapetes Super Premium Gato 5kg | $185 | Chapetes | 2026-03-19 |
+| Chapetes Gato Azul 15kg | $440 | Chapetes | 2026-03-19 |
 
 # ALIASES
 | Ticket dice | Producto real | Proveedor |
@@ -97,6 +99,8 @@
 | Meskuten cubito pm | Maskottchen Premium 15kg | Chapetes |
 | 20x0192x5 | Ganador Premium Adulto 20kg | Dartacan |
 | 20x0068x5 | Pedigree Adulto Res/Veg 20kg | Dartacan |
+| Morado 5kg | Chapetes Super Premium Gato 5kg | Chapetes |
+| Gato Azul 15kg | Chapetes Gato Azul 15kg | Chapetes |
 
 # HISTORIAL DE CAMBIOS
 | Fecha | Producto | Antes | Ahora | Proveedor | Fuente |
@@ -115,3 +119,5 @@
 | 2026-03-19 | Campeon Adulto 25kg |  | 725 | Dartacan | Ticket #378 |
 | 2026-03-19 | Silver Kan 25kg | SIN COSTO | 450 | Chapetes | Precio de lista (pendiente confirmar) |
 | 2026-03-19 | Vet Diet Lata Canine Gastro 380g | 70 | 69.76 | Invet | Cobro tarjeta $418.55 / 6 latas |
+| 2026-03-19 | Chapetes Super Premium Gato 5kg |  | 185 | Chapetes | Ticket Africa 19/03 |
+| 2026-03-19 | Chapetes Gato Azul 15kg |  | 440 | Chapetes | Ticket Africa 19/03 |

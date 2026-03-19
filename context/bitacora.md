@@ -1,3 +1,9 @@
+## 2026-03-19 - Compra Chapetes
+- Ticket Africa, $2,705 total: 4 Naranjas $410, 1 Morado 5kg $185, 2 Gato Azul 15kg $440
+- Nuevos costos: Chapetes Super Premium Gato 5kg $185, Chapetes Gato Azul 15kg $440
+- Aliases nuevos: Morado 5kg, Gato Azul 15kg
+- Pub IDs vinculados: MLM2669314403, MLM2732806753, MLM2732653551, MLM2732856949, MLM2668246551, MLM2668313481
+
 ## 2026-03-19 - Compra Invet
 - Cobro tarjeta $418.55 = 6 latas Vet Diet Canine Gastro 380g
 - Costo unitario: $69.76 (antes $70.00)
