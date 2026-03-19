@@ -58,7 +58,16 @@ Cuando la app tenga control de inventario:
 - Usar el costo de compra original (el que se registro con /registrar-compra), no el costo actual del Sheet
 - Agregar columna "Accion" al CSV: COMPRAR vs YA EN STOCK
 
+## Multi-packs
+Algunos listings venden packs. El catalogo guarda costo unitario, multiplicar segun listing:
+- "2 Costales..." -> costo x2
+- "3 Costales..." -> costo x3
+- "24 Sobres..." -> costo x24
+- "6 Latas ProPlan Gastro" -> NO multiplicar, catalogo ya tiene costo del 6-pack
+Verificar notas del producto en el Sheet para saber si costo es unitario o del pack.
+
 ## Reglas
 - NUNCA generar CSV con productos SIN COSTO sin confirmacion de Bruno
 - Costo viene del Sheet (fuente de verdad), no hardcodeado
 - El CSV se sube a la carpeta de Drive: CSVs de inventario
+- Si Bruno pasa un precio nuevo explicitamente, ese toma precedencia sobre el Sheet

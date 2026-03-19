@@ -20,10 +20,28 @@ Margen objetivo minimo = 10%
 
 ## ALERTAS AUTOMATICAS
 - Margen < 0% -> perdida activa, pausar publicacion
+  - PERO ANTES verificar envios divididos (ver abajo)
 - Margen < 8% con mas de 3 unidades -> repreciar urgente
 - Ganancia semanal baja mas de 20% vs semana anterior
 - Costo de producto = 0 o vacio -> dato faltante
 - SKU con 0 ventas en 7 dias -> revisar si pausar
+
+## ENVIOS DIVIDIDOS Y FLEX
+- **Flex**: Bruno entrega personalmente, se queda con ingreso de envio.
+  Neto Flex > Neto normal para el mismo producto. Columna: "Transportista" / "Forma de entrega" en XLSX de ML.
+- **Envios divididos**: Cuando un cliente compra 2+ unidades y ML separa envios,
+  asigna costos de envio desproporcionalmente. Un envio parece perdida pero el margen combinado es correcto.
+  Ejemplo: Silver Kan $630.80 + $351.80 = $982.60, promedio $491.30 = neto individual real.
+- **Regla**: Antes de alertar perdida, verificar si hay ventas del mismo producto en la misma fecha.
+  Si la suma/promedio da el neto individual esperado, reportar margen COMBINADO.
+
+## MULTI-PACKS
+Algunos listings venden packs. El catalogo guarda costo unitario, multiplicar:
+- "2 Costales..." -> costo x2
+- "3 Costales..." -> costo x3
+- "24 Sobres..." -> costo x24
+- "6 Latas ProPlan Gastro" -> catalogo ya tiene costo del 6-pack, NO multiplicar
+Verificar notas del producto en el Sheet para saber si costo es unitario o del pack.
 
 ## SKUS PRIORITARIOS
 Producto | Margen objetivo | Proveedor

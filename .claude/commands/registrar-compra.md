@@ -52,5 +52,6 @@ $ARGUMENTS
 ## Reglas
 - Chapetes Premium = 18kg SIEMPRE, nunca 19kg
 - Para Invet: costo = P.Final + IVA (16%) — Bruno no deduce IVA
+- Si Bruno pasa un precio explicitamente, ese toma precedencia sobre cualquier calculo
 - Si el costo cambio vs el registro anterior, marcar en historial
 - Siempre preguntar si hay datos ambiguos en el ticket

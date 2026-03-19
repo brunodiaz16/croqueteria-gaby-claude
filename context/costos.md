@@ -13,7 +13,7 @@
 | Gatina 15kg | $495 | Dartacan | 2026-03-18 |
 | LiveClear Gato 1.5kg (x2=3.18kg) | $768.61 | Invet | 2026-03-18 |
 | Vet Diet Lata Canine Gastro 380g | $69.76 | Invet | 2026-03-19 |
-| 6 Latas ProPlan Gastro 380g | $420.01 | Invet | 2026-03-18 |
+| 6 Latas ProPlan Gastro 380g | $418.55 | Invet | 2026-03-19 |
 | Arena Scoop Away 19kg 2-Pack | $798 | Costco | 2026-03-18 |
 | Silver Kan 25kg | $450 | Dartacan | 2026-03-19 |
 | 2 Bultos Alimento Croqueta K9 Adulto Salmon 3kg | $635.54 |  | 2026-02-17 |
@@ -121,3 +121,4 @@
 | 2026-03-19 | Vet Diet Lata Canine Gastro 380g | 70 | 69.76 | Invet | Cobro tarjeta $418.55 / 6 latas |
 | 2026-03-19 | Chapetes Super Premium Gato 5kg |  | 185 | Chapetes | Ticket Africa 19/03 |
 | 2026-03-19 | Chapetes Gato Azul 15kg |  | 440 | Chapetes | Ticket Africa 19/03 |
+| 2026-03-19 | 6 Latas ProPlan Gastro 380g | 420.01 | 418.55 | Invet | Cobro tarjeta 19/03 |

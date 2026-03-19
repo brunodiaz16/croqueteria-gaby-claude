@@ -53,8 +53,21 @@ Si Bruno baja el XLSX en la manana y luego caen pedidos Flex en la tarde:
 
 ## Reglas
 - Columna de ingresos: "Total (MXN)" — ya es neto post-comision ML
-- Columna "Forma de entrega" se usa para distinguir Flex vs Normal en el reporte
+- Columna "Forma de entrega" / "Transportista" distingue Flex vs Mercado Envios
 - Chapetes Premium = 18kg SIEMPRE
 - Resolver aliases ANTES de calcular margenes
 - Si un producto no tiene costo -> SIN COSTO, incluir alerta
 - Semaforo: VERDE >14%, AMARILLO 8-14%, ROJO <8%, PERDIDA <0%
+
+## Envios divididos y Flex
+- **Flex**: Bruno entrega personalmente, se queda con ingreso de envio. Neto Flex > Neto normal para el mismo producto. No comparar directamente.
+- **Envios divididos**: Cuando un cliente compra 2+ unidades y ML separa envios, asigna costos de envio desproporcionalmente a uno. Ejemplo: Silver Kan $630.80 + $351.80 promedia $491.30 (neto real individual).
+- **Antes de alertar perdida**: Verificar si hay otra venta del mismo producto en la misma fecha. Si la suma/promedio da el neto individual esperado, reportar margen COMBINADO en lugar de falsa perdida.
+
+## Multi-packs
+Algunos listings venden packs. El catalogo guarda costo unitario, multiplicar segun listing:
+- "2 Costales..." -> costo x2
+- "3 Costales..." -> costo x3
+- "24 Sobres..." -> costo x24
+- "6 Latas ProPlan Gastro" -> NO multiplicar, catalogo ya tiene costo del 6-pack ($418.55)
+Verificar en las notas del producto en el Sheet si el costo es unitario o del pack.
