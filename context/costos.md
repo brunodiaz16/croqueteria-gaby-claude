@@ -12,7 +12,7 @@
 | Dog Chow Adulto R/G 25kg | $900 | Dartacan | 2026-03-18 |
 | Gatina 15kg | $495 | Dartacan | 2026-03-18 |
 | LiveClear Gato 1.5kg (x2=3.18kg) | $768.61 | Invet | 2026-03-18 |
-| Vet Diet Lata Canine Gastro 380g | $70 | Invet | 2026-03-18 |
+| Vet Diet Lata Canine Gastro 380g | $69.76 | Invet | 2026-03-19 |
 | 6 Latas ProPlan Gastro 380g | $420.01 | Invet | 2026-03-18 |
 | Arena Scoop Away 19kg 2-Pack | $798 | Costco | 2026-03-18 |
 | Silver Kan 25kg | $450 | Dartacan | 2026-03-19 |
@@ -114,3 +114,4 @@
 | 2026-03-19 | Minino Sobre |  | 8.5 | Dartacan | Ticket #378 |
 | 2026-03-19 | Campeon Adulto 25kg |  | 725 | Dartacan | Ticket #378 |
 | 2026-03-19 | Silver Kan 25kg | SIN COSTO | 450 | Chapetes | Precio de lista (pendiente confirmar) |
+| 2026-03-19 | Vet Diet Lata Canine Gastro 380g | 70 | 69.76 | Invet | Cobro tarjeta $418.55 / 6 latas |

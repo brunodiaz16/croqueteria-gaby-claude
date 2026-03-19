@@ -1,3 +1,7 @@
+## 2026-03-19 - Compra Invet
+- Cobro tarjeta $418.55 = 6 latas Vet Diet Canine Gastro 380g
+- Costo unitario: $69.76 (antes $70.00)
+
 ## 2026-03-19 - Compra Dartacan
 - Ticket #378, $2,454 total, 4 productos (27 piezas)
 - Nuevos costos: Minino Sobre $8.50, Campeón Adulto 25kg $725
