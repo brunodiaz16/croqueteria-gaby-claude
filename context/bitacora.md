@@ -1,5 +1,18 @@
 # BITÁCORA CROQUETERÍA GABY
 
+## 2026-03-18 — Reporte del día
+- 18 órdenes, 19 unidades, $14,528.73 neto, $1,345.91 ganancia, margen 9.9%
+- Compra Dartacan #371: 5 Ganador + 2 Pedigree + 1 Dog Chow + 1 Gatina = $7,795
+- Compra Africa: 2 Chapetes 20kg (Amarillos) + 2 Maskottchen 15kg = $1,650
+- Compra Invet #309372: 6 latas Vet Diet Gastro = $420.01
+- Total compras: $9,865.01
+- Nuevos costos registrados: Dog Chow 25kg $900, Gatina 15kg $495, Maskottchen 15kg $525, Chapetes 20kg $300, LiveClear 3.18kg $768.61, Lata Gastro $70
+- Nuevo proveedor: Africa (Chapetes 20kg amarillos, Maskottchen)
+- Aliases nuevos: Amarillos=Chapetes 20kg, Meskuten cubito pm=Maskottchen Premium 15kg
+- Alertas: Ganador 6.0%, Pedigree 6.8%, Dog Chow 5.7%, Gatina 5.5%, LiveClear 3.6% — todos en rojo
+- Pendiente: costo Silver Kan 25kg (1 venta hoy, sin costo registrado)
+- Pendiente: confirmar proveedor de Arena Scoop Away ($798 por 2-pack)
+
 ## 2026-03-17 — Cierre del día
 - Flujo completo automatizado funcionando: procesa ventas → genera archivos → sube Drive → commit
 - Nuevo costo confirmado: Perrón Adulto 25kg = $535 (Dartacan)

@@ -30,19 +30,22 @@ Actuar como: analista financiero + operador de datos + estratega de negocio.
 | Chapetes   | Chapetes Premium, Cat Chow, Lukat, Gatina      |
 | Dartacan   | Ganador, Pedigree, Minino, Dog Chow, Perron    |
 | Martacan   | Ganador, Minino, Dog Chow, Perron, Silver Kan  |
-| Invet      | Pro Plan, Royal Canin, Nupec                   |
+| Invet      | Pro Plan, Royal Canin, Nupec, LiveClear, Vet Diet latas |
 | Costco     | Kirkland, Pedigree, Scoop Away, Maintenance    |
+| Africa     | Chapetes 20kg (Amarillos), Maskottchen Premium |
 
 ---
 
 ## ALIASES DE PROVEEDORES
 # CRÍTICO: Resolver aliases ANTES de calcular márgenes
 
-| Nombre en ticket | Producto real                         | Peso | Proveedor |
-|------------------|---------------------------------------|------|-----------|
-| Naranjas         | Chapetes Premium Perro Adulto         | 18kg | Chapetes  |
-| 20x0192x5        | Ganador Premium Adulto                | 20kg | Dartacan  |
-| 20x0068x5        | Pedigree Adulto Res/Vegetales         | 20kg | Dartacan  |
+| Nombre en ticket      | Producto real                         | Peso | Proveedor |
+|-----------------------|---------------------------------------|------|-----------|
+| Naranjas              | Chapetes Premium Perro Adulto         | 18kg | Chapetes  |
+| Amarillos             | Chapetes 20kg                         | 20kg | Africa    |
+| Meskuten cubito pm    | Maskottchen Premium                   | 15kg | Africa    |
+| 20x0192x5             | Ganador Premium Adulto                | 20kg | Dartacan  |
+| 20x0068x5             | Pedigree Adulto Res/Vegetales         | 20kg | Dartacan  |
 
 REGLA FIJA: Chapetes Premium = 18kg. NUNCA 19kg.
 
@@ -51,12 +54,20 @@ REGLA FIJA: Chapetes Premium = 18kg. NUNCA 19kg.
 ## CATÁLOGO DE COSTOS VIGENTES
 # Actualizar con cada ticket de proveedor recibido
 
-| Producto                              | Costo | Proveedor | Actualizado  |
-|---------------------------------------|-------|-----------|--------------|
-| Chapetes Premium 18kg Perro Adulto    | $410  | Chapetes  | 2026-03-17   |
-| Ganador Premium Adulto 20kg           | $990  | Dartacan  | 2026-03-17   |
-| Pedigree Adulto Res/Vegetales 20kg    | $725  | Dartacan  | 2026-03-17   |
-| Perron Adulto 25kg                    | $535  | Dartacan  | 2026-03-17   |
+| Producto                              | Costo    | Proveedor | Actualizado  |
+|---------------------------------------|----------|-----------|--------------|
+| Chapetes 20kg (Amarillos)             | $300     | Africa    | 2026-03-18   |
+| Chapetes Premium 18kg Perro Adulto    | $410     | Chapetes  | 2026-03-17   |
+| Maskottchen Premium 15kg              | $525     | Africa    | 2026-03-18   |
+| Ganador Premium Adulto 20kg           | $990     | Dartacan  | 2026-03-17   |
+| Pedigree Adulto Res/Vegetales 20kg    | $725     | Dartacan  | 2026-03-17   |
+| Perron Adulto 25kg                    | $535     | Dartacan  | 2026-03-17   |
+| Dog Chow Adulto R/G 25kg             | $900     | Dartacan  | 2026-03-18   |
+| Gatina 15kg                           | $495     | Dartacan  | 2026-03-18   |
+| LiveClear Gato 1.5kg (x2=3.18kg)     | $768.61  | Invet     | 2026-03-18   |
+| Vet Diet Lata Canine Gastro 380g      | $70.00   | Invet     | 2026-03-18   |
+| Arena Scoop Away 19kg 2-Pack          | $798     | Por confirmar | 2026-03-18 |
+| Silver Kan 25kg                       | SIN COSTO | ???      |              |
 
 Si un producto no está aquí → margen = "SIN COSTO" → incluir alerta en reporte.
 
@@ -168,10 +179,24 @@ Incluir siempre en el reporte cuando se detecten:
 - Producto sin costo registrado → dato faltante, solicitar a Bruno
 - Costo aumentó vs registro anterior → marcar cambio en histórico
 
-## ALERTA ACTIVA HOY
-- Pedigree 20kg Res/Vegetales: margen 6.8% (🔴 por debajo de 8%)
+## ALERTAS ACTIVAS
+- Ganador Premium 20kg: margen 6.0% (🔴) — 5 ventas hoy
+  Neto ML $1,053.60 / Costo $990. Precio lista mínimo recomendado: ~$1,350
+  Publicación: MLM4663694700
+- Pedigree 20kg Res/Vegetales: margen 6.8% (🔴)
   Neto ML $778 / Costo $725. Precio lista mínimo recomendado: ~$970
   Publicación: MLM4619784042
+- Dog Chow 25kg: margen 5.7% (🔴)
+  Neto ML $955 / Costo $900. Precio lista mínimo recomendado: ~$1,230
+  Publicación: MLM4663526262
+- Gatina 15kg: margen 5.5% (🔴)
+  Neto ML $524 / Costo $495. Precio lista mínimo recomendado: ~$680
+  Publicación: MLM4619796770
+- LiveClear Gato 3.18kg: margen 3.6% (🔴)
+  Neto ML $798 / Costo $768.61. Precio lista mínimo recomendado: ~$1,090
+  Publicación: MLM2743362281
+- Silver Kan 25kg: SIN COSTO registrado
+  Publicación: MLM2668236083
 
 ---
 
