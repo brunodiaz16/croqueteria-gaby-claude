@@ -1,10 +1,12 @@
 # BITÁCORA CROQUETERÍA GABY
 
-## 2026-03-18 — Sistema automatizado
-- Catalogo Maestro creado en Google Sheet (13 productos, 12 con pub ML, 5 aliases)
+## 2026-03-18 — Sistema automatizado + catalogo enriquecido
+- Catalogo Maestro en Google Sheet: 83 productos (13 base + 70 de historicos)
+- Fuente historica: 20 Google Sheets en Drive (ene 22 - feb 17, 2026), 382 registros de ventas
+- 131 productos unicos encontrados, 70 nuevos agregados al catalogo con costos
 - Pub IDs agregados: MLM2668276953 (Perron 25kg), MLM2668264237 (Chapetes 18kg)
+- Silver Kan 25kg: costo historico encontrado = $450 (Chapetes)
 - Scope Drive ampliado a readonly para acceder reportes historicos
-- Reportes en Drive son PDFs (20 archivos, ene-mar 2026) — no XLSX, no parseables automaticamente
 - Skills creadas: /procesar-ventas, /registrar-compra, /reporte-semanal, /subir-drive
 - Script procesar_ventas.py generico reemplaza scripts ad-hoc por fecha
 - Script catalogo.py lee/escribe Google Sheet con fallback a markdown
