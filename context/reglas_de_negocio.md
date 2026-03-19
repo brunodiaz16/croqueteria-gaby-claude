@@ -30,11 +30,11 @@ Producto | Margen objetivo | Proveedor
 Arena Scoop Away 19kg 2-Pack | 14% | Costco
 Chapetes Premium Perro 18kg | 16% | Chapetes
 Kirkland Gato Pollo/Arroz 11.3kg 2-Pack | 15% | Costco
-Ganador Premium 20kg Med/Grande | 12% | Martacan
+Ganador Premium 20kg Med/Grande | 12% | Dartacan
 Kirkland Salmon/Camote 15.87kg | 14% | Costco
 Chapetes Pet Adultos 20kg | 10% | Chapetes
 Pro Plan Liveclear 1.5kg | 12% | Invet
-Perron Razas Pequenas 20kg | 12% | Martacan
+Perron Razas Pequenas 20kg | 12% | Dartacan
 
 ## DATOS HISTORICOS (referencia)
 - Ventas totales historicas: $575,771 MXN

@@ -16,7 +16,7 @@ $ARGUMENTS
 ## Contexto
 - Reportes diarios: data/xlsx/Reporte_CroqueteriaGaby_*.xlsx
 - Catalogo de costos: Google Sheet Catalogo_Maestro
-- Proveedores: Chapetes, Dartacan, Martacan, Invet, Costco
+- Proveedores: Chapetes, Dartacan, Invet, Costco
 
 ## Instrucciones
 

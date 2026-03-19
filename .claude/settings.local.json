@@ -2,7 +2,18 @@
   "permissions": {
     "allow": [
       "Bash(rm -f context/iteraciones/iteracion_01_aprendizajes.md context/iteraciones/iteracion_02_aprendizajes.md context/catalogo_maestro_costos.md context/aliases_proveedores.md context/drive_folder_ids.md scripts/CrearCarpetasDrive.gs scripts/SubirArchivosDeHoy.gs)",
-      "Bash(rmdir context/iteraciones)"
+      "Bash(rmdir context/iteraciones)",
+      "Bash(python:*)",
+      "Bash(ls:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(grep -r \"import\" /c/Users/bruno/Desktop/Projects/croqueteria-gaby-claude/scripts/*.py)",
+      "Bash(find /c/Users/bruno/Desktop/Projects/croqueteria-gaby-claude/data -type f -name *.xlsx)",
+      "Bash(xargs grep:*)",
+      "Bash(pip list:*)",
+      "Bash(pip install:*)",
+      "Bash(cd:*)",
+      "Bash(find C:UsersbrunoDesktopProjectscroqueteria-gaby-claude.claudecommands -type f -name *.md)"
     ]
   }
 }

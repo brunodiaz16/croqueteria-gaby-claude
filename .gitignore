@@ -10,6 +10,9 @@ data/xlsx/*.xlsx
 data/*.csv
 *.xlsx
 
+# Python
+__pycache__/
+
 # OS
 .DS_Store
 Thumbs.db

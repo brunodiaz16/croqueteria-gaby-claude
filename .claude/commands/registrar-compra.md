@@ -10,11 +10,11 @@ description: Registra compra de proveedor desde foto de ticket o nota. Usar cuan
 
 ## Argumentos
 $ARGUMENTS
-- Proveedor (obligatorio): Chapetes, Dartacan, Martacan, Invet, Costco
+- Proveedor (obligatorio): Chapetes, Dartacan, Invet, Costco
 - Puede incluir ruta a imagen del ticket
 
 ## Contexto
-- Proveedores: Chapetes, Dartacan, Martacan, Invet, Costco
+- Proveedores: Chapetes, Dartacan, Invet, Costco
 - Costos vigentes: leer CLAUDE.md seccion CATALOGO DE COSTOS VIGENTES
 - Aliases conocidos: leer CLAUDE.md seccion ALIASES DE PROVEEDORES
 - IMPORTANTE: "Africa" en un ticket = es Chapetes (Africa es la marca de la libreta)

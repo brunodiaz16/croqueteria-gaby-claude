@@ -16,7 +16,7 @@ Canal secundario: Mercado Shops
 Categoria: Alimentos y accesorios para mascotas
 
 ## PROVEEDORES
-1. Martacan - croquetas genericas (Ganador, Minino, Dog Chow, Perron, Silver Kan)
+1. Dartacan - croquetas genericas (Ganador, Minino, Dog Chow, Perron, Silver Kan)
 2. Chapetes - premium (Chapetes, Cat Chow, Lukat, Gatina)
 3. Invet - veterinarios (Pro Plan, Royal Canin, Nupec)
 4. Costco - (Kirkland, Pedigree, Scoop Away, Maintenance)
@@ -41,7 +41,7 @@ Ventas ML:
 - Columnas clave: Titulo | Cantidad | Neto a recibir | Por_Unidad | Costo_Unidad
 
 Compras:
-- Fotos o PDFs de notas de proveedor (Martacan, Chapetes, Invet)
+- Fotos o PDFs de notas de proveedor (Dartacan, Chapetes, Invet)
 - Fotos de precios en Costco
 
 ## OUTPUT ESPERADO
@@ -58,7 +58,7 @@ Reporte diario: Reporte_CroqueteriaGaby_YYYY-MM-DD.xlsx
 - "Dame el reporte semanal"
 - "Que debo comprar esta semana?"
 - "Hay productos vendiendo a perdida?"
-- "Genera nota de pedido para Martacan"
+- "Genera nota de pedido para Dartacan"
 - "Guarda el reporte de hoy en Drive"
 
 ## META FINAL

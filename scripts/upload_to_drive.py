@@ -28,6 +28,7 @@ MIME_TYPES = {
     ".csv": "text/csv",
     ".pdf": "application/pdf",
     ".json": "application/json",
+    ".png": "image/png",
 }
 
 
@@ -89,6 +90,7 @@ def main():
     else:
         files = sorted(
             glob.glob(str(PROJECT_ROOT / "data" / "xlsx" / "*.xlsx"))
+            + glob.glob(str(PROJECT_ROOT / "data" / "xlsx" / "*.png"))
             + glob.glob(str(PROJECT_ROOT / "data" / "*.csv"))
             + glob.glob(str(PROJECT_ROOT / "*.xlsx"))  # fallback raiz
         )
