@@ -1,6 +1,12 @@
 ---
-description: Genera reporte semanal consolidando los ultimos 7 dias
+description: Genera reporte semanal consolidando ventas de los ultimos 7 dias. Usar cuando Bruno dice "reporte semanal", "como vamos esta semana", o "consolida la semana". Rankings, margenes, tendencias y recomendaciones de compra.
 ---
+
+## Ejemplo de uso
+```
+/reporte-semanal
+/reporte-semanal 12
+```
 
 ## Argumentos
 $ARGUMENTS

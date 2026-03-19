@@ -1,6 +1,12 @@
 ---
-description: Registra compra de proveedor desde foto de ticket
+description: Registra compra de proveedor desde foto de ticket o nota. Usar cuando Bruno dice "registra compra", "compra de Dartacan", o adjunta foto de ticket de proveedor. Extrae datos, actualiza costos en Sheet y markdown, genera XLSX de compra.
 ---
+
+## Ejemplo de uso
+```
+/registrar-compra Dartacan
+/registrar-compra Chapetes C:\ruta\foto_ticket.jpg
+```
 
 ## Argumentos
 $ARGUMENTS

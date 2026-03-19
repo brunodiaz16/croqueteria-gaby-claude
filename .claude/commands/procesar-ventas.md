@@ -1,6 +1,12 @@
 ---
-description: Procesa ventas del dia desde XLSX de Mercado Libre
+description: Procesa ventas diarias de Mercado Libre. Usar cuando Bruno dice "procesa ventas", "reporte del dia", o da una ruta a un XLSX de ML. Cruza costos, calcula margenes, genera reporte XLSX + CSV para la app, actualiza bitacora, sube a Drive y commitea.
 ---
+
+## Ejemplo de uso
+```
+/procesar-ventas C:\Users\bruno\Desktop\Ventas de ML por dia\18 de Mar de 2026\archivo.xlsx
+/procesar-ventas C:\ruta\ventas.xlsx 2026-03-18
+```
 
 ## Argumentos
 $ARGUMENTS

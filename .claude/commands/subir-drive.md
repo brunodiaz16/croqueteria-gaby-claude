@@ -1,6 +1,12 @@
 ---
-description: Sube archivos generados a Google Drive
+description: Sube archivos XLSX y CSV generados a Google Drive. Usar cuando Bruno dice "sube a Drive", "manda los archivos", o despues de generar reportes. Ruteo automatico por prefijo del nombre.
 ---
+
+## Ejemplo de uso
+```
+/subir-drive
+/subir-drive Reporte_CroqueteriaGaby_2026-03-18.xlsx
+```
 
 ## Argumentos
 $ARGUMENTS
