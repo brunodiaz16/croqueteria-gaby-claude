@@ -36,13 +36,13 @@ $ARGUMENTS
    - Actualizar CLAUDE.md seccion CATALOGO DE COSTOS VIGENTES
    - Si hay alias nuevo, agregarlo a ambas tablas de aliases
 
-5. **Generar XLSX de compra**: `Compra_[Proveedor]_YYYY-MM-DD.xlsx` con hojas:
+5. **Generar XLSX de compra**: `data/xlsx/Compra_[Proveedor]_YYYY-MM-DD.xlsx` con hojas:
    - Info: proveedor, nota, fecha, total
    - Detalle: producto, cantidad, precio_unit, total
 
 6. **Recalcular alertas**: Si un costo cambio, recalcular margen y actualizar ALERTAS ACTIVAS en CLAUDE.md
 
-7. **Subir a Drive**: `python scripts/upload_to_drive.py Compra_[Proveedor]_YYYY-MM-DD.xlsx`
+7. **Subir a Drive y limpiar**: `python scripts/upload_to_drive.py --clean`
 
 8. **Commit**: `git add . && git commit -m "compra [proveedor] YYYY-MM-DD - $X total, N productos"`
 

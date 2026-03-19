@@ -26,8 +26,8 @@ $ARGUMENTS
    python scripts/procesar_ventas.py <ruta-xlsx> [YYYY-MM-DD]
    ```
    Este script lee costos del Sheet (o fallback markdown), cruza con ventas, y genera:
-   - `Reporte_CroqueteriaGaby_YYYY-MM-DD.xlsx`
-   - `Lista_Precios_Vigentes_YYYY-MM-DD.xlsx`
+   - `data/xlsx/Reporte_CroqueteriaGaby_YYYY-MM-DD.xlsx`
+   - `data/xlsx/Lista_Precios_Vigentes_YYYY-MM-DD.xlsx`
    - `data/importar_inventario_YYYY-MM-DD.csv`
 
 2. **Si hay tickets de compra adjuntos**: procesarlos ANTES de correr el script para que los costos esten actualizados. Usar `/registrar-compra` para cada ticket.
@@ -42,9 +42,11 @@ $ARGUMENTS
    - Pendientes: [productos sin costo]
    ```
 
-5. **Subir a Drive**: `python scripts/upload_to_drive.py`
+5. **Subir a Drive y limpiar**: `python scripts/upload_to_drive.py --clean`
+   Esto sube todos los archivos de data/xlsx/ y data/*.csv a Drive y los borra del repo despues.
 
 6. **Commit**: `git add . && git commit -m "reporte YYYY-MM-DD - N ordenes $X neto, margen X%"`
+   Solo quedan los archivos de contexto (bitacora, costos), no los XLSX/CSV generados.
 
 7. **Mostrar resumen final** al usuario con ordenes, neto, ganancia, margen, y alertas.
 

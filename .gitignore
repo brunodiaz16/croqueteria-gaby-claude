@@ -5,6 +5,11 @@ token.json
 # Dependencies
 node_modules/
 
+# Archivos generados (temporales, se suben a Drive)
+data/xlsx/*.xlsx
+data/*.csv
+*.xlsx
+
 # OS
 .DS_Store
 Thumbs.db

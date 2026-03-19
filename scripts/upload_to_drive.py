@@ -10,6 +10,7 @@ Uso:
 import os
 import sys
 import glob
+import shutil
 from pathlib import Path
 
 from google.auth.transport.requests import Request
@@ -44,6 +45,7 @@ FOLDERS = {
     "GENERADOS_CLAUDE_MARZO": "1m4V3HZutVZ5nzRxwwWwnrREgIIGWEgvT",
     "HISTORICO_PRECIOS": "1WV5mFQEDLsfym3-VQiiTWTMniX7a22lj",
     "LISTAS_PRECIOS_VIGENTES": "1KvJWSDh2xPIEBkfGI1LcB3K-ixsnZzGl",
+    "CSVS_INVENTARIO": "1DcZDC9jnt_wvgfjotlmmstskG-FShzCI",
 }
 
 ROUTING = [
@@ -59,7 +61,7 @@ ROUTING = [
     ("Reporte_Semanal_", FOLDERS["REPORTES_SEMANALES"]),
     ("Inventario_", FOLDERS["CONTROL_INVENTARIO"]),
     ("Analisis_", FOLDERS["ANALISIS_ESTRATEGIA"]),
-    ("importar_inventario_", FOLDERS["CONTROL_INVENTARIO"]),
+    ("importar_inventario_", FOLDERS["CSVS_INVENTARIO"]),
 ]
 
 MIME_TYPES = {
@@ -120,25 +122,30 @@ def upload_file(service, filepath: str) -> dict:
 
 
 def main():
+    clean_after = "--clean" in sys.argv
+    args = [a for a in sys.argv[1:] if a != "--clean"]
+
     # Determinar archivos a subir
-    if len(sys.argv) > 1:
-        files = sys.argv[1:]
+    if args:
+        files = args
     else:
         files = sorted(
-            glob.glob(str(PROJECT_ROOT / "*.xlsx"))
-            + glob.glob(str(PROJECT_ROOT / "*.csv"))
+            glob.glob(str(PROJECT_ROOT / "data" / "xlsx" / "*.xlsx"))
             + glob.glob(str(PROJECT_ROOT / "data" / "*.csv"))
+            + glob.glob(str(PROJECT_ROOT / "*.xlsx"))  # fallback raiz
         )
 
     if not files:
         print("No se encontraron archivos para subir.")
+        print("  Busque en: data/xlsx/*.xlsx, data/*.csv, *.xlsx")
         sys.exit(0)
 
-    print(f"Autenticando con Google Drive...")
+    print("Autenticando con Google Drive...")
     creds = get_credentials()
     service = build("drive", "v3", credentials=creds)
 
     print(f"\nSubiendo {len(files)} archivo(s):\n")
+    subidos = []
     for filepath in files:
         filename = os.path.basename(filepath)
         folder_id = resolve_folder(filename)
@@ -146,10 +153,18 @@ def main():
         try:
             result = upload_file(service, filepath)
             print(f"    OK: {result['webViewLink']}")
+            subidos.append(filepath)
         except Exception as e:
             print(f"    ERROR: {e}")
 
-    print("\nListo.")
+    # Limpiar archivos subidos exitosamente
+    if clean_after and subidos:
+        print(f"\nLimpiando {len(subidos)} archivo(s) del repo...")
+        for fp in subidos:
+            os.remove(fp)
+            print(f"  Borrado: {os.path.basename(fp)}")
+
+    print(f"\n{len(subidos)}/{len(files)} subidos correctamente.")
 
 
 if __name__ == "__main__":

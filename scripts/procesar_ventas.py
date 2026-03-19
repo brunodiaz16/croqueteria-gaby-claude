@@ -147,7 +147,9 @@ def main():
     alertas = ventas[ventas["Semaforo"].isin(["ROJO", "PERDIDA", "SIN COSTO"])]
 
     # 4. Generar Reporte XLSX
-    reporte_path = PROJECT_ROOT / f"Reporte_CroqueteriaGaby_{fecha}.xlsx"
+    xlsx_dir = PROJECT_ROOT / "data" / "xlsx"
+    xlsx_dir.mkdir(parents=True, exist_ok=True)
+    reporte_path = xlsx_dir / f"Reporte_CroqueteriaGaby_{fecha}.xlsx"
     with pd.ExcelWriter(str(reporte_path), engine="openpyxl") as w:
         ventas.to_excel(w, sheet_name="Ventas", index=False)
         resumen.to_excel(w, sheet_name="Resumen", index=False)
@@ -167,7 +169,7 @@ def main():
                 "Proveedor": v["Proveedor"],
                 "Actualizado": fecha,
             })
-    precios_path = PROJECT_ROOT / f"Lista_Precios_Vigentes_{fecha}.xlsx"
+    precios_path = xlsx_dir / f"Lista_Precios_Vigentes_{fecha}.xlsx"
     pd.DataFrame(precios_rows).to_excel(str(precios_path), index=False)
     print(f"Generado: {precios_path.name}")
 

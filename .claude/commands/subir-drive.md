@@ -17,14 +17,14 @@ $ARGUMENTS
 
 1. **Listar archivos pendientes**:
    ```
-   ls *.xlsx data/*.csv 2>/dev/null
+   ls data/xlsx/*.xlsx data/*.csv 2>/dev/null
    ```
 
-2. **Subir**: Ejecutar el script con los archivos indicados:
+2. **Subir y limpiar**: Ejecutar el script con --clean para borrar despues de subir:
    ```
-   python scripts/upload_to_drive.py $ARGUMENTS
+   python scripts/upload_to_drive.py --clean $ARGUMENTS
    ```
-   Si no hay argumentos, el script detecta automaticamente .xlsx y .csv.
+   Si no hay argumentos, el script detecta automaticamente archivos en data/xlsx/ y data/*.csv.
 
 3. **Reportar**: Mostrar los links de Drive generados para cada archivo.
 
@@ -34,5 +34,9 @@ El script asigna carpeta en Drive segun el prefijo del nombre:
 - Compra_Dartacan_ -> 03 - Compras / Dartacan
 - Compra_Chapetes_ -> 03 - Compras / Chapetes
 - Lista_Precios_Vigentes_ -> Listas de Precios Vigentes
-- importar_inventario_ -> 06 - Control de Inventario
+- importar_inventario_ -> Carpeta CSVs inventario en Drive
 - Otros -> carpeta raiz
+
+## Despues de subir
+Los archivos subidos exitosamente se borran del repo para mantenerlo limpio.
+Los XLSX se generan en data/xlsx/ (temporal) y los CSV en data/.
