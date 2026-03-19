@@ -30,6 +30,10 @@ def cruzar_costos(df, catalogo):
     """Cruza cada venta con el catalogo por publicacion ML."""
     titulo_col = next(c for c in df.columns if "tulo" in c.lower())
     pub_col = next(c for c in df.columns if "publicaci" in c.lower() and "#" in c)
+    envio_col = next(
+        (c for c in df.columns if "forma de entrega" == c.lower().strip()),
+        next((c for c in df.columns if "forma de entrega" in c.lower()), None),
+    )
 
     rows = []
     for _, r in df.iterrows():
@@ -63,6 +67,14 @@ def cruzar_costos(df, catalogo):
             margen = None
             semaforo = "SIN COSTO"
 
+        tipo_envio = ""
+        if envio_col:
+            raw = str(r.get(envio_col, "")).strip()
+            if "flex" in raw.lower():
+                tipo_envio = "Flex"
+            elif raw and raw != "nan":
+                tipo_envio = "Normal"
+
         rows.append({
             "Producto": producto,
             "Publicacion": pub,
@@ -73,6 +85,7 @@ def cruzar_costos(df, catalogo):
             "Margen_%": margen,
             "Semaforo": semaforo,
             "Proveedor": proveedor,
+            "Envio": tipo_envio,
         })
 
     return pd.DataFrame(rows)

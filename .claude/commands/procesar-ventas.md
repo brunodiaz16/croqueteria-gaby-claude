@@ -44,8 +44,16 @@ $ARGUMENTS
 
 7. **Mostrar resumen final** al usuario con ordenes, neto, ganancia, margen, y alertas.
 
+## Doble corrida diaria (Flex)
+Si Bruno baja el XLSX en la manana y luego caen pedidos Flex en la tarde:
+- Correr de nuevo con el XLSX actualizado
+- El script preguntara si quiere sobreescribir (idempotencia)
+- Responder "s" para reemplazar el reporte con datos completos
+- La bitacora se actualiza automaticamente con los numeros finales
+
 ## Reglas
 - Columna de ingresos: "Total (MXN)" — ya es neto post-comision ML
+- Columna "Forma de entrega" se usa para distinguir Flex vs Normal en el reporte
 - Chapetes Premium = 18kg SIEMPRE
 - Resolver aliases ANTES de calcular margenes
 - Si un producto no tiene costo -> SIN COSTO, incluir alerta

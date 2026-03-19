@@ -31,20 +31,23 @@ $ARGUMENTS
 3. **Resolver aliases**: Usar tabla de aliases (ej: "20x0192x5" = Ganador Premium 20kg, "Naranjas" = Chapetes 18kg, "Amarillos" = Chapetes 20kg)
 
 4. **Actualizar costos**:
-   - Si CATALOGO_SHEET_ID esta configurado en scripts/catalogo.py, actualizar el Google Sheet
-   - Actualizar context/costos.md (agregar nuevos costos + historial de cambios)
-   - Actualizar CLAUDE.md seccion CATALOGO DE COSTOS VIGENTES
-   - Si hay alias nuevo, agregarlo a ambas tablas de aliases
+   - Actualizar el Google Sheet Catalogo_Maestro via scripts/catalogo.py
+   - Exportar backup: `python -c "from scripts.catalogo import exportar_costos_md; exportar_costos_md()"`
+   - Si hay alias nuevo, agregarlo al Sheet (hoja Aliases) y a CLAUDE.md
 
 5. **Generar XLSX de compra**: `data/xlsx/Compra_[Proveedor]_YYYY-MM-DD.xlsx` con hojas:
    - Info: proveedor, nota, fecha, total
    - Detalle: producto, cantidad, precio_unit, total
+   - Por_Marca: mismos datos pero agrupados y con subtotal por marca
 
-6. **Recalcular alertas**: Si un costo cambio, recalcular margen y actualizar ALERTAS ACTIVAS en CLAUDE.md
+6. **Guardar foto del ticket**: Si se proporciono foto, copiarla a:
+   `C:\Users\bruno\CroqueteriaGaby\Tickets\YYYY-MM\[Proveedor]_YYYY-MM-DD.jpg`
 
-7. **Subir a Drive y limpiar**: `python scripts/upload_to_drive.py --clean`
+7. **Recalcular alertas**: Si un costo cambio, recalcular margen y actualizar ALERTAS ACTIVAS en CLAUDE.md
 
-8. **Commit**: `git add . && git commit -m "compra [proveedor] YYYY-MM-DD - $X total, N productos"`
+8. **Subir a Drive y limpiar**: `python scripts/upload_to_drive.py --clean`
+
+9. **Commit**: `git add . && git commit -m "compra [proveedor] YYYY-MM-DD - $X total, N productos"`
 
 ## Reglas
 - Chapetes Premium = 18kg SIEMPRE, nunca 19kg
