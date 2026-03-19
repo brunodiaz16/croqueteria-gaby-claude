@@ -203,7 +203,15 @@ Incluir siempre en el reporte cuando se detecten:
 
 | Sheet               | ID                                        |
 |----------------------|------------------------------------------|
-| Catalogo_Maestro     | PENDIENTE — correr scripts/crear_catalogo_maestro.py |
+| Catalogo_Maestro     | 1ypPZlGeRp7QgL6Jpj7Oo6p8RfrqqW1MCcxWF8dDwsCc       |
+
+## CARPETAS DRIVE ADICIONALES
+
+| Carpeta                          | ID / URL                                              |
+|----------------------------------|-------------------------------------------------------|
+| Reportes Históricos (referencia) | 1p6yZuGtwD_1nIRHyHJjnK8ah59U89h8J                    |
+
+Usar para extraer costos faltantes y como referencia de precios anteriores.
 
 ---
 

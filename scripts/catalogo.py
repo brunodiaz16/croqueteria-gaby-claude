@@ -24,7 +24,7 @@ SCOPES = [
 ]
 
 # Se actualiza después de correr crear_catalogo_maestro.py
-CATALOGO_SHEET_ID = ""  # Placeholder — se llena en CLAUDE.md
+CATALOGO_SHEET_ID = "1ypPZlGeRp7QgL6Jpj7Oo6p8RfrqqW1MCcxWF8dDwsCc"
 
 
 def _get_credentials():
