@@ -7,25 +7,16 @@ Uso:
 """
 
 import sys
-from pathlib import Path
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-CREDENTIALS_FILE = PROJECT_ROOT / "credentials.json"
-TOKEN_FILE = PROJECT_ROOT / "token.json"
-
-SCOPES = [
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive.readonly",
-    "https://www.googleapis.com/auth/spreadsheets",
-]
-
-# Se actualiza después de correr crear_catalogo_maestro.py
-CATALOGO_SHEET_ID = "1ypPZlGeRp7QgL6Jpj7Oo6p8RfrqqW1MCcxWF8dDwsCc"
+from scripts.config import (
+    CATALOGO_SHEET_ID, SCOPES,
+    CREDENTIALS_FILE, TOKEN_FILE, COSTOS_PATH,
+)
 
 
 def _get_credentials():
@@ -197,7 +188,7 @@ def actualizar_costo(producto, nuevo_costo, proveedor, fuente, sheet_id=None):
 
 def _fallback_costos():
     """Lee costos desde context/costos.md como fallback."""
-    costos_file = PROJECT_ROOT / "context" / "costos.md"
+    costos_file = COSTOS_PATH
     if not costos_file.exists():
         return {}
 
@@ -231,6 +222,86 @@ def _fallback_costos():
     return catalogo
 
 
+def exportar_costos_md(sheet_id=None):
+    """Exporta el catalogo del Sheet a context/costos.md como backup."""
+    sid = sheet_id or CATALOGO_SHEET_ID
+    if not sid:
+        print("ERROR: CATALOGO_SHEET_ID no configurado")
+        return False
+
+    try:
+        service = _get_sheets_service()
+
+        # Leer productos
+        result = (
+            service.spreadsheets()
+            .values()
+            .get(spreadsheetId=sid, range="Productos!A:K")
+            .execute()
+        )
+        rows = result.get("values", [])
+
+        # Leer aliases
+        alias_result = (
+            service.spreadsheets()
+            .values()
+            .get(spreadsheetId=sid, range="Aliases!A:C")
+            .execute()
+        )
+        alias_rows = alias_result.get("values", [])
+
+        # Leer historial
+        hist_result = (
+            service.spreadsheets()
+            .values()
+            .get(spreadsheetId=sid, range="Historial_Costos!A:F")
+            .execute()
+        )
+        hist_rows = hist_result.get("values", [])
+
+        # Generar markdown
+        lines = ["# COSTOS VIGENTES (auto-generado desde Google Sheet)"]
+        lines.append("# NO EDITAR MANUALMENTE — usar scripts/catalogo.py")
+        lines.append("")
+        lines.append("| Producto | Costo | Proveedor | Actualizado |")
+        lines.append("|---|---|---|---|")
+        for row in rows[1:]:
+            nombre = row[0] if len(row) > 0 else ""
+            costo = row[4] if len(row) > 4 else ""
+            prov = row[3] if len(row) > 3 else ""
+            fecha = row[6] if len(row) > 6 else ""
+            costo_str = f"${costo}" if costo else "SIN COSTO"
+            lines.append(f"| {nombre} | {costo_str} | {prov} | {fecha} |")
+
+        lines.append("")
+        lines.append("# ALIASES")
+        lines.append("| Ticket dice | Producto real | Proveedor |")
+        lines.append("|---|---|---|")
+        for row in alias_rows[1:]:
+            alias = row[0] if len(row) > 0 else ""
+            prod = row[1] if len(row) > 1 else ""
+            prov = row[2] if len(row) > 2 else ""
+            lines.append(f"| {alias} | {prod} | {prov} |")
+
+        lines.append("")
+        lines.append("# HISTORIAL DE CAMBIOS")
+        lines.append("| Fecha | Producto | Antes | Ahora | Proveedor | Fuente |")
+        lines.append("|---|---|---|---|---|---|")
+        for row in hist_rows[1:]:
+            while len(row) < 6:
+                row.append("")
+            lines.append(f"| {row[0]} | {row[1]} | {row[2]} | {row[3]} | {row[4]} | {row[5]} |")
+
+        lines.append("")
+
+        COSTOS_PATH.write_text("\n".join(lines), encoding="utf-8")
+        print(f"Exportado: {COSTOS_PATH} ({len(rows)-1} productos)")
+        return True
+    except Exception as e:
+        print(f"ERROR exportando costos: {e}")
+        return False
+
+
 if __name__ == "__main__":
     print("Leyendo catalogo...")
     cat = leer_catalogo()
@@ -239,3 +310,6 @@ if __name__ == "__main__":
             print(f"  {k}: {v.get('producto')} -> ${v.get('costo_actual')}")
     else:
         print("  Catalogo vacio o no disponible")
+
+    print("\nExportando costos.md...")
+    exportar_costos_md()

@@ -50,25 +50,12 @@ REGLA FIJA: Chapetes Premium = 18kg. NUNCA 19kg.
 
 ---
 
-## CATÁLOGO DE COSTOS VIGENTES
-# Actualizar con cada ticket de proveedor recibido
+## CATÁLOGO DE COSTOS
+# Fuente de verdad: Google Sheet Catalogo_Maestro (ver GOOGLE SHEETS IDs)
+# Backup local auto-generado: context/costos.md (NO editar manual, correr: py scripts/catalogo.py)
+# 83 productos registrados con costos históricos
 
-| Producto                              | Costo    | Proveedor | Actualizado  |
-|---------------------------------------|----------|-----------|--------------|
-| Chapetes 20kg (Amarillos)             | $300     | Chapetes  | 2026-03-18   |
-| Chapetes Premium 18kg Perro Adulto    | $410     | Chapetes  | 2026-03-17   |
-| Maskottchen Premium 15kg              | $525     | Chapetes  | 2026-03-18   |
-| Ganador Premium Adulto 20kg           | $990     | Dartacan  | 2026-03-17   |
-| Pedigree Adulto Res/Vegetales 20kg    | $725     | Dartacan  | 2026-03-17   |
-| Perron Adulto 25kg                    | $535     | Dartacan  | 2026-03-17   |
-| Dog Chow Adulto R/G 25kg             | $900     | Dartacan  | 2026-03-18   |
-| Gatina 15kg                           | $495     | Dartacan  | 2026-03-18   |
-| LiveClear Gato 1.5kg (x2=3.18kg)     | $768.61  | Invet     | 2026-03-18   |
-| Vet Diet Lata Canine Gastro 380g      | $70.00   | Invet     | 2026-03-18   |
-| Arena Scoop Away 19kg 2-Pack          | $798     | Por confirmar | 2026-03-18 |
-| Silver Kan 25kg                       | SIN COSTO | ???      |              |
-
-Si un producto no está aquí → margen = "SIN COSTO" → incluir alerta en reporte.
+Si un producto no está en el Sheet → margen = "SIN COSTO" → incluir alerta en reporte.
 
 ---
 

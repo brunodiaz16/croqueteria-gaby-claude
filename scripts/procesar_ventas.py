@@ -15,7 +15,8 @@ import pandas as pd
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from scripts.catalogo import leer_catalogo, CATALOGO_SHEET_ID
+from scripts.catalogo import leer_catalogo
+from scripts.config import XLSX_DIR, DATA_DIR, BITACORA_PATH
 
 
 def cargar_ventas(xlsx_path):
@@ -103,7 +104,6 @@ def generar_resumen(ventas, fecha):
 
 def generar_csv_inventario(ventas, fecha):
     """Genera CSV para importar en la app de inventario."""
-    # Excluir productos sin costo
     con_costo = ventas[ventas["Costo"].notna() & (ventas["Costo"] > 0)].copy()
     csv_df = pd.DataFrame({
         "Titulo de la publicacion": con_costo["Producto"],
@@ -112,9 +112,54 @@ def generar_csv_inventario(ventas, fecha):
         "Por_Unidad": con_costo["Neto_ML"],
         "Costo_Unidad": con_costo["Costo"],
     })
-    csv_path = PROJECT_ROOT / "data" / f"importar_inventario_{fecha}.csv"
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    csv_path = DATA_DIR / f"importar_inventario_{fecha}.csv"
     csv_df.to_csv(csv_path, index=False)
     return str(csv_path)
+
+
+def auto_bitacora(fecha, ventas):
+    """Auto-append resumen del dia a context/bitacora.md."""
+    con_costo = ventas[ventas["Costo"].notna() & (ventas["Costo"] > 0)]
+    total_neto = ventas["Neto_ML"].sum()
+    total_ganancia = con_costo["Ganancia"].sum()
+    neto_cc = con_costo["Neto_ML"].sum()
+    margen = round(total_ganancia / neto_cc * 100, 1) if neto_cc > 0 else 0
+    ordenes = len(ventas)
+    unidades = int(ventas["Unidades"].sum())
+
+    rojos = ventas[ventas["Semaforo"].isin(["ROJO", "PERDIDA"])]
+    sin_costo = ventas[ventas["Semaforo"] == "SIN COSTO"]
+
+    alertas_str = ", ".join(
+        f"{r['Producto'][:25]} {r['Margen_%']}%"
+        for _, r in rojos.iterrows()
+    ) if len(rojos) > 0 else "ninguna"
+
+    pendientes_str = ", ".join(
+        r["Producto"][:30] for _, r in sin_costo.iterrows()
+    ) if len(sin_costo) > 0 else "ninguno"
+
+    entry = f"""
+## {fecha} - Reporte del dia
+- {ordenes} ordenes, {unidades} unidades, ${total_neto:,.2f} neto, ${total_ganancia:,.2f} ganancia, margen {margen}%
+- Alertas: {alertas_str}
+- Pendientes sin costo: {pendientes_str}
+"""
+
+    if BITACORA_PATH.exists():
+        content = BITACORA_PATH.read_text(encoding="utf-8")
+        # Insertar despues del titulo
+        marker = "# BITACORA CROQUETERIA GABY"
+        if marker in content:
+            content = content.replace(marker, marker + "\n" + entry, 1)
+        else:
+            content = entry + "\n" + content
+        BITACORA_PATH.write_text(content, encoding="utf-8")
+    else:
+        BITACORA_PATH.write_text(f"# BITACORA CROQUETERIA GABY\n{entry}", encoding="utf-8")
+
+    print(f"Bitacora actualizada: {fecha}")
 
 
 def main():
@@ -147,9 +192,16 @@ def main():
     alertas = ventas[ventas["Semaforo"].isin(["ROJO", "PERDIDA", "SIN COSTO"])]
 
     # 4. Generar Reporte XLSX
-    xlsx_dir = PROJECT_ROOT / "data" / "xlsx"
-    xlsx_dir.mkdir(parents=True, exist_ok=True)
-    reporte_path = xlsx_dir / f"Reporte_CroqueteriaGaby_{fecha}.xlsx"
+    XLSX_DIR.mkdir(parents=True, exist_ok=True)
+    reporte_path = XLSX_DIR / f"Reporte_CroqueteriaGaby_{fecha}.xlsx"
+
+    # Idempotencia: verificar si ya existe
+    if reporte_path.exists():
+        print(f"\nWARN: {reporte_path.name} ya existe.")
+        resp = input("Sobreescribir? (s/N): ").strip().lower()
+        if resp != "s":
+            print("Cancelado.")
+            return
     with pd.ExcelWriter(str(reporte_path), engine="openpyxl") as w:
         ventas.to_excel(w, sheet_name="Ventas", index=False)
         resumen.to_excel(w, sheet_name="Resumen", index=False)
@@ -169,7 +221,7 @@ def main():
                 "Proveedor": v["Proveedor"],
                 "Actualizado": fecha,
             })
-    precios_path = xlsx_dir / f"Lista_Precios_Vigentes_{fecha}.xlsx"
+    precios_path = XLSX_DIR / f"Lista_Precios_Vigentes_{fecha}.xlsx"
     pd.DataFrame(precios_rows).to_excel(str(precios_path), index=False)
     print(f"Generado: {precios_path.name}")
 
@@ -200,6 +252,9 @@ def main():
             c = a["Costo"] if a["Costo"] is not None else "???"
             print(f"  {a['Semaforo']:10s} | {a['Producto'][:35]:35s} | Neto ${a['Neto_ML']:,.2f} | Costo {c}")
         print()
+
+    # 8. Auto-append bitacora
+    auto_bitacora(fecha, ventas)
 
 
 if __name__ == "__main__":

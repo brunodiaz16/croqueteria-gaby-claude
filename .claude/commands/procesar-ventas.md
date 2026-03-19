@@ -34,13 +34,7 @@ $ARGUMENTS
 
 3. **Revisar alertas**: Si hay productos en ROJO o SIN COSTO, mostrar alerta con precio minimo recomendado (formula: Costo / 0.85 para margen 15%).
 
-4. **Actualizar bitacora**: Agregar entrada en context/bitacora.md con formato:
-   ```
-   ## YYYY-MM-DD - Reporte del dia
-   - N ordenes, N unidades, $X neto, $X ganancia, margen X%
-   - Alertas: [productos en rojo]
-   - Pendientes: [productos sin costo]
-   ```
+4. **Bitacora**: Se actualiza AUTOMATICAMENTE por el script (auto_bitacora). No requiere paso manual.
 
 5. **Subir a Drive y limpiar**: `python scripts/upload_to_drive.py --clean`
    Esto sube todos los archivos de data/xlsx/ y data/*.csv a Drive y los borra del repo despues.
