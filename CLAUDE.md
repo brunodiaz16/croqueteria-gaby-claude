@@ -186,7 +186,7 @@ Incluir siempre en el reporte cuando se detecten:
 - LiveClear Gato 3.18kg: margen 3.6% (🔴)
   Neto ML $798 / Costo $768.61. Precio lista mínimo recomendado: ~$1,090
   Publicación: MLM2743362281
-- Silver Kan 25kg: SIN COSTO registrado
+- Silver Kan 25kg: margen pendiente de calcular (costo provisional $450, precio de lista)
   Publicación: MLM2668236083
 
 ---

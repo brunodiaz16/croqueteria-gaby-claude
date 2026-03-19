@@ -15,7 +15,7 @@
 | Vet Diet Lata Canine Gastro 380g | $70 | Invet | 2026-03-18 |
 | 6 Latas ProPlan Gastro 380g | $420.01 | Invet | 2026-03-18 |
 | Arena Scoop Away 19kg 2-Pack | $798 | Costco | 2026-03-18 |
-| Silver Kan 25kg | SIN COSTO |  |  |
+| Silver Kan 25kg | $450 | Chapetes | 2026-03-19 |
 | 2 Bultos Alimento Croqueta K9 Adulto Salmon 3kg | $635.54 |  | 2026-02-17 |
 | 2 Costales Croquetas Minino Plus Gato Adulto 10kg C/u | $1010 |  | 2026-02-17 |
 | 2 Costales De Croquetas Chapetes Pet Para Gato Adulto 15kg | $880 |  | 2026-02-17 |
@@ -113,3 +113,4 @@
 | 2026-03-18 | Arena Scoop Away 19kg 2-Pack |  | 798 | Costco | Confirmado por Bruno |
 | 2026-03-19 | Minino Sobre |  | 8.5 | Dartacan | Ticket #378 |
 | 2026-03-19 | Campeon Adulto 25kg |  | 725 | Dartacan | Ticket #378 |
+| 2026-03-19 | Silver Kan 25kg | SIN COSTO | 450 | Chapetes | Precio de lista (pendiente confirmar) |
