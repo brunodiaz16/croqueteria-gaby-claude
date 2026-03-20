@@ -1,3 +1,9 @@
+## 2026-03-20 - Reporte del dia
+- 17 ordenes (sin 4 Silver Kan retrasados), $13,855.44 neto, $881.76 ganancia, margen 6.4%
+- Alertas rojas: Campeon 25kg 3.9% (x4), Dog Chow 25kg 5.7% (x2), Perron x2 costales 6.9% (x4), Gatina 5.5%
+- SIN COSTO: Kan Kan 25kg (MLM2668287827), Kirkland Salmon/Camote 15.87kg (MLM4680043154)
+- Pub IDs vinculados hoy: MLM4663708316 (Dog Chow), MLM2668454937 (Perron x2)
+
 ## 2026-03-19 - Compra Chapetes
 - Ticket Africa, $2,705 total: 4 Naranjas $410, 1 Morado 5kg $185, 2 Gato Azul 15kg $440
 - Nuevos costos: Chapetes Super Premium Gato 5kg $185, Chapetes Gato Azul 15kg $440
