@@ -45,8 +45,10 @@ $ARGUMENTS
 
 4. **Bitacora**: Se actualiza AUTOMATICAMENTE por el script (auto_bitacora). No requiere paso manual.
 
-5. **Subir a Drive y limpiar**: `python scripts/upload_to_drive.py --clean`
-   Esto sube todos los archivos de data/xlsx/ y data/*.csv a Drive y los borra del repo despues.
+5. **Subir a Drive (parcial — NO limpiar todavía)**:
+   - Si hubo compras: `python -m scripts.upload_to_drive` (sin --clean) para subir Compra_* ya finales
+   - El `Reporte_*` y `Lista_Precios_Vigentes_*` se quedan en `data/xlsx/` para que /generar-csv los lea
+   - El clean final lo hace /generar-csv cuando Bruno da el visto bueno
 
 6. **Commit**: `git add . && git commit -m "reporte YYYY-MM-DD - N ordenes $X neto, margen X%"`
    Solo quedan los archivos de contexto (bitacora, costos), no los XLSX/CSV generados.
