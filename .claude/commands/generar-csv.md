@@ -58,13 +58,22 @@ Cuando la app tenga control de inventario:
 - Usar el costo de compra original (el que se registro con /registrar-compra), no el costo actual del Sheet
 - Agregar columna "Accion" al CSV: COMPRAR vs YA EN STOCK
 
-## Multi-packs
-Algunos listings venden packs. El catalogo guarda costo unitario, multiplicar segun listing:
-- "2 Costales..." -> costo x2
-- "3 Costales..." -> costo x3
-- "24 Sobres..." -> costo x24
-- "6 Latas ProPlan Gastro" -> NO multiplicar, catalogo ya tiene costo del 6-pack
-Verificar notas del producto en el Sheet para saber si costo es unitario o del pack.
+## Multi-packs — detección intuitiva
+El catálogo guarda costo unitario. Multiplicar cuando el título del listing indique claramente cantidad:
+
+**Patrones que significan x2:**
+- "2 Costales...", "2 Bultos...", "2 Bolsas...", "2 Pack...", "2-Pack", "Paquete 2", "Pack 2", "Doble Pack", "Duo"
+- Cualquier número al inicio + sustantivo en plural + producto: "2 [cosa] [producto]"
+
+**Patrones que significan x3, x6, x24, etc.:**
+- "3 Costales...", "6 Latas..." → x3, x6, etc.
+- "24 Sobres..." → x24
+
+**Excepciones (NO multiplicar — el catálogo ya tiene el costo del pack):**
+- "6 Latas ProPlan Gastro 380g" → costo ya es del 6-pack ($418.55)
+- Verificar notas del producto en el Sheet si hay duda
+
+**Regla general:** si el título empieza con un número seguido de una unidad (costales, bultos, bolsas, latas, sobres, packs) → multiplicar costo x ese número. Si empieza con "2 Pack" o "Paquete 2" o similar → x2.
 
 ## Reglas
 - NUNCA generar CSV con productos SIN COSTO sin confirmacion de Bruno

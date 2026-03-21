@@ -7,6 +7,10 @@ Uso:
 """
 
 import sys
+from datetime import date
+
+import openpyxl
+from openpyxl.styles import Font, PatternFill, Alignment
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -15,7 +19,7 @@ from googleapiclient.discovery import build
 
 from scripts.config import (
     CATALOGO_SHEET_ID, SCOPES,
-    CREDENTIALS_FILE, TOKEN_FILE, COSTOS_PATH,
+    CREDENTIALS_FILE, TOKEN_FILE, COSTOS_PATH, XLSX_DIR,
 )
 
 
@@ -157,12 +161,17 @@ def actualizar_costo(producto, nuevo_costo, proveedor, fuente, sheet_id=None):
             nombre = row[col_producto] if col_producto < len(row) else ""
             if nombre.lower() == producto.lower():
                 costo_ant = row[col_costo] if col_costo < len(row) else ""
-                # Actualizar costo_anterior, costo_actual, fecha
+                # Actualizar costo_actual, costo_anterior, fecha (en orden de columna)
+                col_start = min(col_costo, col_anterior)
+                col_end = col_fecha
+                # Construir fila completa en orden: costo_actual=E, costo_anterior=F, fecha=G
+                values_map = {col_costo: nuevo_costo, col_anterior: costo_ant, col_fecha: hoy}
+                vals = [values_map[c] for c in range(col_start, col_end + 1)]
                 service.spreadsheets().values().update(
                     spreadsheetId=sid,
-                    range=f"Productos!{chr(65+col_anterior)}{i}:{chr(65+col_fecha)}{i}",
+                    range=f"Productos!{chr(65+col_start)}{i}:{chr(65+col_end)}{i}",
                     valueInputOption="RAW",
-                    body={"values": [[costo_ant, nuevo_costo, hoy]]},
+                    body={"values": [vals]},
                 ).execute()
 
                 # Agregar al historial
@@ -300,6 +309,63 @@ def exportar_costos_md(sheet_id=None):
     except Exception as e:
         print(f"ERROR exportando costos: {e}")
         return False
+
+
+def exportar_catalogo_xlsx(sheet_id=None, fecha=None):
+    """Exporta el Catalogo_Maestro como XLSX a data/xlsx/ para subir a Drive.
+    Genera: data/xlsx/Catalogo_Maestro_YYYY-MM-DD.xlsx
+    """
+    sid = sheet_id or CATALOGO_SHEET_ID
+    hoy = fecha or date.today().strftime("%Y-%m-%d")
+    if not sid:
+        print("ERROR: CATALOGO_SHEET_ID no configurado")
+        return None
+
+    try:
+        service = _get_sheets_service()
+
+        def leer_hoja(rango):
+            r = service.spreadsheets().values().get(spreadsheetId=sid, range=rango).execute()
+            return r.get("values", [])
+
+        productos = leer_hoja("Productos!A:K")
+        aliases = leer_hoja("Aliases!A:C")
+        historial = leer_hoja("Historial_Costos!A:F")
+
+        wb = openpyxl.Workbook()
+        header_fill = PatternFill("solid", fgColor="2C3E50")
+        header_font = Font(bold=True, color="FFFFFF")
+
+        def escribir_hoja(ws, rows):
+            if not rows:
+                return
+            for ci, val in enumerate(rows[0], 1):
+                cell = ws.cell(row=1, column=ci, value=val)
+                cell.font = header_font
+                cell.fill = header_fill
+                cell.alignment = Alignment(horizontal="center")
+            for ri, row in enumerate(rows[1:], 2):
+                for ci, val in enumerate(row, 1):
+                    ws.cell(row=ri, column=ci, value=val)
+
+        ws_prod = wb.active
+        ws_prod.title = "Productos"
+        escribir_hoja(ws_prod, productos)
+
+        ws_alias = wb.create_sheet("Aliases")
+        escribir_hoja(ws_alias, aliases)
+
+        ws_hist = wb.create_sheet("Historial_Costos")
+        escribir_hoja(ws_hist, historial)
+
+        XLSX_DIR.mkdir(parents=True, exist_ok=True)
+        out = XLSX_DIR / f"Catalogo_Maestro_{hoy}.xlsx"
+        wb.save(str(out))
+        print(f"Catalogo exportado: {out}")
+        return str(out)
+    except Exception as e:
+        print(f"ERROR exportando catalogo xlsx: {e}")
+        return None
 
 
 if __name__ == "__main__":

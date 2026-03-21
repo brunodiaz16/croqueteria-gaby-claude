@@ -31,6 +31,15 @@ $ARGUMENTS
    - `data/importar_inventario_YYYY-MM-DD.csv`
 
 2. **Si hay tickets de compra adjuntos**: procesarlos ANTES de correr el script para que los costos esten actualizados. Usar `/registrar-compra` para cada ticket.
+   - `/registrar-compra` ya se encarga de actualizar el Sheet y exportar el Catalogo_Maestro XLSX.
+
+2b. **Si Bruno da precios inline** (ej: "Kan Kan $380") sin ticket formal:
+   - Actualizar el Sheet directamente: `python -c "from scripts.catalogo import actualizar_costo; actualizar_costo('Kan Kan 25kg', 380, 'Dartacan', 'inline')"`
+   - Exportar costos.md y XLSX del catálogo:
+     ```
+     python -c "from scripts.catalogo import exportar_costos_md, exportar_catalogo_xlsx; exportar_costos_md(); exportar_catalogo_xlsx()"
+     ```
+   - El Catalogo_Maestro_YYYY-MM-DD.xlsx se sube junto con el reporte del día en el paso 5.
 
 3. **Revisar alertas**: Si hay productos en ROJO o SIN COSTO, mostrar alerta con precio minimo recomendado (formula: Costo / 0.85 para margen 15%).
 
@@ -43,6 +52,16 @@ $ARGUMENTS
    Solo quedan los archivos de contexto (bitacora, costos), no los XLSX/CSV generados.
 
 7. **Mostrar resumen final** al usuario con ordenes, neto, ganancia, margen, y alertas.
+
+## Flujo iterativo con tickets
+
+El flujo normal NO es todo-de-una. Es:
+1. Bruno pasa el XLSX de ventas → generar reporte con costos que existan en el Sheet (algunos pueden quedar SIN COSTO)
+2. Bruno sube tickets o menciona precios → correr `/registrar-compra` por cada uno → Sheet se actualiza, se exporta Catalogo_Maestro XLSX
+3. Bruno revisa el reporte y confirma → correr `/generar-csv` con costos ya completos
+4. `/generar-notas-pedido` e `/generar-imagenes-pedido` son independientes y van por aparte (para el trabajador, no para el CSV)
+
+Si al generar el CSV todavía hay productos SIN COSTO → preguntar a Bruno si los ignora o los registra primero.
 
 ## Doble corrida diaria (Flex)
 Si Bruno baja el XLSX en la manana y luego caen pedidos Flex en la tarde:
@@ -64,10 +83,19 @@ Si Bruno baja el XLSX en la manana y luego caen pedidos Flex en la tarde:
 - **Envios divididos**: Cuando un cliente compra 2+ unidades y ML separa envios, asigna costos de envio desproporcionalmente a uno. Ejemplo: Silver Kan $630.80 + $351.80 promedia $491.30 (neto real individual).
 - **Antes de alertar perdida**: Verificar si hay otra venta del mismo producto en la misma fecha. Si la suma/promedio da el neto individual esperado, reportar margen COMBINADO en lugar de falsa perdida.
 
-## Multi-packs
-Algunos listings venden packs. El catalogo guarda costo unitario, multiplicar segun listing:
-- "2 Costales..." -> costo x2
-- "3 Costales..." -> costo x3
-- "24 Sobres..." -> costo x24
-- "6 Latas ProPlan Gastro" -> NO multiplicar, catalogo ya tiene costo del 6-pack ($418.55)
-Verificar en las notas del producto en el Sheet si el costo es unitario o del pack.
+## Multi-packs — detección intuitiva
+El catálogo guarda costo unitario. Multiplicar cuando el título del listing indique claramente cantidad:
+
+**Patrones que significan x2:**
+- "2 Costales...", "2 Bultos...", "2 Bolsas...", "2 Pack...", "2-Pack", "Paquete 2", "Pack 2", "Doble Pack", "Duo"
+- Cualquier número al inicio + sustantivo + producto: "2 [unidad] [producto]"
+
+**Patrones que significan x3, x6, x24, etc.:**
+- "3 Costales...", "6 Latas..." → x3, x6, etc.
+- "24 Sobres..." → x24
+
+**Excepciones (NO multiplicar — el catálogo ya tiene el costo del pack):**
+- "6 Latas ProPlan Gastro 380g" → costo ya es del 6-pack ($418.55)
+- Verificar notas del producto en el Sheet si hay duda
+
+**Regla general:** número al inicio del título + unidad (costales, bultos, bolsas, latas, sobres, packs) → multiplicar costo x ese número.

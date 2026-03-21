@@ -32,7 +32,8 @@ $ARGUMENTS
 
 4. **Actualizar costos**:
    - Actualizar el Google Sheet Catalogo_Maestro via scripts/catalogo.py
-   - Exportar backup: `python -c "from scripts.catalogo import exportar_costos_md; exportar_costos_md()"`
+   - Exportar backup markdown: `python -c "from scripts.catalogo import exportar_costos_md; exportar_costos_md()"`
+   - Exportar XLSX del catálogo para Drive: `python -c "from scripts.catalogo import exportar_catalogo_xlsx; exportar_catalogo_xlsx()"`
    - Si hay alias nuevo, agregarlo al Sheet (hoja Aliases) y a CLAUDE.md
 
 5. **Generar XLSX de compra**: `data/xlsx/Compra_[Proveedor]_YYYY-MM-DD.xlsx` con hojas:
@@ -46,6 +47,7 @@ $ARGUMENTS
 7. **Recalcular alertas**: Si un costo cambio, recalcular margen y actualizar ALERTAS ACTIVAS en CLAUDE.md
 
 8. **Subir a Drive y limpiar**: `python scripts/upload_to_drive.py --clean`
+   Sube: Compra_[Proveedor]_YYYY-MM-DD.xlsx + Catalogo_Maestro_YYYY-MM-DD.xlsx (siempre que se actualice el catálogo)
 
 9. **Commit**: `git add . && git commit -m "compra [proveedor] YYYY-MM-DD - $X total, N productos"`
 

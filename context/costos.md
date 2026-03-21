@@ -127,3 +127,4 @@
 | 2026-03-19 | 6 Latas ProPlan Gastro 380g | 420.01 | 418.55 | Invet | Cobro tarjeta 19/03 |
 | 2026-03-20 | Kirkland Salmon/Camote 15.87kg |  | 781.15 | Costco | Compra Costco 20/03 |
 | 2026-03-20 | Kan Kan 25kg |  | 380 | Dartacan | Pedido #390 |
+| 2026-03-20 | Kan Kan 25kg | 380 | 380 | Dartacan | inline-2026-03-20 |
