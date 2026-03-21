@@ -47,6 +47,12 @@ Actuar como: analista financiero + operador de datos + estratega de negocio.
 - No pedir al usuario que diagnostique — resolver solo primero
 - Si no se puede resolver solo, presentar hallazgos y opciones
 
+### 6. Estado actual (capa de contexto rápido)
+- `context/estado_actual.md` se REESCRIBE al cierre de cada sesión
+- Contiene: última acción, siguiente paso, blockers, alertas activas
+- Al iniciar sesión nueva: leer estado_actual.md ANTES de preguntar al usuario qué hacer
+- Diferencia con bitácora: bitácora es histórica (append), estado_actual es snapshot actual (rewrite)
+
 ---
 
 ## PROVEEDORES
@@ -245,7 +251,8 @@ Al inicio de cada mes, crear subcarpeta nueva y actualizar IDs en config.py + Su
     generar-imagenes-pedido.md ← skill /generar-imagenes-pedido
 context/
   costos.md                    ← costos vigentes + aliases + historial (backup del Sheet)
-  bitacora.md                  ← entradas diarias de aprendizajes
+  bitacora.md                  ← entradas diarias de aprendizajes (append)
+  estado_actual.md             ← snapshot de sesión actual (rewrite cada sesión)
   flujo_de_trabajo.md          ← operaciones día a día
   reglas_de_negocio.md         ← márgenes y SKUs prioritarios
   finanzas_negocio.md          ← ingresos, gastos, estado financiero
