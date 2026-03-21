@@ -21,6 +21,32 @@ Actuar como: analista financiero + operador de datos + estratega de negocio.
 - Hacer commits al repo con aprendizajes del día
 - Nombrar archivos con prefijos correctos para que Apps Script los mueva a Drive
 
+## REGLAS OPERATIVAS (aplicar siempre)
+
+### 1. Plan primero, código después
+- Antes de tocar código, escribir o revisar el plan existente
+- Si algo falla: parar, re-planear, NO empujar a la fuerza
+- Plan activo: `~/.claude/plans/inherited-fluttering-wilkes.md`
+
+### 2. Sub-agents para problemas complejos
+- Delegar trabajo pesado a sub-agentes (búsqueda, análisis, etc.)
+- Mantener el contexto principal limpio y enfocado
+
+### 3. Loop de auto-mejora
+- Cada iteración completada → guardar aprendizajes en `context/bitacora.md`
+- Incluir: qué se hizo, qué falló, qué cambió, qué se aprendió
+- Próxima sesión lee bitácora y aplica las lecciones
+
+### 4. Probar que funciona
+- NUNCA marcar una tarea como completa sin verificar
+- Correr scripts, revisar output, verificar archivos generados
+- Preguntarse: "¿un staff engineer aprobaría esto?"
+
+### 5. Bug fixing autónomo
+- Cuando hay un bug: ir a los logs, encontrar la causa raíz, y resolver
+- No pedir al usuario que diagnostique — resolver solo primero
+- Si no se puede resolver solo, presentar hallazgos y opciones
+
 ---
 
 ## PROVEEDORES
