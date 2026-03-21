@@ -1,8 +1,11 @@
-## 2026-03-20 - Reporte del dia
-- 17 ordenes (sin 4 Silver Kan retrasados), $13,855.44 neto, $881.76 ganancia, margen 6.4%
-- Alertas rojas: Campeon 25kg 3.9% (x4), Dog Chow 25kg 5.7% (x2), Perron x2 costales 6.9% (x4), Gatina 5.5%
-- SIN COSTO: Kan Kan 25kg (MLM2668287827), Kirkland Salmon/Camote 15.87kg (MLM4680043154)
-- Pub IDs vinculados hoy: MLM4663708316 (Dog Chow), MLM2668454937 (Perron x2)
+## 2026-03-20 - Reporte del dia (actualizado)
+- 18 ordenes (sin 4 Silver Kan retrasados), $14,920.06 neto, $1,448.72 ganancia, margen 9.7%
+- +1 Kirkland Salmon Flex extra, +1 Chapetes 18kg Amazon (venta directa)
+- Kirkland Salmon 26.6% (verde), Chapetes Premium 18.2% (verde), Chapetes Gato 5kg 23.8% (verde)
+- Alertas rojas: Campeon 25kg 3.9% (x4), Perron x2 6.9% (x4), Dog Chow 5.7% (x2), Gatina 5.5%
+- SIN COSTO: Kan Kan 25kg (MLM2668287827) — pendiente
+- Compra Costco: $2,360.30 (2x Kirkland $781.15 + 2x Scoop Away $399)
+- Pub IDs vinculados: MLM4663708316 (Dog Chow), MLM2668454937 (Perron x2), MLM4680043154 (Kirkland)
 
 ## 2026-03-19 - Compra Chapetes
 - Ticket Africa, $2,705 total: 4 Naranjas $410, 1 Morado 5kg $185, 2 Gato Azul 15kg $440

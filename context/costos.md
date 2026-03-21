@@ -90,6 +90,7 @@
 | Campeon Adulto 25kg | $725 | Dartacan | 2026-03-19 |
 | Chapetes Super Premium Gato 5kg | $185 | Chapetes | 2026-03-19 |
 | Chapetes Gato Azul 15kg | $440 | Chapetes | 2026-03-19 |
+| Kirkland Salmon/Camote 15.87kg | $781.15 | Costco | 2026-03-20 |
 
 # ALIASES
 | Ticket dice | Producto real | Proveedor |
@@ -122,3 +123,4 @@
 | 2026-03-19 | Chapetes Super Premium Gato 5kg |  | 185 | Chapetes | Ticket Africa 19/03 |
 | 2026-03-19 | Chapetes Gato Azul 15kg |  | 440 | Chapetes | Ticket Africa 19/03 |
 | 2026-03-19 | 6 Latas ProPlan Gastro 380g | 420.01 | 418.55 | Invet | Cobro tarjeta 19/03 |
+| 2026-03-20 | Kirkland Salmon/Camote 15.87kg |  | 781.15 | Costco | Compra Costco 20/03 |
