@@ -22,7 +22,7 @@
 | 2 Pack Kirkland Nature's Domain P Perro Salmón Y Camote Azul | $1562.3 |  | 2026-02-17 |
 | 2 Pack Maintenance Cat Alimento Para Gato/ Pollo Y Arroz Ctc | $967.3 |  | 2026-02-17 |
 | 24 Sobres Minino Plus Sabores Surtidos. | $204 |  | 2026-02-17 |
-| 2pz Alimento Para Gato Pollo/arroz 11.3kg Kirkland Signature | $569 |  | 2026-02-17 |
+| 2pz Alimento Para Gato Pollo/arroz 11.3kg Kirkland Signature | $967.3 |  | 2026-03-23 |
 | 3 Pack Maintenance Cat Alimento Para Gato/ Pollo Y Arroz Ctc | $569 |  | 2026-02-17 |
 | Alimento Campeón Para Perro Cachorro Los Tamaños Sabor Mix De 20 Kg | $745 |  | 2026-02-17 |
 | Alimento Chapetes Para Perros 25 Kilos Todas Las Razas | $375 |  | 2026-02-17 |
@@ -32,7 +32,7 @@
 | Alimento Para Cachorro Pollo/arroz 9 Kg Kirkland | $381.6 |  | 2026-02-17 |
 | Alimento Para Cachorro Pollo/arroz 9 Kg Kirkland FLEX | $429 |  | 2026-02-17 |
 | Alimento Para Gato Pollo/arroz 11 Kg Kirkland Signature FLEX | $200 |  | 2026-02-17 |
-| Alimento Para Gato Pollo/arroz 11.3kg Kirkland Signature | $569 |  | 2026-02-17 |
+| Alimento Para Gato Pollo/arroz 11.3kg Kirkland Signature | $483.65 |  | 2026-03-23 |
 | Alimento Para Perros Salmon Camote 15 Kg Ks Natures Domain | $781.15 |  | 2026-02-17 |
 | Alimento Perro Cachorro Pollo 9kg Croqueta Kirkland Cachorro | $429 |  | 2026-02-17 |
 | Alimento Pro Plan Veterinary Diets Nf Kidney Function Para Perro Adulto Todos Lo | $595.3 |  | 2026-02-17 |
@@ -142,3 +142,5 @@
 | 2026-03-23 | Chapetes 20kg (Amarillos) | 300 | 300 | Chapetes | ticket 2026-03-23 |
 | 2026-03-23 | Chapetes Premium 18kg | 410 | 410 | Chapetes | ticket 2026-03-23 |
 | 2026-03-23 | Maskottchen 20kg |  | 350 | Chapetes | ticket 2026-03-23 |
+| 2026-03-23 | Alimento Para Gato Pollo/arroz 11.3kg Kirkland Signature | 569 | 483.65 | Costco | inline 2026-03-23 |
+| 2026-03-23 | 2pz Alimento Para Gato Pollo/arroz 11.3kg Kirkland Signature | 569 | 967.3 | Costco | inline 2026-03-23 |
