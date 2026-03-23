@@ -3,8 +3,8 @@
 
 | Producto | Costo | Proveedor | Actualizado |
 |---|---|---|---|
-| Chapetes 20kg (Amarillos) | $300 | Chapetes | 2026-03-18 |
-| Chapetes Premium 18kg | $410 | Chapetes | 2026-03-17 |
+| Chapetes 20kg (Amarillos) | $300 | Chapetes | 2026-03-23 |
+| Chapetes Premium 18kg | $410 | Chapetes | 2026-03-23 |
 | Maskottchen Premium 15kg | $525 | Chapetes | 2026-03-18 |
 | Ganador Premium Adulto 20kg | $990 | Dartacan | 2026-03-17 |
 | Pedigree Adulto Res/Veg 20kg | $725 | Dartacan | 2026-03-17 |
@@ -95,6 +95,7 @@
 | Perron Razas Pequenas 20kg | $675 | Dartacan | 2026-03-23 |
 | Perron Premium Adulto | $695 | Dartacan | 2026-03-23 |
 | Megacan 25kg+1kg | $460 | Dartacan | 2026-03-23 |
+| Maskottchen 20kg | $350 | Chapetes | 2026-03-23 |
 
 # ALIASES
 | Ticket dice | Producto real | Proveedor |
@@ -138,3 +139,6 @@
 | 2026-03-23 | Perron Razas Pequenas 20kg |  | 675 | Dartacan | ticket 2026-03-23 |
 | 2026-03-23 | Perron Premium Adulto |  | 695 | Dartacan | ticket 2026-03-23 |
 | 2026-03-23 | Megacan 25kg+1kg |  | 460 | Dartacan | ticket 2026-03-23 |
+| 2026-03-23 | Chapetes 20kg (Amarillos) | 300 | 300 | Chapetes | ticket 2026-03-23 |
+| 2026-03-23 | Chapetes Premium 18kg | 410 | 410 | Chapetes | ticket 2026-03-23 |
+| 2026-03-23 | Maskottchen 20kg |  | 350 | Chapetes | ticket 2026-03-23 |
