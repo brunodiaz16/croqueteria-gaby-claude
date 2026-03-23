@@ -83,50 +83,33 @@ def get_fonts():
 
 def leer_general_xlsx(path: str) -> dict:
     """Lee el General XLSX y agrupa por proveedor.
+    Cada hoja = un proveedor. Columnas: A=Cant, B=Producto, C=Notas (fila 1=titulo, fila 2=headers)
 
     Returns: {proveedor: [{"producto": str, "cantidad": int}, ...]}
     """
     wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
-    ws = wb.active
-
-    # Detectar columnas por header
-    headers = {}
-    for row in ws.iter_rows(min_row=1, max_row=5):
-        for cell in row:
-            if cell.value and isinstance(cell.value, str):
-                val = cell.value.strip().lower()
-                if "proveedor" in val or "marca" in val:
-                    headers["proveedor"] = cell.column - 1
-                elif "producto" in val:
-                    headers["producto"] = cell.column - 1
-                elif "cantidad" in val or "qty" in val or "piezas" in val:
-                    headers["cantidad"] = cell.column - 1
-        if headers:
-            header_row = cell.row
-            break
-
-    if not headers or "producto" not in headers:
-        # Fallback: asumir col A=Proveedor, B=Producto, C=Cantidad
-        headers = {"proveedor": 0, "producto": 1, "cantidad": 2}
-        header_row = 1
-
     resultado = {}
-    for row in ws.iter_rows(min_row=header_row + 1, values_only=False):
-        vals = [c.value for c in row]
-        proveedor = str(vals[headers.get("proveedor", 0)] or "").strip()
-        producto = str(vals[headers.get("producto", 1)] or "").strip()
-        cantidad = vals[headers.get("cantidad", 2)]
 
-        if not producto or not proveedor:
-            continue
-        try:
-            cantidad = int(cantidad)
-        except (ValueError, TypeError):
-            cantidad = 1
+    for sheet_name in wb.sheetnames:
+        ws = wb[sheet_name]
+        proveedor = sheet_name.strip()
+        productos = []
 
-        if proveedor not in resultado:
-            resultado[proveedor] = []
-        resultado[proveedor].append({"producto": producto, "cantidad": cantidad})
+        # Fila 1 = titulo merged, Fila 2 = headers (Cant, Producto, Notas)
+        # Datos desde fila 3
+        for row in ws.iter_rows(min_row=3, values_only=True):
+            cantidad = row[0] if len(row) > 0 else None
+            producto = row[1] if len(row) > 1 else None
+            if not producto or str(producto).strip().lower() in ("producto", ""):
+                continue
+            try:
+                cantidad = int(cantidad)
+            except (ValueError, TypeError):
+                cantidad = 1
+            productos.append({"producto": str(producto).strip(), "cantidad": cantidad})
+
+        if productos:
+            resultado[proveedor] = productos
 
     wb.close()
     return resultado
