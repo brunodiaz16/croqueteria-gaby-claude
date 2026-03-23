@@ -1,3 +1,9 @@
+
+## 2026-03-23 - Reporte del dia
+- 23 ordenes, 23 unidades, $16,643.06 neto, $1,345.16 ganancia, margen 13.7%
+- Alertas: Kan Kan 25kg 3.2%, Campeon Adulto 25kg 3.9%, Dog Chow Adulto R/G 25kg 5.7%, Campeon Adulto 25kg 3.9%, Campeon Adulto 25kg 3.9%, Perron Adulto 25kg 4.2%, Campeon Adulto 25kg 3.9%, Campeon Adulto 25kg 3.9%, Perron Adulto 25kg 4.2%, Perron Adulto 25kg 4.2%
+- Pendientes sin costo: Alimento Seco Perro Perron Raz, Alimento Perron Premium Premiu, Dog Chow Croquetas Adulto Raza, Dog Chow Croquetas Adulto Raza, Croquetas Perro Adulto Megacan, 2pz Alimento Para Gato Pollo/a, 2 Costales Croquetas Maskottch, Dog Chow Croquetas Adulto Raza
+
 ## 2026-03-20 - Reporte del dia (actualizado)
 - 18 ordenes (sin 4 Silver Kan retrasados), $14,920.06 neto, $1,448.72 ganancia, margen 9.7%
 - +1 Kirkland Salmon Flex extra, +1 Chapetes 18kg Amazon (venta directa)

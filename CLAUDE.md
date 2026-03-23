@@ -249,6 +249,7 @@ Al inicio de cada mes, crear subcarpeta nueva y actualizar IDs en config.py + Su
     reporte-semanal.md         ← skill /reporte-semanal
     subir-drive.md             ← skill /subir-drive
     generar-imagenes-pedido.md ← skill /generar-imagenes-pedido
+    revisar-catalogo.md        ← skill /revisar-catalogo (health check semanal)
 context/
   costos.md                    ← costos vigentes + aliases + historial (backup del Sheet)
   bitacora.md                  ← entradas diarias de aprendizajes (append)
