@@ -206,15 +206,20 @@ Incluir siempre en el reporte cuando se detecten:
 - Costo aumentó vs registro anterior → marcar cambio en histórico
 
 ## ALERTAS ACTIVAS
-- Ganador Premium 20kg: margen 6.0% (🔴) — 5 ventas hoy
+- Campeon Adulto 25kg: margen 0.6% (🔴🚨) — costo subió a $750, REPRECIAR URGENTE
+  Neto ML $754 / Costo $750. Precio lista mínimo recomendado: ~$882
+- Kan Kan 25kg: margen 3.2% (🔴)
+  Neto ML $393 / Costo $380. Precio lista mínimo recomendado: ~$447
+- Dog Chow Adulto 25kg: margen 5.7% (🔴)
+  Neto ML $955 / Costo $900. Precio lista mínimo recomendado: ~$1,059
+- Perron Adulto 25kg: margen 4.2% (🔴)
+  Neto ML $558 / Costo $535. Precio lista mínimo recomendado: ~$629
+- Ganador Premium 20kg: margen 6.0% (🔴)
   Neto ML $1,053.60 / Costo $990. Precio lista mínimo recomendado: ~$1,350
   Publicación: MLM4663694700
 - Pedigree 20kg Res/Vegetales: margen 6.8% (🔴)
   Neto ML $778 / Costo $725. Precio lista mínimo recomendado: ~$970
   Publicación: MLM4619784042
-- Dog Chow 25kg: margen 5.7% (🔴)
-  Neto ML $955 / Costo $900. Precio lista mínimo recomendado: ~$1,230
-  Publicación: MLM4663526262
 - Gatina 15kg: margen 5.5% (🔴)
   Neto ML $524 / Costo $495. Precio lista mínimo recomendado: ~$680
   Publicación: MLM4619796770

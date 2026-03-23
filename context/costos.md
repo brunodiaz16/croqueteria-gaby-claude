@@ -8,8 +8,8 @@
 | Maskottchen Premium 15kg | $525 | Chapetes | 2026-03-18 |
 | Ganador Premium Adulto 20kg | $990 | Dartacan | 2026-03-17 |
 | Pedigree Adulto Res/Veg 20kg | $725 | Dartacan | 2026-03-17 |
-| Perron Adulto 25kg | $535 | Dartacan | 2026-03-17 |
-| Dog Chow Adulto R/G 25kg | $900 | Dartacan | 2026-03-18 |
+| Perron Adulto 25kg | $535 | Dartacan | 2026-03-23 |
+| Dog Chow Adulto R/G 25kg | $900 | Dartacan | 2026-03-23 |
 | Gatina 15kg | $495 | Dartacan | 2026-03-18 |
 | LiveClear Gato 1.5kg (x2=3.18kg) | $768.61 | Invet | 2026-03-18 |
 | Vet Diet Lata Canine Gastro 380g | $69.76 | Invet | 2026-03-19 |
@@ -87,11 +87,14 @@
 | Proplan Veterinary Diets Perro Kidney Function 11.3 Kg | $1795.62 |  | 2026-02-17 |
 | Whiskas - Croquetas Para Gatos Adultos, Sabor Carne, Omega 6 | $620 |  | 2026-02-17 |
 | Minino Sobre | $8.5 | Dartacan | 2026-03-19 |
-| Campeon Adulto 25kg | $725 | Dartacan | 2026-03-19 |
+| Campeon Adulto 25kg | $750 | Dartacan | 2026-03-23 |
 | Chapetes Super Premium Gato 5kg | $185 | Chapetes | 2026-03-19 |
 | Chapetes Gato Azul 15kg | $440 | Chapetes | 2026-03-19 |
 | Kirkland Salmon/Camote 15.87kg | $781.15 | Costco | 2026-03-20 |
-| Kan Kan 25kg | $380 | Dartacan | 2026-03-20 |
+| Kan Kan 25kg | $380 | Dartacan | 2026-03-23 |
+| Perron Razas Pequenas 20kg | $675 | Dartacan | 2026-03-23 |
+| Perron Premium Adulto | $695 | Dartacan | 2026-03-23 |
+| Megacan 25kg+1kg | $460 | Dartacan | 2026-03-23 |
 
 # ALIASES
 | Ticket dice | Producto real | Proveedor |
@@ -128,3 +131,10 @@
 | 2026-03-20 | Kirkland Salmon/Camote 15.87kg |  | 781.15 | Costco | Compra Costco 20/03 |
 | 2026-03-20 | Kan Kan 25kg |  | 380 | Dartacan | Pedido #390 |
 | 2026-03-20 | Kan Kan 25kg | 380 | 380 | Dartacan | inline-2026-03-20 |
+| 2026-03-23 | Campeon Adulto 25kg | 725 | 750 | Dartacan | ticket 2026-03-23 |
+| 2026-03-23 | Perron Adulto 25kg | 535 | 535 | Dartacan | ticket 2026-03-23 |
+| 2026-03-23 | Kan Kan 25kg | 380 | 380 | Dartacan | ticket 2026-03-23 |
+| 2026-03-23 | Dog Chow Adulto R/G 25kg | 900 | 900 | Dartacan | ticket 2026-03-23 |
+| 2026-03-23 | Perron Razas Pequenas 20kg |  | 675 | Dartacan | ticket 2026-03-23 |
+| 2026-03-23 | Perron Premium Adulto |  | 695 | Dartacan | ticket 2026-03-23 |
+| 2026-03-23 | Megacan 25kg+1kg |  | 460 | Dartacan | ticket 2026-03-23 |
