@@ -83,7 +83,8 @@ def get_fonts():
 
 def leer_general_xlsx(path: str) -> dict:
     """Lee el General XLSX y agrupa por proveedor.
-    Cada hoja = un proveedor. Columnas: A=Cant, B=Producto, C=Notas (fila 1=titulo, fila 2=headers)
+    Cada hoja = un proveedor. Fila 1=titulo, Fila 2=headers, Datos desde fila 3.
+    Detecta columnas por nombre para no depender del orden.
 
     Returns: {proveedor: [{"producto": str, "cantidad": int}, ...]}
     """
@@ -95,11 +96,32 @@ def leer_general_xlsx(path: str) -> dict:
         proveedor = sheet_name.strip()
         productos = []
 
-        # Fila 1 = titulo merged, Fila 2 = headers (Cant, Producto, Notas)
-        # Datos desde fila 3
-        for row in ws.iter_rows(min_row=3, values_only=True):
-            cantidad = row[0] if len(row) > 0 else None
-            producto = row[1] if len(row) > 1 else None
+        # Leer fila 2 para detectar posición de columnas por nombre
+        rows_all = list(ws.iter_rows(values_only=True))
+        if len(rows_all) < 2:
+            continue
+
+        headers_row = [str(h).strip().lower() if h else "" for h in rows_all[1]]
+        # Buscar índice de "producto" y "cantidad"
+        idx_prod = next(
+            (i for i, h in enumerate(headers_row) if "producto" in h or "product" in h), None
+        )
+        idx_cant = next(
+            (i for i, h in enumerate(headers_row) if "cantidad" in h or "qty" in h or "cant" in h), None
+        )
+
+        # Fallback: si no hay headers claros, asumir A=Producto, B=Cantidad
+        if idx_prod is None:
+            idx_prod = 0
+        if idx_cant is None:
+            idx_cant = 1
+
+        # Datos desde fila 3 (índice 2)
+        for row in rows_all[2:]:
+            if not row or len(row) <= max(idx_prod, idx_cant):
+                continue
+            producto = row[idx_prod]
+            cantidad = row[idx_cant]
             if not producto or str(producto).strip().lower() in ("producto", ""):
                 continue
             try:
