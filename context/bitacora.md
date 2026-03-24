@@ -1,4 +1,16 @@
 
+## 2026-03-24 - Reporte del dia
+- 10 ordenes, 10 unidades, $7,906.09 neto, $782.49 ganancia, margen 12.6%
+- Alertas: Campeon Adulto 25kg 0.6%
+- Pendientes sin costo: Purina Proplan En Gastroenteri, Alimento Perron Premium Premiu
+
+
+## 2026-03-24 - Reporte del dia
+- 10 ordenes, 10 unidades, $7,906.09 neto, $422.86 ganancia, margen 9.7%
+- Alertas: Campeon Adulto 25kg 0.6%
+- Pendientes sin costo: Purina Proplan En Gastroenteri, Alimento Perron Premium Premiu, 2 Costales Croquetas Alimento 
+
+
 ## 2026-03-23 - Reporte del dia
 - 23 ordenes, 23 unidades, $16,643.06 neto, $1,220.16 ganancia, margen 12.4%
 - Alertas: Kan Kan 25kg 3.2%, Campeon Adulto 25kg 0.6%, Dog Chow Adulto R/G 25kg 5.7%, Campeon Adulto 25kg 0.6%, Campeon Adulto 25kg 0.6%, Perron Adulto 25kg 4.2%, Campeon Adulto 25kg 0.6%, Campeon Adulto 25kg 0.6%, Perron Adulto 25kg 4.2%, Perron Adulto 25kg 4.2%
