@@ -4,7 +4,7 @@
 | Producto | Costo | Proveedor | Actualizado |
 |---|---|---|---|
 | Chapetes 20kg (Amarillos) | $300 | Chapetes | 2026-03-24 |
-| Chapetes Premium 18kg | $410 | Chapetes | 2026-03-23 |
+| Chapetes Premium 18kg | $410 | Chapetes | 2026-03-25 |
 | Maskottchen Premium 15kg | $525 | Chapetes | 2026-03-18 |
 | Ganador Premium Adulto 20kg | $990 | Dartacan | 2026-03-17 |
 | Pedigree Adulto Res/Veg 20kg | $725 | Dartacan | 2026-03-17 |
@@ -89,7 +89,7 @@
 | Minino Sobre | $8.5 | Dartacan | 2026-03-19 |
 | Campeon Adulto 25kg | $750 | Dartacan | 2026-03-23 |
 | Chapetes Super Premium Gato 5kg | $195 | Chapetes | 2026-03-24 |
-| Chapetes Gato Azul 15kg | $440 | Chapetes | 2026-03-19 |
+| Chapetes Gato Azul 15kg | $440 | Chapetes | 2026-03-25 |
 | Kirkland Salmon/Camote 15.87kg | $781.15 | Costco | 2026-03-20 |
 | Kan Kan 25kg | $380 | Dartacan | 2026-03-23 |
 | Perron Razas Pequenas 20kg | $675 | Dartacan | 2026-03-23 |
@@ -104,6 +104,9 @@
 | Cat Chow Defense Plus 20kg | $885 | Dartacan | 2026-03-25 |
 | Cat Chow Mariscos 20kg | $885 | Dartacan | 2026-03-25 |
 | Ganador Premium 4kg | $245 | Dartacan | 2026-03-25 |
+| Chapetes Super Premium Gato 2kg | $85 | Chapetes | 2026-03-25 |
+| Maskottchen 2-Pack | $700 | Chapetes | 2026-03-25 |
+| Chapetes Gato Super Premium 2kg 3-Pack | $255 | Chapetes | 2026-03-25 |
 
 # ALIASES
 | Ticket dice | Producto real | Proveedor |
@@ -158,3 +161,5 @@
 | 2026-03-24 | Chapetes Super Premium Gato 5kg | 185 | 195 | Chapetes | ticket 2026-03-24 |
 | 2026-03-25 | Gatina 15kg | 495 | 495 | Dartacan | 2026-03-25 |
 | 2026-03-25 | Perron Adulto 25kg | 535 | 535 | Dartacan | 2026-03-25 |
+| 2026-03-25 | Chapetes Gato Azul 15kg | 440 | 440 | Chapetes | 2026-03-25 |
+| 2026-03-25 | Chapetes Premium 18kg | 410 | 410 | Chapetes | 2026-03-25 |
