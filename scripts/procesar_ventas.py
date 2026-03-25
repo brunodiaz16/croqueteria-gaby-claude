@@ -52,8 +52,9 @@ def cruzar_costos(df, catalogo):
             proveedor = "SIN COSTO"
 
         if costo is not None and costo > 0:
-            ganancia = round(neto - costo, 2)
-            margen = round((neto - costo) / neto * 100, 1)
+            costo_total = costo * qty
+            ganancia = round(neto - costo_total, 2)
+            margen = round((neto - costo_total) / neto * 100, 1)
             if margen < 0:
                 semaforo = "PERDIDA"
             elif margen < 8:
@@ -92,15 +93,15 @@ def cruzar_costos(df, catalogo):
 
 
 def generar_resumen(ventas, fecha):
-    """Genera DataFrame de resumen."""
+    """Genera DataFrame de resumen con desglose Flex vs Normal."""
     con_costo = ventas[ventas["Costo"].notna() & (ventas["Costo"] > 0)]
     total_neto = ventas["Neto_ML"].sum()
-    total_costo = con_costo["Costo"].sum()
+    total_costo = (con_costo["Costo"] * con_costo["Unidades"]).sum()
     total_ganancia = con_costo["Ganancia"].sum()
     neto_cc = con_costo["Neto_ML"].sum()
     margen = round(total_ganancia / neto_cc * 100, 1) if neto_cc > 0 else 0
 
-    return pd.DataFrame([
+    rows = [
         {"Metrica": "Fecha", "Valor": fecha},
         {"Metrica": "Ordenes", "Valor": len(ventas)},
         {"Metrica": "Unidades", "Valor": int(ventas["Unidades"].sum())},
@@ -112,7 +113,25 @@ def generar_resumen(ventas, fecha):
         {"Metrica": "ROJO (<8%)", "Valor": len(ventas[ventas["Semaforo"].isin(["ROJO", "PERDIDA"])])},
         {"Metrica": "AMARILLO (8-14%)", "Valor": len(ventas[ventas["Semaforo"] == "AMARILLO"])},
         {"Metrica": "VERDE (>14%)", "Valor": len(ventas[ventas["Semaforo"] == "VERDE"])},
-    ])
+        {"Metrica": "---", "Valor": "--- DESGLOSE ENVIO ---"},
+    ]
+
+    # Desglose Flex vs Normal
+    for tipo in ["Flex", "Normal"]:
+        subset = ventas[ventas["Envio"] == tipo]
+        if len(subset) == 0:
+            continue
+        sub_cc = subset[subset["Costo"].notna() & (subset["Costo"] > 0)]
+        sub_neto = subset["Neto_ML"].sum()
+        sub_ganancia = sub_cc["Ganancia"].sum() if len(sub_cc) > 0 else 0
+        sub_neto_cc = sub_cc["Neto_ML"].sum()
+        sub_margen = round(sub_ganancia / sub_neto_cc * 100, 1) if sub_neto_cc > 0 else 0
+        rows.append({"Metrica": f"{tipo} - Ordenes", "Valor": len(subset)})
+        rows.append({"Metrica": f"{tipo} - Neto", "Valor": f"${sub_neto:,.2f}"})
+        rows.append({"Metrica": f"{tipo} - Ganancia", "Valor": f"${sub_ganancia:,.2f}"})
+        rows.append({"Metrica": f"{tipo} - Margen", "Valor": f"{sub_margen}%"})
+
+    return pd.DataFrame(rows)
 
 
 def generar_csv_inventario(ventas, fecha):
@@ -257,11 +276,36 @@ def main():
     print(f"Neto ML:  ${total_neto:,.2f}")
     print(f"Ganancia: ${total_ganancia:,.2f}")
     print(f"Margen:   {margen}%")
+
+    # Desglose Flex vs Normal
+    for tipo in ["Flex", "Normal"]:
+        subset = ventas[ventas["Envio"] == tipo]
+        if len(subset) == 0:
+            continue
+        sub_cc = subset[subset["Costo"].notna() & (subset["Costo"] > 0)]
+        sub_ganancia = sub_cc["Ganancia"].sum() if len(sub_cc) > 0 else 0
+        sub_neto_cc = sub_cc["Neto_ML"].sum()
+        sub_margen = round(sub_ganancia / sub_neto_cc * 100, 1) if sub_neto_cc > 0 else 0
+        print(f"  {tipo:6s}: {len(subset)} ordenes | ${subset['Neto_ML'].sum():,.2f} neto | {sub_margen}% margen")
     print()
+
+    # Productos no registrados en catalogo
+    no_registrados = ventas[ventas["Semaforo"] == "SIN COSTO"]
+    if len(no_registrados) > 0:
+        seen_pubs = set()
+        print("PRODUCTOS NO REGISTRADOS EN CATALOGO:")
+        for _, r in no_registrados.iterrows():
+            if r["Publicacion"] not in seen_pubs:
+                seen_pubs.add(r["Publicacion"])
+                print(f"  {r['Publicacion']} | {r['Producto'][:50]}")
+        print("  -> Registrar con /registrar-compra o agregar manualmente al Sheet")
+        print()
 
     if len(alertas) > 0:
         print("ALERTAS:")
         for _, a in alertas.iterrows():
+            if a["Semaforo"] == "SIN COSTO":
+                continue  # Ya mostrado arriba
             c = a["Costo"] if a["Costo"] is not None else "???"
             print(f"  {a['Semaforo']:10s} | {a['Producto'][:35]:35s} | Neto ${a['Neto_ML']:,.2f} | Costo {c}")
         print()
