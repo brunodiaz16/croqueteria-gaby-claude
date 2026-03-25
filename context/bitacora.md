@@ -1,5 +1,11 @@
 
 ## 2026-03-25 - Reporte del dia
+- 16 ordenes, 17 unidades, $13,672.52 neto, $2,051.52 ganancia, margen 15.0%
+- Alertas: Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Dog Chow Adulto R/G 25kg 5.7%, Cat Chow Mariscos 20kg 6.1%
+- Pendientes sin costo: ninguno
+
+
+## 2026-03-25 - Reporte del dia
 - 16 ordenes, 17 unidades, $13,672.52 neto, $2,491.52 ganancia, margen 18.2%
 - Alertas: Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Dog Chow Adulto R/G 25kg 5.7%, Cat Chow Mariscos 20kg 6.1%
 - Pendientes sin costo: ninguno

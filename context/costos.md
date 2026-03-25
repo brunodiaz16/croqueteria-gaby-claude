@@ -107,6 +107,7 @@
 | Chapetes Super Premium Gato 2kg | $85 | Chapetes | 2026-03-25 |
 | Maskottchen 2-Pack | $700 | Chapetes | 2026-03-25 |
 | Chapetes Gato Super Premium 2kg 3-Pack | $255 | Chapetes | 2026-03-25 |
+| Chapetes Gato Azul 15kg 2-Pack | $880 | Chapetes | 2026-03-25 |
 
 # ALIASES
 | Ticket dice | Producto real | Proveedor |
