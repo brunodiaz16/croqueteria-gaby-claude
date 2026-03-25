@@ -4,14 +4,23 @@ description: Procesa ventas diarias de Mercado Libre. Usar cuando Bruno dice "pr
 
 ## Ejemplo de uso
 ```
-/procesar-ventas C:\Users\bruno\Desktop\Ventas de ML por dia\18 de Mar de 2026\archivo.xlsx
+/procesar-ventas 20260325_Ventas_MX_...xlsx
 /procesar-ventas C:\ruta\ventas.xlsx 2026-03-18
+/procesar-ventas          ← sin argumento: busca el XLSX de hoy automáticamente
 ```
 
 ## Argumentos
 $ARGUMENTS
-- Primer argumento: ruta al archivo XLSX de Mercado Libre
+- Primer argumento: nombre de archivo o ruta completa al XLSX de Mercado Libre (opcional)
 - Segundo argumento (opcional): fecha YYYY-MM-DD (default: hoy)
+
+## Resolución automática del archivo
+Si el argumento NO es una ruta absoluta (o no hay argumento), buscar el archivo en:
+- `C:\Users\bruno\CroqueteriaGaby\Ventas\YYYY-MM\` donde YYYY-MM corresponde al mes de la fecha a procesar
+- Si hay argumento: buscar archivo cuyo nombre contenga ese argumento en esa carpeta
+- Si no hay argumento: buscar el archivo cuyo nombre empiece con la fecha de hoy en formato YYYYMMDD
+- Si hay múltiples archivos del mismo día, tomar el más reciente (por nombre, el de hora más alta)
+- Si no se encuentra, informar al usuario y mostrar los archivos disponibles en esa carpeta
 
 ## Contexto
 - Catalogo de costos: Google Sheet Catalogo_Maestro (via scripts/catalogo.py)
