@@ -3,7 +3,7 @@
 
 | Producto | Costo | Proveedor | Actualizado |
 |---|---|---|---|
-| Chapetes 20kg (Amarillos) | $300 | Chapetes | 2026-03-23 |
+| Chapetes 20kg (Amarillos) | $300 | Chapetes | 2026-03-24 |
 | Chapetes Premium 18kg | $410 | Chapetes | 2026-03-23 |
 | Maskottchen Premium 15kg | $525 | Chapetes | 2026-03-18 |
 | Ganador Premium Adulto 20kg | $990 | Dartacan | 2026-03-17 |
@@ -88,7 +88,7 @@
 | Whiskas - Croquetas Para Gatos Adultos, Sabor Carne, Omega 6 | $620 |  | 2026-02-17 |
 | Minino Sobre | $8.5 | Dartacan | 2026-03-19 |
 | Campeon Adulto 25kg | $750 | Dartacan | 2026-03-23 |
-| Chapetes Super Premium Gato 5kg | $185 | Chapetes | 2026-03-19 |
+| Chapetes Super Premium Gato 5kg | $195 | Chapetes | 2026-03-24 |
 | Chapetes Gato Azul 15kg | $440 | Chapetes | 2026-03-19 |
 | Kirkland Salmon/Camote 15.87kg | $781.15 | Costco | 2026-03-20 |
 | Kan Kan 25kg | $380 | Dartacan | 2026-03-23 |
@@ -148,3 +148,5 @@
 | 2026-03-23 | 2pz Alimento Para Gato Pollo/arroz 11.3kg Kirkland Signature | 569 | 967.3 | Costco | inline 2026-03-23 |
 | 2026-03-24 | Ganador Adulto 20kg |  | 755 | Dartacan | inline Bruno |
 | 2026-03-24 | 2 Costales Ganador Adulto 20kg |  | 1510 | Dartacan | inline Bruno (2x755) |
+| 2026-03-24 | Chapetes 20kg (Amarillos) | 300 | 300 | Chapetes | ticket 2026-03-24 |
+| 2026-03-24 | Chapetes Super Premium Gato 5kg | 185 | 195 | Chapetes | ticket 2026-03-24 |
