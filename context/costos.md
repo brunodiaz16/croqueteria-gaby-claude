@@ -8,9 +8,9 @@
 | Maskottchen Premium 15kg | $525 | Chapetes | 2026-03-18 |
 | Ganador Premium Adulto 20kg | $990 | Dartacan | 2026-03-17 |
 | Pedigree Adulto Res/Veg 20kg | $725 | Dartacan | 2026-03-17 |
-| Perron Adulto 25kg | $535 | Dartacan | 2026-03-23 |
+| Perron Adulto 25kg | $535 | Dartacan | 2026-03-25 |
 | Dog Chow Adulto R/G 25kg | $900 | Dartacan | 2026-03-23 |
-| Gatina 15kg | $495 | Dartacan | 2026-03-18 |
+| Gatina 15kg | $495 | Dartacan | 2026-03-25 |
 | LiveClear Gato 1.5kg (x2=3.18kg) | $768.61 | Invet | 2026-03-18 |
 | Vet Diet Lata Canine Gastro 380g | $69.76 | Invet | 2026-03-19 |
 | 6 Latas ProPlan Gastro 380g | $418.55 | Invet | 2026-03-19 |
@@ -98,6 +98,12 @@
 | Maskottchen 20kg | $350 | Chapetes | 2026-03-23 |
 | Ganador Adulto 20kg | $755 | Dartacan | 2026-03-24 |
 | 2 Costales Ganador Adulto 20kg | $1510 | Dartacan | 2026-03-24 |
+| ProPlan Gastro Perro 12 Latas 380g | $837.10 | Invet | 2026-03-24 |
+| Perron Adulto 25kg 2-Pack | $1070 | Dartacan | 2026-03-25 |
+| Megacan 25kg | $460 | Dartacan | 2026-03-25 |
+| Cat Chow Defense Plus 20kg | $885 | Dartacan | 2026-03-25 |
+| Cat Chow Mariscos 20kg | $885 | Dartacan | 2026-03-25 |
+| Ganador Premium 4kg | $245 | Dartacan | 2026-03-25 |
 
 # ALIASES
 | Ticket dice | Producto real | Proveedor |
@@ -150,3 +156,5 @@
 | 2026-03-24 | 2 Costales Ganador Adulto 20kg |  | 1510 | Dartacan | inline Bruno (2x755) |
 | 2026-03-24 | Chapetes 20kg (Amarillos) | 300 | 300 | Chapetes | ticket 2026-03-24 |
 | 2026-03-24 | Chapetes Super Premium Gato 5kg | 185 | 195 | Chapetes | ticket 2026-03-24 |
+| 2026-03-25 | Gatina 15kg | 495 | 495 | Dartacan | 2026-03-25 |
+| 2026-03-25 | Perron Adulto 25kg | 535 | 535 | Dartacan | 2026-03-25 |

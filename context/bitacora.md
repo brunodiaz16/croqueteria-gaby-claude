@@ -1,5 +1,17 @@
 
 ## 2026-03-25 - Reporte del dia
+- 16 ordenes, 17 unidades, $13,672.52 neto, $2,300.93 ganancia, margen 18.4%
+- Alertas: Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Dog Chow Adulto R/G 25kg 5.7%, Cat Chow Mariscos 20kg 6.1%
+- Pendientes sin costo: 2 Costales Croquetas Maskottch, 3 Costales Croquetas Gato Adul
+
+
+## 2026-03-25 - Reporte del dia
+- 16 ordenes, 17 unidades, $13,672.52 neto, $2,188.21 ganancia, margen 30.8%
+- Alertas: Dog Chow Adulto R/G 25kg 5.7%
+- Pendientes sin costo: Croquetas Perro Adulto Megacan, 2 Costales Croquetas Maskottch, Alimento Cat Chow Defense Plus, Cat Chow Sabor Mariscos Bulto , 3 Costales Croquetas Gato Adul, Cat Chow Sabor Mariscos Bulto , Ganador Premium 4kg Mix Perro , Cat Chow Sabor Mariscos Bulto 
+
+
+## 2026-03-25 - Reporte del dia
 - 15 ordenes, 15 unidades, $12,330.40 neto, $2,188.21 ganancia, margen 30.8%
 - Alertas: Dog Chow Adulto R/G 25kg 5.7%
 - Pendientes sin costo: 2 Costales Croquetas Maskottch, Alimento Cat Chow Defense Plus, Cat Chow Sabor Mariscos Bulto , 3 Costales Croquetas Gato Adul, Cat Chow Sabor Mariscos Bulto , Ganador Premium 4kg Mix Perro , Cat Chow Sabor Mariscos Bulto 
