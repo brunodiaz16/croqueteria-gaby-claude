@@ -106,7 +106,15 @@ El catálogo guarda costo unitario. Multiplicar cuando el título del listing in
 - "24 Sobres..." → x24
 
 **Excepciones (NO multiplicar — el catálogo ya tiene el costo del pack):**
+- Si el campo `notas` del producto en el Sheet dice "Nx [producto] $Y c/u" → costo ya es del pack
 - "6 Latas ProPlan Gastro 380g" → costo ya es del 6-pack ($418.55)
-- Verificar notas del producto en el Sheet si hay duda
+- Ver tabla de multi-packs confirmados en CLAUDE.md sección MULTI-PACKS
 
 **Regla general:** número al inicio del título + unidad (costales, bultos, bolsas, latas, sobres, packs) → multiplicar costo x ese número.
+
+**Listings confirmados como pack (costo ya registrado correcto en Sheet, NO multiplicar):**
+- MLM2668454937 → Perron 2-Pack ($1,070)
+- MLM2732806753 → Chapetes Gato Azul 2-Pack ($880)
+- MLM4626970320 → Maskottchen 2-Pack ($700)
+- MLM2669160711 → Gato Super Premium 2kg 3-Pack ($255)
+- MLM4680298954 → Arena Scoop Away 2-Pack ($798)

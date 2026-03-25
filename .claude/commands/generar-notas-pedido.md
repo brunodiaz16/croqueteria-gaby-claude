@@ -27,6 +27,8 @@ $ARGUMENTS
 2. **Agrupar ventas por proveedor y marca**: Usar columna "Proveedor" del reporte
    - Para cada proveedor, listar productos vendidos con cantidades
    - Agrupar por marca dentro de cada proveedor
+   - Si el proveedor dice "SIN COSTO", resolver usando PROVEEDOR_MAP de CLAUDE.md (no dejar productos sin proveedor)
+   - Si el proveedor dice "Dartacan" para Gatina → corregir a Chapetes
 
 3. **Generar notas de pedido**: Crear archivos en `data/xlsx/`:
    - `Nota_Pedido_[Proveedor]_YYYY-MM-DD.xlsx` — una por proveedor con:
@@ -55,3 +57,7 @@ $ARGUMENTS
 - Separar SIEMPRE por proveedor — el trabajador va a un proveedor a la vez
 - El resumen para WhatsApp debe ser texto plano, facil de leer en celular
 - NO incluir precios en la nota del trabajador (solo producto y cantidad)
+- Para multi-packs: mostrar en términos de UNIDADES INDIVIDUALES a comprar, no de packs
+  - Ej: se vendió "1x Perron 2-Pack" → pedir "2x Perron Adulto 25kg" al proveedor
+  - Ej: se vendió "1x Gato Azul 2-Pack" → pedir "2x Chapetes Gato Azul 15kg"
+- El General XLSX es para que Bruno lo edite antes de generar imágenes — no es final

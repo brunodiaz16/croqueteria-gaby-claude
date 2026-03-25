@@ -55,14 +55,29 @@ Actuar como: analista financiero + operador de datos + estratega de negocio.
 
 ---
 
+## UBICACIONES DE ARCHIVOS
+# Asumir estas rutas si Bruno no pasa ruta completa
+
+| Tipo       | Ruta                                                                 | Extensión |
+|------------|----------------------------------------------------------------------|-----------|
+| Ventas ML  | `C:\Users\bruno\CroqueteriaGaby\Ventas\YYYY-MM\`                    | .xlsx     |
+| Tickets    | `C:\Users\bruno\CroqueteriaGaby\Tickets\YYYY-MM\DD\[Proveedor].jpeg`| .jpeg     |
+
+- Ventas: nombre sigue patrón `YYYYMMDD_Ventas_MX_*.xlsx`. Si hay varios del mismo día, tomar el de hora más alta.
+- Tickets: `DD` = día del mes con 2 dígitos. Si no existe esa subcarpeta del día, buscar directamente en `YYYY-MM\[Proveedor].jpeg`.
+
+---
+
 ## PROVEEDORES
 
-| Proveedor  | Productos                                      |
-|------------|------------------------------------------------|
-| Chapetes   | Chapetes Premium 18kg, Chapetes 20kg (Amarillos), Maskottchen Premium, Cat Chow, Lukat, Gatina |
-| Dartacan   | Ganador, Pedigree, Minino, Dog Chow, Perron, Silver Kan |
-| Invet      | Pro Plan, Royal Canin, Nupec, LiveClear, Vet Diet latas |
-| Costco     | Kirkland, Pedigree, Scoop Away, Maintenance    |
+| Proveedor  | Productos                                                                   |
+|------------|-----------------------------------------------------------------------------|
+| Chapetes   | Chapetes Premium 18kg, Chapetes 20kg (Amarillos), Maskottchen 20kg, Chapetes Gato Azul 15kg, Chapetes Super Premium Gato 2kg, Lukat |
+| Dartacan   | Ganador, Pedigree, Minino, Dog Chow, Perron, Silver Kan, Kan Kan, Megacan, Cat Chow, Gatina |
+| Invet      | Pro Plan, Royal Canin, Nupec, LiveClear, Vet Diet latas                     |
+| Costco     | Kirkland, Pedigree, Scoop Away, Maintenance                                 |
+
+# NOTA: Cat Chow y Gatina confirmados en ticket Dartacan 2026-03-25. Antes estaban en Chapetes — corregido.
 
 ---
 
@@ -74,11 +89,14 @@ Actuar como: analista financiero + operador de datos + estratega de negocio.
 | Naranjas              | Chapetes Premium Perro Adulto         | 18kg | Chapetes  |
 | Amarillos             | Chapetes 20kg                         | 20kg | Chapetes  |
 | Meskuten cubito pm    | Maskottchen Premium                   | 15kg | Chapetes  |
+| Negros                | Maskottchen 20kg                      | 20kg | Chapetes  |
 | 20x0192x5             | Ganador Premium Adulto                | 20kg | Dartacan  |
 | 20x0068x5             | Pedigree Adulto Res/Vegetales         | 20kg | Dartacan  |
 | Morado 5kg            | Chapetes Super Premium Gato           | 5kg  | Chapetes  |
-| Gato Azul 15kg        | Chapetes Gato Azul                    | 15kg | Chapetes  |
+| Gato Morado 2kg       | Chapetes Super Premium Gato 2kg       | 2kg  | Chapetes  |
+| Gato Azul 15kg        | Chapetes Gato Azul 15kg               | 15kg | Chapetes  |
 | 25x0384x5             | Kan Kan                               | 25kg | Dartacan  |
+| Megacan               | Megacan 25kg (+1kg extra)             | 26kg | Dartacan  |
 
 REGLA FIJA: Chapetes Premium = 18kg. NUNCA 19kg.
 
@@ -87,9 +105,33 @@ REGLA FIJA: Chapetes Premium = 18kg. NUNCA 19kg.
 ## CATÁLOGO DE COSTOS
 # Fuente de verdad: Google Sheet Catalogo_Maestro (ver GOOGLE SHEETS IDs)
 # Backup local auto-generado: context/costos.md (NO editar manual, correr: py scripts/catalogo.py)
-# 83 productos registrados con costos históricos
+# 105 productos registrados con costos históricos (actualizado 2026-03-25)
 
 Si un producto no está en el Sheet → margen = "SIN COSTO" → incluir alerta en reporte.
+
+## MULTI-PACKS — REGLAS CRÍTICAS
+# Muchos listings de ML venden packs aunque el título no lo diga
+
+**Regla 1 — Detectar por título (auto):**
+- Título empieza con número + unidad: "2 Costales...", "3 Bolsas...", "6 Latas..." → multiplicar costo × N
+- "2 Pack", "2-Pack", "Doble Pack", "Paquete 2" → × 2
+
+**Regla 2 — Detectar por catálogo (manual):**
+- Si el campo `notas` en el Sheet dice "Listing=2 costales" o "2x [producto] $X c/u" → el costo YA es del pack
+- NO volver a multiplicar
+
+**Regla 3 — Detectar por neto sospechoso:**
+- Si neto ML es ~2x el neto esperado para una unidad → probablemente 2-Pack
+- ANTES de alertar margen incorrecto: verificar con Bruno
+
+**Listings multi-pack confirmados (costo ya en el Sheet como pack):**
+| MLM ID          | Producto                              | Pack | Costo pack |
+|-----------------|---------------------------------------|------|------------|
+| MLM2668454937   | Perron Adulto 25kg 2-Pack             | ×2   | $1,070     |
+| MLM2732806753   | Chapetes Gato Azul 15kg 2-Pack        | ×2   | $880       |
+| MLM4626970320   | Maskottchen 2-Pack                    | ×2   | $700       |
+| MLM2669160711   | Chapetes Gato Super Premium 2kg 3-Pack| ×3   | $255       |
+| MLM4680298954   | Arena Scoop Away 19kg 2-Pack          | ×2   | $798       |
 
 ---
 
@@ -206,28 +248,30 @@ Incluir siempre en el reporte cuando se detecten:
 - Costo aumentó vs registro anterior → marcar cambio en histórico
 
 ## ALERTAS ACTIVAS
-- Campeon Adulto 25kg: margen 0.6% (🔴🚨) — costo subió a $750, REPRECIAR URGENTE
+# Última actualización: 2026-03-25
+- Cat Chow Mariscos 20kg: margen 6.1% (🔴)
+  Neto ML $942 / Costo $885. Precio lista mínimo recomendado: ~$1,041
+- Dog Chow Adulto 25kg: margen 5.7% (🔴)
+  Neto ML $955 / Costo $900. Precio lista mínimo recomendado: ~$1,059
+- Campeon Adulto 25kg: margen 0.6% (🔴🚨) — REPRECIAR URGENTE
   Neto ML $754 / Costo $750. Precio lista mínimo recomendado: ~$882
 - Kan Kan 25kg: margen 3.2% (🔴)
   Neto ML $393 / Costo $380. Precio lista mínimo recomendado: ~$447
-- Dog Chow Adulto 25kg: margen 5.7% (🔴)
-  Neto ML $955 / Costo $900. Precio lista mínimo recomendado: ~$1,059
-- Perron Adulto 25kg: margen 4.2% (🔴)
-  Neto ML $558 / Costo $535. Precio lista mínimo recomendado: ~$629
 - Ganador Premium 20kg: margen 6.0% (🔴)
   Neto ML $1,053.60 / Costo $990. Precio lista mínimo recomendado: ~$1,350
   Publicación: MLM4663694700
 - Pedigree 20kg Res/Vegetales: margen 6.8% (🔴)
   Neto ML $778 / Costo $725. Precio lista mínimo recomendado: ~$970
   Publicación: MLM4619784042
-- Gatina 15kg: margen 5.5% (🔴)
-  Neto ML $524 / Costo $495. Precio lista mínimo recomendado: ~$680
+- Gatina 15kg: margen 9.4% (🟡) — monitorear
+  Neto ML $547 / Costo $495.
   Publicación: MLM4619796770
 - LiveClear Gato 3.18kg: margen 3.6% (🔴)
   Neto ML $798 / Costo $768.61. Precio lista mínimo recomendado: ~$1,090
   Publicación: MLM2743362281
 - Silver Kan 25kg: margen pendiente de calcular (costo provisional $450, Dartacan)
   Publicación: MLM2668236083
+# RESUELTAS HOY: Perron 2-Pack (8.0% 🟡 — correcto para pack), Chapetes Gato Azul 2-Pack (10.1% 🟡)
 
 ---
 
@@ -255,6 +299,7 @@ Al inicio de cada mes, crear subcarpeta nueva y actualizar IDs en config.py + Su
     subir-drive.md             ← skill /subir-drive
     generar-imagenes-pedido.md ← skill /generar-imagenes-pedido
     revisar-catalogo.md        ← skill /revisar-catalogo (health check semanal)
+    registrar-gasto.md         ← skill /registrar-gasto (gastos operativos)
 context/
   costos.md                    ← costos vigentes + aliases + historial (backup del Sheet)
   bitacora.md                  ← entradas diarias de aprendizajes (append)
@@ -267,6 +312,7 @@ context/
   uso_carpetas_drive.md        ← quién sube qué y cuándo
 scripts/
   catalogo.py                  ← módulo para leer/escribir Google Sheet Catalogo_Maestro
+  gastos.py                    ← módulo para registrar/leer gastos operativos (hoja Gastos en Sheet)
   crear_catalogo_maestro.py    ← script one-time para crear el Sheet
   procesar_ventas.py           ← procesador de ventas reutilizable (no hardcodear fechas)
   upload_to_drive.py           ← sube archivos a Drive con ruteo por prefijo

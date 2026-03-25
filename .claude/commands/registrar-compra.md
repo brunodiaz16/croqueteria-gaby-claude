@@ -5,19 +5,28 @@ description: Registra compra de proveedor desde foto de ticket o nota. Usar cuan
 ## Ejemplo de uso
 ```
 /registrar-compra Dartacan
-/registrar-compra Chapetes C:\ruta\foto_ticket.jpg
+/registrar-compra Chapetes C:\ruta\foto_ticket.jpeg
+/registrar-compra Dartacan         ← sin foto: busca automáticamente en carpeta de tickets
 ```
 
 ## Argumentos
 $ARGUMENTS
 - Proveedor (obligatorio): Chapetes, Dartacan, Invet, Costco
-- Puede incluir ruta a imagen del ticket
+- Ruta a imagen del ticket (opcional): si no se da, buscar automáticamente
+
+## Resolución automática del ticket
+Si no se proporciona ruta, buscar en este orden:
+1. `C:\Users\bruno\CroqueteriaGaby\Tickets\YYYY-MM\DD\[Proveedor].jpeg` (DD = día actual 2 dígitos)
+2. `C:\Users\bruno\CroqueteriaGaby\Tickets\YYYY-MM\[Proveedor].jpeg`
+3. Si no se encuentra, pedir a Bruno que adjunte la foto
 
 ## Contexto
 - Proveedores: Chapetes, Dartacan, Invet, Costco
 - Costos vigentes: leer CLAUDE.md seccion CATALOGO DE COSTOS VIGENTES
 - Aliases conocidos: leer CLAUDE.md seccion ALIASES DE PROVEEDORES
 - IMPORTANTE: "Africa" en un ticket = es Chapetes (Africa es la marca de la libreta)
+- Tickets de Chapetes: formato "Nota de Remisión Africa", productos en nombre coloquial (Naranjas, Negros, etc.)
+- Tickets de Dartacan: formato "PEDIDO", productos con código (20x0192x5) o nombre directo
 
 ## Instrucciones
 
@@ -57,3 +66,12 @@ $ARGUMENTS
 - Si Bruno pasa un precio explicitamente, ese toma precedencia sobre cualquier calculo
 - Si el costo cambio vs el registro anterior, marcar en historial
 - Siempre preguntar si hay datos ambiguos en el ticket
+- Cuando el total del ticket no cuadra con lo leído → calcular algebraicamente qué cantidad/precio falta antes de preguntar
+- Si Bruno menciona "X es un doble pack" o "vendemos X como 2-pack" → registrar en Sheet con costo del pack (costo_unit × N), MLM ID propio, y nota "Nx [producto] $Y c/u"
+- NO crear entrada "2-Pack" si el MLM ID ya existe en otra fila → actualizar esa fila directamente
+
+## Multi-packs al registrar compra
+Cuando en el ticket aparece un producto que en ML se vende como pack:
+1. Registrar el costo **unitario** (precio del ticket) en la fila del producto simple
+2. Verificar si existe entrada "NxPack" en el Sheet con ese MLM ID — si no existe, crearla con costo = N × unitario
+3. Si Bruno confirma que "las ventas de X son Npacks" → asegurar que el MLM ID del listing apunte a la entrada pack, no a la simple
