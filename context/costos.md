@@ -96,6 +96,8 @@
 | Perron Premium Adulto | $695 | Dartacan | 2026-03-23 |
 | Megacan 25kg+1kg | $460 | Dartacan | 2026-03-23 |
 | Maskottchen 20kg | $350 | Chapetes | 2026-03-23 |
+| Ganador Adulto 20kg | $755 | Dartacan | 2026-03-24 |
+| 2 Costales Ganador Adulto 20kg | $1510 | Dartacan | 2026-03-24 |
 
 # ALIASES
 | Ticket dice | Producto real | Proveedor |
@@ -144,3 +146,5 @@
 | 2026-03-23 | Maskottchen 20kg |  | 350 | Chapetes | ticket 2026-03-23 |
 | 2026-03-23 | Alimento Para Gato Pollo/arroz 11.3kg Kirkland Signature | 569 | 483.65 | Costco | inline 2026-03-23 |
 | 2026-03-23 | 2pz Alimento Para Gato Pollo/arroz 11.3kg Kirkland Signature | 569 | 967.3 | Costco | inline 2026-03-23 |
+| 2026-03-24 | Ganador Adulto 20kg |  | 755 | Dartacan | inline Bruno |
+| 2026-03-24 | 2 Costales Ganador Adulto 20kg |  | 1510 | Dartacan | inline Bruno (2x755) |

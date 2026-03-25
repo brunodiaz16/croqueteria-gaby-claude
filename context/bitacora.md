@@ -1,5 +1,11 @@
 
 ## 2026-03-24 - Reporte del dia
+- 10 ordenes, 10 unidades, $7,906.09 neto, $811.58 ganancia, margen 11.7%
+- Alertas: Perron Premium Adulto 4.0%, Campeon Adulto 25kg 0.6%
+- Pendientes sin costo: Purina Proplan En Gastroenteri
+
+
+## 2026-03-24 - Reporte del dia
 - 10 ordenes, 10 unidades, $7,906.09 neto, $782.49 ganancia, margen 12.6%
 - Alertas: Campeon Adulto 25kg 0.6%
 - Pendientes sin costo: Purina Proplan En Gastroenteri, Alimento Perron Premium Premiu
