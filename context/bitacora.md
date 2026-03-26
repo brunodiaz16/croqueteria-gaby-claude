@@ -1,4 +1,16 @@
 
+## 2026-03-26 - Reporte del dia
+- 22 ordenes, 22 unidades, $17,948.17 neto, $671.57 ganancia, margen 8.8%
+- Alertas: Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Maskottchen Premium 15kg 4.2%
+- Pendientes sin costo: Dog Chow Adulto 25kg Alimento , Campeón Recetas Caseras Alimen, Dog Chow Adulto 25kg Alimento , Dog Chow Adulto 25kg Alimento , Dog Chow Adulto 25kg Alimento , Dog Chow Adulto 25kg Alimento , Dog Chow Croquetas Adulto Raza, Alimento Ganador Premium Para , Pro Plan Liveclear Caspa/alérg, Pro Plan Liveclear Caspa/alérg, Gatina Alimento Seco Adulto Pa, Alimento Ganador Premium Para 
+
+
+## 2026-03-26 - Reporte del dia
+- 26 ordenes, 32 unidades, $26,728.91 neto, $0.00 ganancia, margen 0%
+- Alertas: ninguna
+- Pendientes sin costo: Dog Chow Adulto 25kg Alimento , Campeón Recetas Caseras Alimen, Dog Chow Adulto 25kg Alimento , Dog Chow Adulto 25kg Alimento , Dog Chow Adulto 25kg Alimento , Dog Chow Adulto 25kg Alimento , Dog Chow Croquetas Adulto Raza, Alimento Ganador Premium Para , Cat Chow Sabor Mariscos Bulto , Cat Chow Sabor Mariscos Bulto , Cat Chow Sabor Mariscos Bulto , Alimento Seco Chapetes Super P, Croquetas Maskottchen Premium , Pro Plan Liveclear Caspa/alérg, Arena Gato Scoop Away 19kg Agl, 6 Latas Proplan En Para Perro , Arena Gato Scoop Away 19kg Agl, Croquetas Perron Mix Perro Adu, Alimento Cat Chow Defense Plus, Gatina 15kg Alimento Purina Pa, Gatina 15kg Alimento Purina Pa, Pro Plan Liveclear Caspa/alérg, Alimento Perro Ganador Premium, Gatina Alimento Seco Adulto Pa, Alimento Ganador Premium Para , Alimento Ganador Premium Para 
+
+
 ## 2026-03-25 - Reporte del dia
 - 16 ordenes, 17 unidades, $13,672.52 neto, $1,591.52 ganancia, margen 11.6%
 - Alertas: Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Dog Chow Adulto R/G 25kg 5.7%, Cat Chow Mariscos 20kg 6.1%
