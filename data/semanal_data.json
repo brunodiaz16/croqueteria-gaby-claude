@@ -1,0 +1,199 @@
+{
+  "por_dia": [
+    [
+      "2026-03-17",
+      5,
+      4178.549999999999,
+      793.55,
+      18.991037560876382,
+      []
+    ],
+    [
+      "2026-03-18",
+      18,
+      14528.730000000001,
+      1878.4999999999998,
+      12.929554062880925,
+      []
+    ],
+    [
+      "2026-03-19",
+      14,
+      8845.96,
+      -1248.0500000000002,
+      -14.108700468914625,
+      []
+    ],
+    [
+      "2026-03-20",
+      18,
+      14920.059999999998,
+      1171.2099999999996,
+      7.849901407903184,
+      []
+    ]
+  ],
+  "agg": {
+    "Croqueta Alimento Para Perro Perron Adulto 25kg": {
+      "u": 1,
+      "neto": 788.3,
+      "costo": 535.0
+    },
+    "Pedigree Croquetas Para Perros Adultos Res Y Vegetales 20kg": {
+      "u": 2,
+      "neto": 1724.96,
+      "costo": 1450.0
+    },
+    "Alimento Seco Chapetes Premium 18kg Perro Adulto Salud Oral": {
+      "u": 1,
+      "neto": 501.19,
+      "costo": 410.0
+    },
+    "Alimento Ganador Premium Para Perro Adulto 20kg": {
+      "u": 1,
+      "neto": 1164.1,
+      "costo": 990.0
+    },
+    "Silver Kan 25kg": {
+      "u": 4,
+      "neto": 1965.1899999999998,
+      "costo": 1350.0
+    },
+    "Ganador Premium 20kg": {
+      "u": 5,
+      "neto": 5268.0,
+      "costo": 4950.0
+    },
+    "Maskottchen Premium 15kg": {
+      "u": 2,
+      "neto": 1434.48,
+      "costo": 1050.0
+    },
+    "Chapetes 20kg (Amarillos)": {
+      "u": 2,
+      "neto": 864.3599999999999,
+      "costo": 600.0
+    },
+    "LiveClear Gato 3.18kg (2x1.5)": {
+      "u": 2,
+      "neto": 1595.26,
+      "costo": 1537.22
+    },
+    "Arena Scoop Away 19kg 2-Pack": {
+      "u": 2,
+      "neto": 1791.94,
+      "costo": 1596.0
+    },
+    "Pedigree 20kg Res/Veg": {
+      "u": 2,
+      "neto": 1555.96,
+      "costo": 1450.0
+    },
+    "Dog Chow 25kg": {
+      "u": 1,
+      "neto": 954.75,
+      "costo": 900.0
+    },
+    "Gatina 15kg": {
+      "u": 3,
+      "neto": 1571.0099999999998,
+      "costo": 1485.0
+    },
+    "6 Latas ProPlan Gastro 380g": {
+      "u": 2,
+      "neto": 907.38,
+      "costo": 840.02
+    },
+    "Alimento Seco Silver Kan Para Perro Adulto 25 Kg Protector Salud Oral": {
+      "u": 2,
+      "neto": 1129.6,
+      "costo": 1800.0
+    },
+    "Alimento Seco Chapetes Super Premium Para Gatos Adultos 5kg Opción Completa Y Balanceada": {
+      "u": 1,
+      "neto": 338.29,
+      "costo": 410.0
+    },
+    "2 Costales De Croquetas Chapetes Pet Para Gato Adulto 15kg": {
+      "u": 1,
+      "neto": 978.43,
+      "costo": 1800.0
+    },
+    "24 Sobres Minino Plus Sabores Surtidos.": {
+      "u": 1,
+      "neto": 223.72,
+      "costo": 204.0
+    },
+    "Chapetes Premium 18kg": {
+      "u": 1,
+      "neto": 501.19,
+      "costo": 410.0
+    },
+    "Perron Adulto 25kg": {
+      "u": 1,
+      "neto": 558.3,
+      "costo": 535.0
+    },
+    "3 Costales Croquetas Perro Adulto Chapetes Premium 18kg C/u": {
+      "u": 1,
+      "neto": 1348.57,
+      "costo": 1230.0
+    },
+    "Campeón Recetas Caseras Alimento Para Perro Adulto Los Tamaños Sabor Carne Y Vegetales En Bolsa De 25kg": {
+      "u": 1,
+      "neto": 754.3,
+      "costo": 900.0
+    },
+    "Ganador Premium Adulto 20kg": {
+      "u": 1,
+      "neto": 1053.6,
+      "costo": 990.0
+    },
+    "Croquetas Kan Kan Para Perro Adulto 25 Kg": {
+      "u": 1,
+      "neto": 622.51,
+      "costo": 900.0
+    },
+    "Campeon Recetas Caseras Perro Adulto 25kg": {
+      "u": 4,
+      "neto": 3017.2,
+      "costo": 2900.0
+    },
+    "6 Latas Proplan Gastro Perro": {
+      "u": 1,
+      "neto": 478.95,
+      "costo": 418.55
+    },
+    "Chapetes Premium 18kg Perro Adulto": {
+      "u": 1,
+      "neto": 501.19,
+      "costo": 410.0
+    },
+    "Dog Chow Adulto 25 Kg": {
+      "u": 2,
+      "neto": 1909.5,
+      "costo": 1800.0
+    },
+    "Kirkland Salmon/Camote 15.87kg": {
+      "u": 2,
+      "neto": 2129.24,
+      "costo": 1562.3
+    },
+    "Perron Mix 25kg X2 Costales (50kg)": {
+      "u": 4,
+      "neto": 4599.04,
+      "costo": 4280.0
+    },
+    "Chapetes Super Premium Gato 5kg": {
+      "u": 1,
+      "neto": 242.79,
+      "costo": 185.0
+    }
+  },
+  "totales": {
+    "ords": 55,
+    "neto": 42473.299999999996,
+    "gan": 2595.209999999999,
+    "margen": 6.110215123383394
+  }
+}

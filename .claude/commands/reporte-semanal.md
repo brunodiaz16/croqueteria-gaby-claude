@@ -23,12 +23,24 @@ $ARGUMENTS
 
 2. **Leer reportes diarios**: Abrir cada Reporte_CroqueteriaGaby_YYYY-MM-DD.xlsx del periodo, hoja "Ventas"
 
-3. **Consolidar**:
+3. **Consolidar ventas**:
    - Total neto, total costos, ganancia, margen promedio ponderado
    - Ordenes totales, unidades totales
    - Desglose por dia
+   - Desglose Flex vs Normal (ordenes, neto, margen por tipo)
 
-4. **Rankings**:
+4. **Consolidar gastos operativos**: Leer gastos del periodo desde Google Sheet:
+   ```python
+   from scripts.gastos import leer_gastos_periodo, resumen_gastos
+   gastos = leer_gastos_periodo(fecha_inicio, fecha_fin)
+   resumen = resumen_gastos(gastos)
+   ```
+   - Desglose por categoria (gasolina, trabajador, transporte_flex, etc.)
+   - Total gastos operativos
+   - **Ganancia real** = Ganancia bruta (ventas - costos) - Gastos operativos
+   - **Margen real** = Ganancia real / Neto total
+
+5. **Rankings**:
    - Top 10 por volumen de ventas
    - Top 10 por margen
    - Bottom 5 por margen (candidatos a repreciar)
@@ -37,13 +49,14 @@ $ARGUMENTS
 
 6. **Recomendaciones de compra**: Basado en velocidad de venta semanal, estimar que productos necesitan restock
 
-7. **Generar**: `Reporte_Semanal_S[N]_2026.xlsx` con hojas:
-   - Resumen: metricas consolidadas
+8. **Generar**: `Reporte_Semanal_S[N]_2026.xlsx` con hojas:
+   - Resumen: metricas consolidadas + ganancia real post-gastos
    - Por_Dia: desglose diario
    - Top_Productos: rankings
    - Alertas: productos en rojo
+   - Gastos: desglose por categoria con total
    - Compras_Sugeridas: recomendaciones de restock
 
-8. **Subir a Drive**: `python scripts/upload_to_drive.py Reporte_Semanal_S[N]_2026.xlsx`
+9. **Subir a Drive**: `python scripts/upload_to_drive.py Reporte_Semanal_S[N]_2026.xlsx`
 
-9. **Commit**: `git add . && git commit -m "reporte semanal S[N] 2026"`
+10. **Commit**: `git add . && git commit -m "reporte semanal S[N] 2026"`

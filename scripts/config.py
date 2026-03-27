@@ -68,3 +68,15 @@ MARGEN_VERDE = 14    # > 14% = verde
 MARGEN_AMARILLO = 8  # 8-14% = amarillo
                      # < 8% = rojo
                      # < 0% = perdida
+
+# --- Categorias de gastos operativos ---
+CATEGORIAS_GASTOS = [
+    "gasolina",
+    "pago_trabajador",
+    "transporte_flex",
+    "comidas",
+    "renta_local",
+    "servicios_local",
+    "compra_inventario",
+    "otro",
+]

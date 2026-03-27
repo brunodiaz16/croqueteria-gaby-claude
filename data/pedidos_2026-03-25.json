@@ -1,0 +1,52 @@
+{
+  "Costco": [
+    {
+      "producto": "Arena Scoop Away 19kg 2-Pack",
+      "unidades": 2
+    }
+  ],
+  "Chapetes": [
+    {
+      "producto": "Cat Chow Sabor Mariscos Bulto Con 20kg",
+      "unidades": 3
+    },
+    {
+      "producto": "2 Costales Croquetas Maskottchen Para Perro Adulto 20kg C/u",
+      "unidades": 1
+    },
+    {
+      "producto": "Chapetes Gato Azul 15kg",
+      "unidades": 1
+    },
+    {
+      "producto": "Alimento Cat Chow Defense Plus Para Gato Purina Cat Chow Adulto Para Gato Adulto De Raza Mediana Sabor Pescado De 20 Kg",
+      "unidades": 1
+    },
+    {
+      "producto": "Gatina 15kg",
+      "unidades": 1
+    },
+    {
+      "producto": "3 Costales Croquetas Gato Adulto Super Premium Chapetes 2kg",
+      "unidades": 1
+    },
+    {
+      "producto": "Chapetes Premium 18kg",
+      "unidades": 1
+    }
+  ],
+  "Dartacan": [
+    {
+      "producto": "Perron Adulto 25kg",
+      "unidades": 2
+    },
+    {
+      "producto": "Ganador Premium 4kg Mix Perro Cachorro Malta Texo",
+      "unidades": 1
+    },
+    {
+      "producto": "Dog Chow Adulto R/G 25kg",
+      "unidades": 1
+    }
+  ]
+}
