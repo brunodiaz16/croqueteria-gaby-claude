@@ -1,4 +1,10 @@
 
+## 2026-03-27 - Reporte del dia
+- 12 ordenes, 15 unidades, $11,352.25 neto, $638.58 ganancia, margen 9.4%
+- Alertas: Ganador Premium Adulto 20 0.2%, Gatina 15kg -3.8%, Cat Chow Mariscos 20kg -5.4%
+- Pendientes sin costo: Arena Aglutinante Quita Olores, Casta Brava 20 Kg Purina Para , Alimento Perro Ganador Premium, Alimento Perro Ganador Premium
+
+
 ## 2026-03-26 - Reporte del dia
 - 22 ordenes, 22 unidades, $17,948.17 neto, $1,643.62 ganancia, margen 9.2%
 - Alertas: Dog Chow Croquetas Adulto -1.0%, Ganador Premium Adulto 20 7.3%, Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Maskottchen Premium 15kg 4.2%, Ganador Premium Adulto 20 7.3%
