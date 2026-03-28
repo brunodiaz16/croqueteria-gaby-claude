@@ -108,6 +108,13 @@
 | Maskottchen 2-Pack | $700 | Chapetes | 2026-03-25 |
 | Chapetes Gato Super Premium 2kg 3-Pack | $255 | Chapetes | 2026-03-25 |
 | Chapetes Gato Azul 15kg 2-Pack | $880 | Chapetes | 2026-03-25 |
+| Pro Plan LiveClear Salmon 1.5kg | $370 | Invet | 2026-03-26 |
+| Dog Chow Adulto 25kg Raza Pequena | $900 | Dartacan | 2026-03-26 |
+| Campeon Recetas Caseras 25kg | $750 | Dartacan | 2026-03-26 |
+| Dog Chow Croquetas Adulto 25kg | $900 | Dartacan | 2026-03-26 |
+| Ganador Premium Adulto 20kg v2 | $970 | Dartacan | 2026-03-26 |
+| Gatina 15kg v2 | $495 | Dartacan | 2026-03-27 |
+| Dog Chow Adulto 25kg Raza Mediana | $900 | Dartacan | 2026-03-27 |
 
 # ALIASES
 | Ticket dice | Producto real | Proveedor |
@@ -164,3 +171,4 @@
 | 2026-03-25 | Perron Adulto 25kg | 535 | 535 | Dartacan | 2026-03-25 |
 | 2026-03-25 | Chapetes Gato Azul 15kg | 440 | 440 | Chapetes | 2026-03-25 |
 | 2026-03-25 | Chapetes Premium 18kg | 410 | 410 | Chapetes | 2026-03-25 |
+| 2026-03-26 | Pro Plan LiveClear Salmon 1.5kg |  | 370 | Invet | stock_2026-03-26 |
