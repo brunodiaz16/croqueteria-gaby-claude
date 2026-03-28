@@ -1,43 +1,43 @@
 # Estado Actual del Proyecto
-<!-- Este archivo se REESCRIBE (no append) al final de cada sesión de Claude Code -->
-<!-- Leer al inicio de cada sesión para retomar contexto inmediatamente -->
+<!-- Este archivo se REESCRIBE (no append) al cierre de cada sesión de Claude Code -->
 
-## Última sesión: 2026-03-26
-
-### STOCK ESPECIAL — Pro Plan LiveClear Salmon 1.5kg
-- Compra: 10 unidades a $370 c/u = $3,700 total (2026-03-26)
-- MLM ID: MLM2743127883
-- Gasto registrado en Sheet (compra_inventario) — ya contabilizado en reporte semanal
-- Costo en catálogo: $370/unidad
-- Unidades restantes: 10 (actualizar aquí cada vez que se vendan)
-- REGLA: al vender este producto, el costo $370 ya está en catálogo → aplica normal en reportes diarios
-- El gasto $3,700 en "Gastos" es la inversión inicial; los $370 por venta en reportes diarios reflejan el margen real
-- Cuando lleguen a 0 unidades: avisar a Bruno y pedir nuevo precio si compra más stock
-
-## Última sesión anterior: 2026-03-20
+## Última sesión: 2026-03-27
 
 ### Completado hoy
-- Reporte 2026-03-20: 18 órdenes, $14,920 neto, 9.7% margen
-- Compra Dartacan: Kan Kan 25kg $380 (nuevo producto)
-- Compra Costco: 2x Kirkland + 2x Scoop Away ($2,360)
-- Agregadas reglas operativas a CLAUDE.md (plan first, sub-agents, auto-mejora, verificar, bug fix)
+- Reporte 2026-03-26: retroactivo — 22 órdenes, $17,948 neto, 9.2% margen | 5 nuevos MLM IDs registrados
+- Reporte 2026-03-27: 13 órdenes (12 ML + 1 Flex manual Dog Chow 25kg R/M), $12,469 neto, 10.2% margen
+- Compra Dartacan 2026-03-27: $5,690 | Gatina x4 $495, Ganador 20kg x2 $970, Cat Chow Mariscos x2 $885
+- Nuevos productos en catálogo (115 total):
+  - Arena Scoop Away 19kg unidad (MLM4680670824): $399 Costco
+  - Casta Brava 20kg (MLM2668259001): $390 Dartacan
+  - Ganador Premium 21kg (MLM5066965482): $970 Dartacan
+  - Dog Chow 25kg Raza Mediana (MLM_pendiente): $900 Dartacan
+  - Dog Chow Adulto 25kg Raza Pequeña (MLM2815230425): $900
+  - Campeón Recetas Caseras 25kg (MLM2815125467): $750
+  - Dog Chow Croquetas Adulto 25kg (MLM2815383797): $900
+  - Ganador Premium 20kg v2 (MLM5066929480): $970
+  - Gatina 15kg v2 (MLM2814943069): $495 (corregido de $520)
+- Gastos registrados: gasolina $500, trabajador $1,250 (semana 23-27 mar), adelanto $1,700 (26 mar)
+- CSV subido a Drive para app inventario (13 productos)
+- Flex tracker creado: context/flex_tracker.md
 
 ### Siguiente paso
-- Crear skill `/generar-notas-pedido` (notas por marca para trabajador)
-- Crear skill `/generar-csv` (verifica costos registrados, genera CSV para app inventario)
-- Actualizar plan con flujo diario completo
+- Lunes 2026-03-30: resetear flex_tracker.md con nueva semana
+- Registrar MLM ID real de Dog Chow 25kg Raza Mediana (actualmente "MLM_pendiente")
+- Confirmar proveedor Casta Brava (asumido Dartacan por ser producto Purina)
 
 ### Blockers abiertos
-- Kan Kan 25kg (MLM2668287827): SIN COSTO registrado en Sheet
-- Silver Kan 25kg: margen pendiente de calcular
-- Costos Kirkland/Scoop Away: recién registrados, verificar en próximo reporte
+- Dog Chow 25kg Raza Mediana: MLM ID pendiente de confirmar
+- Ganador Premium 21kg: neto $905/u < costo $970 — PÉRDIDA, repreciar urgente
+- Ganador Premium 20kg (MLM5066929480): margen 0.2% — repreciar
 
 ### Alertas activas
-- Campeón 25kg: 3.9% margen (ROJO) — repreciar urgente
-- Perron x2 25kg: 6.9% (ROJO)
-- Dog Chow 25kg: 5.7% (ROJO)
-- Gatina 15kg: 5.5% (ROJO)
+- Gatina 15kg (2u orden): $476/u < costo $495 — posible envío dividido ML
+- Cat Chow Mariscos ($839): posible envío dividido (promedio con $1,045 = $942 = 6.1%)
+- Ganador Premium 21kg: PÉRDIDA real a $905 neto vs $970 costo
+- Ganador Premium 20kg v2: 0.2% margen — prácticamente sin margen
 
-### Plan activo
-Fase 1 completada. Fase 1.5-1.8 en progreso (nuevos items del plan).
-Ver: `~/.claude/plans/inherited-fluttering-wilkes.md`
+### Flex tracker semana actual
+Ver: context/flex_tracker.md
+- Semana 2026-03-23/27: 5 Flex, pagado $1,250 el sábado 27
+- Próxima semana: 2026-03-30/04-05

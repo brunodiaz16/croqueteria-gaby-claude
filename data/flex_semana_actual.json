@@ -1,0 +1,42 @@
+{
+  "semana": "2026-03-23/2026-03-27",
+  "lunes": "2026-03-23",
+  "sabado_pago": "2026-03-27",
+  "dias": {
+    "2026-03-23": {
+      "flex": 1,
+      "detalle": [
+        "Chapetes 20kg (Amarillos)"
+      ]
+    },
+    "2026-03-24": {
+      "flex": 0,
+      "detalle": []
+    },
+    "2026-03-25": {
+      "flex": 1,
+      "detalle": [
+        "Kirkland Salmon"
+      ]
+    },
+    "2026-03-26": {
+      "flex": 0,
+      "detalle": []
+    },
+    "2026-03-27": {
+      "flex": 3,
+      "detalle": [
+        "Gatina 15kg v2",
+        "Arena Scoop Away 19kg",
+        "Dog Chow 25kg R/M"
+      ]
+    }
+  },
+  "total_flex": 5,
+  "bono_por_flex": 50,
+  "bono_total": 250,
+  "pago_base": 2700,
+  "adelanto": 1700,
+  "pago_sabado": 1250,
+  "cerrada": true
+}
