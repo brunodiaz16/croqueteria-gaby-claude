@@ -115,6 +115,9 @@
 | Ganador Premium Adulto 20kg v2 | $970 | Dartacan | 2026-03-26 |
 | Gatina 15kg v2 | $495 | Dartacan | 2026-03-27 |
 | Dog Chow Adulto 25kg Raza Mediana | $900 | Dartacan | 2026-03-27 |
+| Arena Scoop Away 19kg | $399 | Costco | 2026-03-27 |
+| Casta Brava 20kg | $390 | Dartacan | 2026-03-27 |
+| Ganador Premium 21kg | $970 | Dartacan | 2026-03-27 |
 
 # ALIASES
 | Ticket dice | Producto real | Proveedor |
