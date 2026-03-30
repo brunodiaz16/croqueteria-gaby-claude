@@ -2,25 +2,19 @@
 <!-- Actualizar cada vez que cae un pedido Flex -->
 <!-- Reiniciar cada lunes con nueva semana -->
 
-## Semana actual: 2026-03-23 al 2026-03-29
+## Semana actual: 2026-03-30 al 2026-04-05
 
 | Fecha      | Día   | Flex | Productos                                      |
 |------------|-------|------|------------------------------------------------|
-| 2026-03-23 | Lun   | 1    | Chapetes 20kg (Amarillos)                     |
-| 2026-03-24 | Mar   | 0    | —                                              |
-| 2026-03-25 | Mié   | 1    | Kirkland Salmon                               |
-| 2026-03-26 | Jue   | 0    | —                                              |
-| 2026-03-27 | Vie   | 3    | Gatina 15kg v2, Arena Scoop Away 19kg, Dog Chow 25kg R/M |
-| 2026-03-28 | Sáb   | —    | (pendiente)                                   |
-| 2026-03-29 | Dom   | —    | (pendiente)                                   |
+| 2026-03-30 | Lun   | 2    | (ver reporte del día)                         |
+| 2026-03-31 | Mar   | —    | (pendiente)                                   |
+| 2026-04-01 | Mié   | —    | (pendiente)                                   |
+| 2026-04-02 | Jue   | —    | (pendiente)                                   |
+| 2026-04-03 | Vie   | —    | (pendiente)                                   |
+| 2026-04-04 | Sáb   | —    | (pendiente)                                   |
+| 2026-04-05 | Dom   | —    | (pendiente)                                   |
 
-**Total semana: 5 Flex | Bono: $250 ($50 × 5)**
-
-## Pago semana 2026-03-23/27 (pagado 2026-03-27)
-- Base semanal: $2,700
-- Bono Flex: +$250 (5 × $50)
-- Adelanto: -$1,700
-- **Pagado: $1,250**
+**Total semana: 2 Flex | Bono acumulado: $100 ($50 × 2)**
 
 ---
 

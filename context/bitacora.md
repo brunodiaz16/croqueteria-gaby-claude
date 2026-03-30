@@ -1,4 +1,10 @@
 
+## 2026-03-30 - Reporte del dia
+- 11 ordenes, 13 unidades, $7,446.41 neto, $599.85 ganancia, margen 9.9%
+- Alertas: Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Gatina 15kg 5.6%
+- Pendientes sin costo: Alimento Pro Plan Veterinary D, Paquete 4 Proplan Lata Overwei, Alimento Seco Para Perro Ganad
+
+
 ## 2026-03-27 - Reporte del dia
 - 12 ordenes, 15 unidades, $11,352.25 neto, $1,163.25 ganancia, margen 10.2%
 - Alertas: Ganador Premium Adulto 20 0.2%, Gatina 15kg -3.8%, Cat Chow Mariscos 20kg -5.4%, Ganador Premium 21kg -7.1%
