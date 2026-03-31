@@ -1,43 +1,40 @@
 # Estado Actual del Proyecto
 <!-- Este archivo se REESCRIBE (no append) al cierre de cada sesión de Claude Code -->
 
-## Última sesión: 2026-03-27
+## Última sesión: 2026-03-30
 
 ### Completado hoy
-- Reporte 2026-03-26: retroactivo — 22 órdenes, $17,948 neto, 9.2% margen | 5 nuevos MLM IDs registrados
-- Reporte 2026-03-27: 13 órdenes (12 ML + 1 Flex manual Dog Chow 25kg R/M), $12,469 neto, 10.2% margen
-- Compra Dartacan 2026-03-27: $5,690 | Gatina x4 $495, Ganador 20kg x2 $970, Cat Chow Mariscos x2 $885
-- Nuevos productos en catálogo (115 total):
-  - Arena Scoop Away 19kg unidad (MLM4680670824): $399 Costco
-  - Casta Brava 20kg (MLM2668259001): $390 Dartacan
-  - Ganador Premium 21kg (MLM5066965482): $970 Dartacan
-  - Dog Chow 25kg Raza Mediana (MLM_pendiente): $900 Dartacan
-  - Dog Chow Adulto 25kg Raza Pequeña (MLM2815230425): $900
-  - Campeón Recetas Caseras 25kg (MLM2815125467): $750
-  - Dog Chow Croquetas Adulto 25kg (MLM2815383797): $900
-  - Ganador Premium 20kg v2 (MLM5066929480): $970
-  - Gatina 15kg v2 (MLM2814943069): $495 (corregido de $520)
-- Gastos registrados: gasolina $500, trabajador $1,250 (semana 23-27 mar), adelanto $1,700 (26 mar)
-- CSV subido a Drive para app inventario (13 productos)
-- Flex tracker creado: context/flex_tracker.md
+- Reporte 2026-03-30: 12 órdenes (11 ML + 1 Flex manual Kirkland), $8,511.05 neto, 9.9% margen
+  - Flex: 3 órdenes | $2,417.03 neto | 13.8% margen
+  - Normal: 9 órdenes | $6,094.02 neto | 9.0% margen
+- Flex tracker actualizado: 3 Flex semana 30 mar - 5 abr | Bono $150
+- Kirkland Salmon y Camote 15.87kg registrado como MANUAL/SIN COSTO (costo Costco pendiente)
+
+### Archivos generados (en data/xlsx/ — pendientes de Drive)
+- Reporte_CroqueteriaGaby_2026-03-30.xlsx
+- Lista_Precios_Vigentes_2026-03-30.xlsx
+- importar_inventario_2026-03-30.csv
 
 ### Siguiente paso
-- Lunes 2026-03-30: resetear flex_tracker.md con nueva semana
+- /generar-csv cuando Bruno dé visto bueno al reporte
 - Registrar MLM ID real de Dog Chow 25kg Raza Mediana (actualmente "MLM_pendiente")
-- Confirmar proveedor Casta Brava (asumido Dartacan por ser producto Purina)
+- Conseguir costo Kirkland Salmon Camote 15.87kg (Costco) para cerrar SIN COSTO
+- Inicio de abril (2026-04-01): crear subcarpetas 2026-04 en Drive y actualizar IDs en config.py
 
 ### Blockers abiertos
+- 4 productos SIN COSTO en reporte 2026-03-30:
+  - MLM2742868975: Pro Plan Vet Diets Gastro latas (3u, Flex) — Invet
+  - MLM5066055786: Paquete 4 ProPlan Lata OM 380g — Invet
+  - MLM2722499641: Ganador Adulto Razas Medianas — Dartacan
+  - MANUAL: Kirkland Salmon Camote 15.87kg — Costco ($1,064.64 neto)
 - Dog Chow 25kg Raza Mediana: MLM ID pendiente de confirmar
-- Ganador Premium 21kg: neto $905/u < costo $970 — PÉRDIDA, repreciar urgente
-- Ganador Premium 20kg (MLM5066929480): margen 0.2% — repreciar
 
 ### Alertas activas
-- Gatina 15kg (2u orden): $476/u < costo $495 — posible envío dividido ML
-- Cat Chow Mariscos ($839): posible envío dividido (promedio con $1,045 = $942 = 6.1%)
-- Ganador Premium 21kg: PÉRDIDA real a $905 neto vs $970 costo
-- Ganador Premium 20kg v2: 0.2% margen — prácticamente sin margen
+- Cat Chow Mariscos 20kg (×2): 6.1% ROJO | neto $942.28 | costo $885
+- Gatina 15kg (MLM4619796770): 5.6% ROJO | neto $524.56 | costo $495
+- Ganador Premium 21kg: AMARILLO 13.8% | neto $1,125.01 vs costo $970 (mejoró vs sesión anterior)
+- Ganador Premium 20kg v2 (MLM5066929480): 0.2% — repreciar urgente (no vendido hoy)
 
-### Flex tracker semana actual
+### Flex tracker semana actual (2026-03-30 al 04-05)
 Ver: context/flex_tracker.md
-- Semana 2026-03-23/27: 5 Flex, pagado $1,250 el sábado 27
-- Próxima semana: 2026-03-30/04-05
+- 3 Flex | Bono acumulado: $150

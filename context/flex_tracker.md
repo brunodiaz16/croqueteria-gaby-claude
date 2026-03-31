@@ -6,7 +6,7 @@
 
 | Fecha      | Día   | Flex | Productos                                      |
 |------------|-------|------|------------------------------------------------|
-| 2026-03-30 | Lun   | 2    | (ver reporte del día)                         |
+| 2026-03-30 | Lun   | 3    | Ganador Premium 21kg, ProPlan Vet Gastro 3u, Kirkland Salmon Camote 15.87kg (manual) |
 | 2026-03-31 | Mar   | —    | (pendiente)                                   |
 | 2026-04-01 | Mié   | —    | (pendiente)                                   |
 | 2026-04-02 | Jue   | —    | (pendiente)                                   |
@@ -14,7 +14,7 @@
 | 2026-04-04 | Sáb   | —    | (pendiente)                                   |
 | 2026-04-05 | Dom   | —    | (pendiente)                                   |
 
-**Total semana: 2 Flex | Bono acumulado: $100 ($50 × 2)**
+**Total semana: 3 Flex | Bono acumulado: $150 ($50 × 3)**
 
 ---
 
