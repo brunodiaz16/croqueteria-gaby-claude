@@ -1,5 +1,11 @@
 
 ## 2026-03-31 - Reporte del dia
+- 11 ordenes, 12 unidades, $10,635.03 neto, $1,222.73 ganancia, margen 11.5%
+- Alertas: Cat Chow Mariscos 20kg 6.1%, Cat Chow Defense Plus 20k 6.9%, Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%
+- Pendientes sin costo: ninguno
+
+
+## 2026-03-31 - Reporte del dia
 - 10 ordenes, 11 unidades, $9,570.41 neto, $939.26 ganancia, margen 9.8%
 - Alertas: Cat Chow Mariscos 20kg 6.1%, Cat Chow Defense Plus 20k 6.9%, Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%
 - Pendientes sin costo: ninguno
