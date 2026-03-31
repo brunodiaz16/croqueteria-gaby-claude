@@ -120,6 +120,8 @@
 | Ganador Premium 21kg | $970 | Dartacan | 2026-03-27 |
 | Ganador Adulto 20kg | $755 | Dartacan | 2026-03-30 |
 | Minino 15kg | $600 | Dartacan | 2026-03-30 |
+| ProPlan Vet Gastro lata 380g | $70 | Invet | 2026-03-30 |
+| ProPlan Lata OM Overweight 4-Pack | $265 | Invet | 2026-03-30 |
 
 # ALIASES
 | Ticket dice | Producto real | Proveedor |
