@@ -257,8 +257,8 @@ Incluir siempre en el reporte cuando se detecten:
   Neto ML $754 / Costo $750. Precio lista mínimo recomendado: ~$882
 - Kan Kan 25kg: margen 3.2% (🔴)
   Neto ML $393 / Costo $380. Precio lista mínimo recomendado: ~$447
-- Ganador Premium 20kg: margen 6.0% (🔴)
-  Neto ML $1,053.60 / Costo $990. Precio lista mínimo recomendado: ~$1,350
+- Ganador Premium 20kg: margen 7.9% (🔴)
+  Neto ML $1,053.60 / Costo $970 (actualizado 2026-03-30). Precio lista mínimo recomendado: ~$1,141
   Publicación: MLM4663694700
 - Pedigree 20kg Res/Vegetales: margen 6.8% (🔴)
   Neto ML $778 / Costo $725. Precio lista mínimo recomendado: ~$970

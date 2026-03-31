@@ -6,7 +6,7 @@
 | Chapetes 20kg (Amarillos) | $300 | Chapetes | 2026-03-24 |
 | Chapetes Premium 18kg | $410 | Chapetes | 2026-03-25 |
 | Maskottchen Premium 15kg | $525 | Chapetes | 2026-03-18 |
-| Ganador Premium Adulto 20kg | $990 | Dartacan | 2026-03-17 |
+| Ganador Premium Adulto 20kg | $970 | Dartacan | 2026-03-30 |
 | Pedigree Adulto Res/Veg 20kg | $725 | Dartacan | 2026-03-17 |
 | Perron Adulto 25kg | $535 | Dartacan | 2026-03-25 |
 | Dog Chow Adulto R/G 25kg | $900 | Dartacan | 2026-03-23 |
@@ -118,6 +118,8 @@
 | Arena Scoop Away 19kg | $399 | Costco | 2026-03-27 |
 | Casta Brava 20kg | $390 | Dartacan | 2026-03-27 |
 | Ganador Premium 21kg | $970 | Dartacan | 2026-03-27 |
+| Ganador Adulto 20kg | $755 | Dartacan | 2026-03-30 |
+| Minino 15kg | $600 | Dartacan | 2026-03-30 |
 
 # ALIASES
 | Ticket dice | Producto real | Proveedor |
@@ -175,3 +177,4 @@
 | 2026-03-25 | Chapetes Gato Azul 15kg | 440 | 440 | Chapetes | 2026-03-25 |
 | 2026-03-25 | Chapetes Premium 18kg | 410 | 410 | Chapetes | 2026-03-25 |
 | 2026-03-26 | Pro Plan LiveClear Salmon 1.5kg |  | 370 | Invet | stock_2026-03-26 |
+| 2026-03-30 | Ganador Premium Adulto 20kg | 990 | 970 | Dartacan | ticket-2026-03-30 |
