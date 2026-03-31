@@ -28,7 +28,7 @@ $ARGUMENTS
    - Para cada proveedor, listar productos vendidos con cantidades
    - Agrupar por marca dentro de cada proveedor
    - Si el proveedor dice "SIN COSTO", resolver usando PROVEEDOR_MAP de CLAUDE.md (no dejar productos sin proveedor)
-   - Si el proveedor dice "Dartacan" para Gatina → corregir a Chapetes
+   - Gatina IS Dartacan (confirmado ticket 2026-03-25) — NO mover a Chapetes
 
 3. **Generar notas de pedido**: Crear archivos en `data/xlsx/`:
    - `Nota_Pedido_[Proveedor]_YYYY-MM-DD.xlsx` — una por proveedor con:
@@ -61,3 +61,4 @@ $ARGUMENTS
   - Ej: se vendió "1x Perron 2-Pack" → pedir "2x Perron Adulto 25kg" al proveedor
   - Ej: se vendió "1x Gato Azul 2-Pack" → pedir "2x Chapetes Gato Azul 15kg"
 - El General XLSX es para que Bruno lo edite antes de generar imágenes — no es final
+- Cat Chow variants (Mariscos, Defense Plus, etc.) se pueden consolidar como una sola línea "Cat Chow 20kg" con cantidad total — el proveedor no distingue variante, simplifica el pedido

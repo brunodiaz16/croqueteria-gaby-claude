@@ -81,6 +81,24 @@ Si Bruno baja el XLSX en la manana y luego caen pedidos Flex en la tarde:
 - Responder "s" para reemplazar el reporte con datos completos
 - La bitacora se actualiza automaticamente con los numeros finales
 
+## Flex adicionales que Bruno informa manualmente (sin XLSX nuevo)
+Si Bruno dice "fueron N Flex de [producto], no M" y no hay XLSX actualizado:
+1. Crear XLSX patched: copiar el XLSX original, duplicar la fila del producto tantas veces como falten
+   ```python
+   import openpyxl, shutil
+   shutil.copy(SRC, DST_patched)
+   wb = openpyxl.load_workbook(DST_patched)
+   ws = wb.active
+   # duplicar fila del producto (mismo neto, misma publicacion)
+   for _ in range(N_extra):
+       last = ws.max_row + 1
+       for c in range(1, ws.max_column+1):
+           ws.cell(last, c, ws.cell(fila_producto, c).value)
+   wb.save(DST_patched)
+   ```
+2. Re-procesar con el XLSX patched: `python scripts/procesar_ventas.py DST_patched YYYY-MM-DD`
+3. El neto de cada fila duplicada = mismo neto que la orden original (Bruno confirma "mismo precio")
+
 ## Reglas
 - Columna de ingresos: "Total (MXN)" — ya es neto post-comision ML
 - Columna "Forma de entrega" / "Transportista" distingue Flex vs Mercado Envios
