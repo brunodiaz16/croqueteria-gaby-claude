@@ -165,7 +165,8 @@ Comisión ML estimada: ~15% (ya descontada en columna "Total MXN" del XLSX)
 | Carpeta                              | ID                                  | Notas                    |
 |--------------------------------------|-------------------------------------|--------------------------|
 | 01 - Ventas por Día (padre)          | 1jgqqt_fXEoDv5YFbaS8Hldmu4C4Xstq0  |                          |
-| 01 - Ventas por Día / 2026-03        | 1ID04u87lSj1bfyE02mfO3AqbYdORZRP7  | ← activa en config.py   |
+| 01 - Ventas por Día / 2026-03        | 1ID04u87lSj1bfyE02mfO3AqbYdORZRP7  | (histórico)              |
+| 01 - Ventas por Día / 2026-04        | 111MAHZeXpE0zT-sRK2DK_KgLSx0bl5bB  | ← activa en config.py   |
 | 02 - Reportes Diarios (padre)        | 1p6yZuGtwD_1nIRHyHJjnK8ah59U89h8J  |                          |
 | 02 - Reportes Diarios / PDF / Marzo  | 1nW52l8hhqofwTds3z7ohtB3pEkD0WH0W  |                          |
 | 02 - Reportes Diarios / CSV          | 1DcZDC9jnt_wvgfjotlmmstskG-FShzCI  | ← CSVS_INVENTARIO       |
@@ -174,12 +175,14 @@ Comisión ML estimada: ~15% (ya descontada en columna "Total MXN" del XLSX)
 | 03 - Compras / Invet                 | 1bwCiAbVIt3QhJmSclhtX5gIz1ENp81Mj  |                          |
 | 03 - Compras / Costco                | 1z4iGSk9-0ym9BV24D0tfHLwzugegJ172  |                          |
 | 04 - Notas de Pedido (padre)         | 1EFyRedwQafW4A_MAQGUrerCB05v_r8cO  |                          |
-| 04 - Notas de Pedido / Marzo 2026    | 1hCZuAB9uCHKSHdSJGWXYs3eMWYQx__H0  | ← activa en config.py   |
+| 04 - Notas de Pedido / Marzo 2026    | 1hCZuAB9uCHKSHdSJGWXYs3eMWYQx__H0  | (histórico)              |
+| 04 - Notas de Pedido / Abril 2026    | 1BLwCScqPTmBiW4GPSZFdKKDWANqxlpE2  | ← activa en config.py   |
 | 05 - Catálogo y Precios              | 1uTeqMTUtzK-mLfT_LNEHAkns8Oc14yls  |                          |
 | 06 - Control de Inventario           | 1_xb-szCE1bHVa5_SXq8_CmcFdlEOOBAs  |                          |
 | 07 - Análisis y Estrategia           | 1B50RXBeCLe0LAayEzw4YhvUnA0L6pAAM  |                          |
 | 08 - Generados por Claude (padre)    | 1yYxUJOkVOHNCkVVaRlLXyCfyzEsQDmxR  |                          |
-| 08 - Generados por Claude / 2026-03  | 1m4V3HZutVZ5nzRxwwWwnrREgIIGWEgvT  | ← activa en config.py   |
+| 08 - Generados por Claude / 2026-03  | 1m4V3HZutVZ5nzRxwwWwnrREgIIGWEgvT  | (histórico)              |
+| 08 - Generados por Claude / 2026-04  | 1Ge48lFJ0_ItBU3-MsFYN159mqPkiI06N  | ← activa en config.py   |
 | Histórico de Precios                 | 1WV5mFQEDLsfym3-VQiiTWTMniX7a22lj  |                          |
 | Listas de Precios Vigentes           | 1KvJWSDh2xPIEBkfGI1LcB3K-ixsnZzGl  |                          |
 
@@ -188,7 +191,7 @@ Comisión ML estimada: ~15% (ya descontada en columna "Total MXN" del XLSX)
 
 | Prefijo                      | Carpeta destino automática           |
 |------------------------------|--------------------------------------|
-| Reporte_CroqueteriaGaby_     | 08 - Generados por Claude / 2026-03  |
+| Reporte_CroqueteriaGaby_     | 08 - Generados por Claude / 2026-04  |
 | Reporte_Semanal_             | 02 - Reportes Semanales / 2026       |
 | Historico_de_Precios_        | Histórico de Precios                 |
 | Lista_Precios_Vigentes_      | Listas de Precios Vigentes           |
@@ -197,8 +200,8 @@ Comisión ML estimada: ~15% (ya descontada en columna "Total MXN" del XLSX)
 | Compra_Chapetes_             | 03 - Compras / Chapetes              |
 | Compra_Invet_                | 03 - Compras / Invet                 |
 | Compra_Costco_               | 03 - Compras / Costco                |
-| Nota_Pedido_                 | 04 - Notas de Pedido / 2026-03       |
-| Ventas_MX_                   | 01 - Ventas por Día / 2026-03        |
+| Nota_Pedido_                 | 04 - Notas de Pedido / Abril 2026    |
+| Ventas_MX_                   | 01 - Ventas por Día / 2026-04        |
 
 ---
 
