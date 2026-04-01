@@ -1,5 +1,17 @@
 
 ## 2026-04-01 - Reporte del dia
+- 11 ordenes, 12 unidades, $9,854.57 neto, $1,176.37 ganancia, margen 11.9%
+- Alertas: Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Ganador Adulto 20kg 7.0%
+- Pendientes sin costo: ninguno
+
+
+## 2026-04-01 - Reporte del dia
+- 11 ordenes, 12 unidades, $9,854.57 neto, $922.31 ganancia, margen 10.0%
+- Alertas: Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Ganador Adulto 20kg 7.0%
+- Pendientes sin costo: Arena Para Gato 19kg Aglutinan
+
+
+## 2026-04-01 - Reporte del dia
 - 11 ordenes, 12 unidades, $9,854.57 neto, $812.94 ganancia, margen 9.2%
 - Alertas: Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Cat Chow Mariscos 20kg 6.1%, Ganador Adulto 20kg 7.0%
 - Pendientes sin costo: Arena Para Gato 19kg Aglutinan, Chapetes Pet Croquetas Para Pe

@@ -115,13 +115,14 @@
 | Ganador Premium Adulto 20kg v2 | $970 | Dartacan | 2026-03-26 |
 | Gatina 15kg v2 | $495 | Dartacan | 2026-03-27 |
 | Dog Chow Adulto 25kg Raza Mediana | $900 | Dartacan | 2026-03-27 |
-| Arena Scoop Away 19kg | $399 | Costco | 2026-03-27 |
+| Arena Scoop Away 19kg | $399 | Costco | 2026-04-01 |
 | Casta Brava 20kg | $390 | Dartacan | 2026-03-27 |
 | Ganador Premium 21kg | $970 | Dartacan | 2026-03-27 |
 | Ganador Adulto 20kg | $755 | Dartacan | 2026-03-30 |
 | Minino 15kg | $600 | Dartacan | 2026-03-30 |
 | ProPlan Vet Gastro lata 380g | $70 | Invet | 2026-03-30 |
 | ProPlan Lata OM Overweight 4-Pack | $265 | Invet | 2026-03-30 |
+| Chapetes Adulto 20kg Todas Las Razas | $300 | Chapetes | 2026-04-01 |
 
 # ALIASES
 | Ticket dice | Producto real | Proveedor |
@@ -180,3 +181,4 @@
 | 2026-03-25 | Chapetes Premium 18kg | 410 | 410 | Chapetes | 2026-03-25 |
 | 2026-03-26 | Pro Plan LiveClear Salmon 1.5kg |  | 370 | Invet | stock_2026-03-26 |
 | 2026-03-30 | Ganador Premium Adulto 20kg | 990 | 970 | Dartacan | ticket-2026-03-30 |
+| 2026-04-01 | Arena Scoop Away 19kg | 399 | 399 | Costco | Bruno inline 2026-04-01 |
